@@ -457,9 +457,14 @@ function render(){
       if(href) window.open(href, "_blank", "noopener");
     });
     feed.appendChild(card);
-    observer.observe(card);
     card.dataset.index = i;
     card.id = `card-${i}`;
+    if(cache[bird.wiki]){
+      loadWiki(bird, i);
+      loadAudio(bird, i);
+    } else {
+      observer.observe(card);
+    }
   });
 }
 
