@@ -245,6 +245,7 @@
 <div class="toolbar">
   <div class="wordmark">birds<span>.</span>gallery</div>
   <div class="sort-group" id="sortGroup">
+    <button class="sort-btn" data-key="length_cm">Size</button>
     <button class="sort-btn active" data-key="wingspan_cm">Wingspan</button>
     <button class="dir-btn" id="dirToggle" title="Reverse sort order">↓</button>
   </div>
@@ -301,12 +302,12 @@ const STATUS_COLORS = {
 };
 
 const SORT_LABELS = {
+  length_cm: "Size",
   wingspan_cm: "Wingspan",
-  status: "Status",
 };
 const DIR_LABELS = {
+  length_cm: ["Smallest to Biggest", "Biggest to Smallest"],
   wingspan_cm: ["Narrowest to Widest", "Widest to Narrowest"],
-  status: ["Least to Most Threatened", "Most to Least Threatened"],
 };
 
 function updateTitle(){
@@ -325,6 +326,7 @@ function fmtNum(n){
 }
 function fmtVal(key, v){
   if(v===null || v===undefined) return "no data";
+  if(key==="length_cm") return v + " cm";
   if(key==="wingspan_cm") return v + " cm";
   if(key==="status") return STATUS_LABELS[v] || v;
 }
@@ -348,8 +350,14 @@ function statusHtml(bird){
 }
 
 function specRowsHtml(bird){
+  const lengthPct = bird.length_cm ? Math.min(100,(bird.length_cm/230)*100) : 0;
   const wingPct = bird.wingspan_cm ? Math.min(100,(bird.wingspan_cm/320)*100) : 0;
   return `
+    <div class="spec-row">
+      <div class="spec-label">Length</div>
+      <div class="spec-bar"><i style="width:${lengthPct}%"></i></div>
+      <div class="spec-val">${fmtVal('length_cm', bird.length_cm)}</div>
+    </div>
     <div class="spec-row">
       <div class="spec-label">Wingspan</div>
       <div class="spec-bar"><i style="width:${wingPct}%"></i></div>
