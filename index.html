@@ -246,7 +246,6 @@
   <div class="wordmark">birds<span>.</span>gallery</div>
   <div class="sort-group" id="sortGroup">
     <button class="sort-btn active" data-key="wingspan_cm">Wingspan</button>
-    <button class="sort-btn" data-key="status">Status</button>
     <button class="dir-btn" id="dirToggle" title="Reverse sort order">↓</button>
   </div>
   <div class="controls">
@@ -254,7 +253,7 @@
       <button class="view-btn" data-view="list">List</button>
       <button class="view-btn active" data-view="spectrum">Spectrum</button>
     </div>
-    <input id="searchBox" class="search-box" type="text" placeholder="Search by name or country…">
+    <input id="searchBox" class="search-box" type="text" placeholder="Search name, country, or status…">
     <button class="mode-toggle" id="modeToggle" title="Toggle dark mode">☀</button>
   </div>
 </div>
@@ -417,9 +416,16 @@ function render(){
     }
     if(codes.size) locationCodes = codes;
   }
+  let statusMatch = null;
+  if(q){
+    for(const [code, label] of Object.entries(STATUS_LABELS)){
+      if(label.toLowerCase().includes(q) || code.toLowerCase() === q) { statusMatch = code; break; }
+    }
+  }
   const filtered = BIRDS.filter(b=>{
     if(!q) return true;
     if(b.common.toLowerCase().includes(q) || b.sci.toLowerCase().includes(q)) return true;
+    if(statusMatch && b.status === statusMatch) return true;
     if(locationCodes){
       const range = RANGES[b.wiki];
       if(range) return range.some(c => locationCodes.has(c));
