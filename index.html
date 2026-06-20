@@ -245,7 +245,7 @@
 <body class="view-spectrum">
 
 <div class="toolbar">
-  <div class="wordmark">birds<span>.</span>gallery</div>
+  <div class="wordmark" id="wordmark" style="cursor:pointer">birds<span>.</span>gallery</div>
   <div class="sort-group" id="sortGroup">
     <button class="sort-btn active" data-key="length_cm">Size</button>
     <button class="sort-btn" data-key="wingspan_cm">Wingspan</button>
@@ -835,6 +835,23 @@ document.getElementById("viewToggle").addEventListener("click", (e)=>{
   detailPanel.style.display = "none";
   specHint.style.display = "";
   specHint.textContent = defaultHint;
+});
+
+document.getElementById("wordmark").addEventListener("click", ()=>{
+  currentKey = "length_cm";
+  sortDir = -1;
+  searchQuery = "";
+  selectedBird = null;
+  document.getElementById("searchBox").value = "";
+  document.getElementById("dirToggle").textContent = "↓";
+  document.querySelectorAll(".sort-btn").forEach(b=>b.classList.toggle("active", b.dataset.key==="length_cm"));
+  currentView = "spectrum";
+  document.querySelectorAll(".view-btn").forEach(b=>b.classList.toggle("active", b.dataset.view==="spectrum"));
+  document.body.classList.add("view-spectrum");
+  detailPanel.style.display = "none";
+  specHint.style.display = "";
+  specHint.textContent = defaultHint;
+  render();
 });
 
 document.getElementById("sortGroup").addEventListener("click", (e)=>{
