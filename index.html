@@ -247,8 +247,8 @@
 <div class="toolbar">
   <div class="wordmark">birds<span>.</span>gallery</div>
   <div class="sort-group" id="sortGroup">
-    <button class="sort-btn" data-key="length_cm">Size</button>
-    <button class="sort-btn active" data-key="wingspan_cm">Wingspan</button>
+    <button class="sort-btn active" data-key="length_cm">Size</button>
+    <button class="sort-btn" data-key="wingspan_cm">Wingspan</button>
     <button class="dir-btn" id="dirToggle" title="Reverse sort order">↓</button>
   </div>
   <div class="controls">
@@ -286,7 +286,7 @@ let FACTS = {};
 let RANGES = {};
 let countryToCode = {};
 
-let currentKey = "wingspan_cm";
+let currentKey = "length_cm";
 let sortDir = -1; // -1 = biggest/most first, 1 = smallest/least first
 let searchQuery = "";
 const feed = document.getElementById("feed");
