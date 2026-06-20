@@ -139,6 +139,7 @@
     pointer-events:none;
   }
   .tick.near{background:var(--accent); height:24px; width:3px;}
+  .tick.selected{background:var(--accent); height:28px; width:4px; z-index:1;}
   .spectrum-hint{
     width:min(880px, 100%); margin:0 auto; padding:0 20px; box-sizing:border-box;
     font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft); text-align:center; opacity:.7;
@@ -151,6 +152,7 @@
   body.view-spectrum .spectrum-track{height:64px;}
   body.view-spectrum .tick{height:30px; width:3px;}
   body.view-spectrum .tick.near{height:50px; width:5px;}
+  body.view-spectrum .tick.selected{height:58px; width:5px;}
   body.view-spectrum .spectrum-label{font-size:13px; width:110px;}
   body.view-spectrum .spectrum-hint{font-size:13px; margin-top:4px;}
   body.view-spectrum .intro,
@@ -690,6 +692,14 @@ const detailPanel = document.getElementById("detailPanel");
 function showDetail(bird, idx){
   selectedBird = bird;
   showPreviewImage(bird);
+  document.querySelectorAll(".tick.selected").forEach(t=>t.classList.remove("selected"));
+  const sv = sortVal(currentKey, bird);
+  if(sv !== null){
+    const pct = scalePos(currentKey, sv, currentRange)*100;
+    document.querySelectorAll("#specTicks .tick").forEach(t=>{
+      if(Math.abs(parseFloat(t.style.left)-pct) < 0.05) t.classList.add("selected");
+    });
+  }
   detailPanel.innerHTML = `
     <div class="card detail-card" id="card-detail">
       <div class="info">
