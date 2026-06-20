@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<title>birds.gallery — a visual bird encyclopedia</title>
+<meta name="description" content="Every bird species, sorted by size, wingspan, and population. Images and data from Wikipedia.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2F2F0;
+    --ink:#111114;
+    --ink-soft:#6B6B6F;
+    --rule:#D8D8D6;
+    --accent:#0E9F76;
+    --card-bg:#FFFFFF;
+    --bar-track:#E3E3E1;
+  }
+  html.dark{
+    --paper:#101113;
+    --ink:#EDEDED;
+    --ink-soft:#8C8C90;
+    --rule:#2A2C30;
+    --accent:#5CF0C2;
+    --card-bg:#17181B;
+    --bar-track:#222327;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    transition:background .3s ease, color .3s ease;
+  }
+  .toolbar{
+    position:sticky; top:0; z-index:50;
+    display:grid; grid-template-columns:1fr auto 1fr; align-items:center;
+    gap:16px;
+    padding:14px 28px;
+    background:color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--rule);
+  }
+  .wordmark{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:0.02em;
+    text-transform:uppercase;
+    justify-self:start;
+  }
+  .wordmark span{color:var(--accent);}
+  .sort-group{justify-self:center; display:flex; border:1px solid var(--rule);}
+  .sort-btn, .dir-btn{
+    appearance:none; border:none; border-right:1px solid var(--rule); background:transparent; color:var(--ink-soft);
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+    padding:9px 16px; cursor:pointer; transition:all .15s ease;
+  }
+  .sort-btn:last-child, .dir-btn:last-child{border-right:none;}
+  .sort-btn.active{background:var(--accent); color:#0A0A0A;}
+  .sort-btn:hover:not(.active){color:var(--ink);}
+  .dir-btn{font-size:13px; color:var(--accent); padding:9px 14px;}
+  .dir-btn:hover{background:var(--accent); color:#0A0A0A;}
+  .controls{justify-self:end; display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+  .mode-toggle{
+    appearance:none; border:1px solid var(--rule); background:transparent; color:var(--ink-soft);
+    width:34px; height:34px; border-radius:50%; cursor:pointer; font-size:15px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .mode-toggle:hover{border-color:var(--accent); color:var(--accent);}
+  .view-toggle{display:flex; border:1px solid var(--rule);}
+  .view-btn{
+    appearance:none; border:none; border-right:1px solid var(--rule); background:transparent; color:var(--ink-soft);
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+    padding:8px 13px; cursor:pointer; transition:all .15s ease;
+  }
+  .view-btn:last-child{border-right:none;}
+  .view-btn.active{background:var(--accent); color:#0A0A0A;}
+  .view-btn:hover:not(.active){color:var(--ink);}
+  .search-box{
+    font-family:'IBM Plex Sans', sans-serif; font-size:13px;
+    border:1px solid var(--rule); background:transparent; color:var(--ink);
+    padding:8px 14px; width:160px; outline:none; transition:width .2s ease, border-color .2s ease;
+  }
+  .search-box:focus{width:210px; border-color:var(--accent);}
+  .search-box::placeholder{color:var(--ink-soft);}
+  .audio-btn{
+    appearance:none; border:1px solid var(--rule); background:transparent; color:var(--accent);
+    width:28px; height:28px; cursor:pointer; font-size:12px; flex:none;
+    display:flex; align-items:center; justify-content:center; margin-top:8px;
+  }
+  .audio-btn:hover{background:var(--accent); color:#0A0A0A;}
+  .audio-btn.playing{background:var(--accent); color:#0A0A0A;}
+  .audio-credit{
+    font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft);
+    text-decoration:none; margin-top:8px; border-bottom:1px dotted var(--ink-soft);
+  }
+  .audio-credit:hover{color:var(--accent); border-color:var(--accent);}
+  .wiki-row{display:flex; align-items:center; gap:12px;}
+  .empty-state{padding:60px 20px; text-align:center; color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; font-size:12px;}
+
+  .feed{max-width:880px; margin:0 auto; padding:8px 20px 120px;}
+
+  .spectrum-stage{
+    display:none;
+    flex-direction:column; align-items:center; gap:14px;
+    transition:min-height .25s ease;
+  }
+  .spectrum-preview{
+    display:none; width:120px; height:120px; border:1px solid var(--rule); background:var(--card-bg);
+    align-items:center; justify-content:center; overflow:hidden;
+  }
+  .spectrum-preview img{width:100%; height:100%; object-fit:cover; filter:grayscale(.15) contrast(1.05);}
+  .spectrum-preview .ph{font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft);}
+  .spectrum-wrap{
+    width:min(880px, 100%); margin:0 auto; padding:0 20px; box-sizing:border-box;
+    display:grid; grid-template-columns:auto 1fr auto; align-items:center; gap:14px;
+  }
+  .spectrum-label{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); white-space:nowrap; width:90px;}
+  .spectrum-label:last-child{text-align:right;}
+  #specMinLabel{grid-column:1; grid-row:1;}
+  #specTrack{grid-column:2; grid-row:1;}
+  #specMaxLabel{grid-column:3; grid-row:1;}
+  #detailPanel{grid-column:2; grid-row:2; width:100%; justify-self:stretch; box-sizing:border-box;}
+  .spectrum-track{
+    position:relative; height:34px; cursor:pointer;
+    border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+  }
+  .spectrum-track::before{
+    content:""; position:absolute; left:0; right:0; top:50%; height:2px; background:var(--rule);
+  }
+  .spectrum-ticks{position:absolute; inset:0;}
+  .tick{
+    position:absolute; top:50%; width:2px; height:16px;
+    background:color-mix(in srgb, var(--accent) 45%, var(--ink-soft));
+    transform:translate(-50%,-50%); transition:background .15s ease, height .15s ease, width .15s ease;
+    pointer-events:none;
+  }
+  .tick.near{background:var(--accent); height:24px; width:3px;}
+  .spectrum-hint{
+    width:min(880px, 100%); margin:0 auto; padding:0 20px; box-sizing:border-box;
+    font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft); text-align:center; opacity:.7;
+  }
+
+  /* Spectrum view: stage becomes the centerpiece of the page */
+  body.view-spectrum .spectrum-stage{display:flex; min-height:62vh; justify-content:center; margin:0 auto; padding:24px 0;}
+  body.view-spectrum .spectrum-preview{display:flex; width:360px; height:360px;}
+  body.view-spectrum .spectrum-wrap{width:min(1000px, 92vw);}
+  body.view-spectrum .spectrum-track{height:64px;}
+  body.view-spectrum .tick{height:30px; width:3px;}
+  body.view-spectrum .tick.near{height:50px; width:5px;}
+  body.view-spectrum .spectrum-label{font-size:13px; width:110px;}
+  body.view-spectrum .spectrum-hint{font-size:13px; margin-top:4px;}
+  body.view-spectrum .intro,
+  body.view-spectrum .feed{display:none;}
+
+  .detail-panel{margin-top:18px;}
+  .detail-panel .card{border-bottom:none; padding-top:0;}
+  .card.detail-card{grid-template-columns:1fr;}
+  .detail-body{display:grid; grid-template-columns:1fr 240px; gap:28px; align-items:start; box-sizing:border-box;}
+  .detail-main{display:flex; flex-direction:column; gap:10px;}
+  .detail-body .extract{max-width:none;}
+  .detail-side{display:flex; flex-direction:column; gap:14px; width:240px;}
+  .detail-side .specs{max-width:none;}
+
+  .intro{max-width:880px; margin:32px auto 8px; padding:0 20px;}
+  .intro h1{font-family:'Space Grotesk', sans-serif; font-weight:700; font-size:clamp(28px,4vw,42px); margin:0 0 12px; line-height:1.15;}
+  .intro p{font-size:14px; color:var(--ink-soft); max-width:54ch; line-height:1.6; margin:0;}
+
+  .card{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:24px;
+    padding:32px 0;
+    border-bottom:1px solid var(--rule);
+    align-items:start;
+    cursor:pointer;
+  }
+  .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:6px;}
+  .imgwrap{
+    background:var(--card-bg);
+    border:1px solid var(--rule);
+    aspect-ratio:1/1;
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden;
+    position:relative;
+    transition:border-color .15s ease;
+  }
+  .card:hover .imgwrap{border-color:var(--accent);}
+  .card.flash .imgwrap{border-color:var(--accent); box-shadow:0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent);}
+  .imgwrap img{
+    width:100%; height:100%; object-fit:cover;
+    filter:grayscale(.15) contrast(1.05);
+  }
+  .imgwrap .ph{
+    font-family:'IBM Plex Mono', monospace; font-size:10px; color:var(--ink-soft);
+  }
+  .info{display:flex; flex-direction:column; gap:10px; padding-top:2px;}
+  .name-row{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
+  .common-name{font-family:'Space Grotesk', sans-serif; font-weight:500; font-size:24px;}
+  .sci-name{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft);}
+  .extract{font-size:13px; color:var(--ink-soft); line-height:1.55; max-width:60ch;}
+  .specs{display:flex; flex-direction:column; gap:8px; margin-top:6px; max-width:380px;}
+  .spec-row{display:grid; grid-template-columns:88px 1fr auto; align-items:center; gap:10px;}
+  .spec-label{font-family:'IBM Plex Mono', monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft);}
+  .spec-bar{height:3px; background:var(--bar-track);}
+  .spec-bar i{display:block; height:100%; background:var(--accent);}
+  .spec-val{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); white-space:nowrap;}
+  .note{
+    max-width:880px; margin:24px auto 0; padding:14px 20px;
+    font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--ink-soft); line-height:1.6;
+    border-left:2px solid var(--rule);
+  }
+
+  @media (max-width:700px){
+    .toolbar{grid-template-columns:1fr; justify-items:center; gap:10px; padding:14px 18px;}
+    .wordmark, .sort-group, .controls{justify-self:center;}
+    .card{grid-template-columns:1fr; gap:14px;}
+    .imgwrap{aspect-ratio:16/10;}
+    .detail-body{grid-template-columns:1fr;}
+    .detail-side{width:100%;}
+  }
+</style>
+</head>
+<body class="view-spectrum">
+
+<div class="toolbar">
+  <div class="wordmark">birds<span>.</span>gallery</div>
+  <div class="sort-group" id="sortGroup">
+    <button class="sort-btn active" data-key="length_cm">Size</button>
+    <button class="sort-btn" data-key="wingspan_cm">Wingspan</button>
+    <button class="sort-btn" data-key="population">Population</button>
+    <button class="dir-btn" id="dirToggle" title="Reverse sort order">↓</button>
+  </div>
+  <div class="controls">
+    <div class="view-toggle" id="viewToggle">
+      <button class="view-btn" data-view="list">List</button>
+      <button class="view-btn active" data-view="spectrum">Spectrum</button>
+    </div>
+    <input id="searchBox" class="search-box" type="text" placeholder="Search by name…">
+    <button class="mode-toggle" id="modeToggle" title="Toggle dark mode">☀</button>
+  </div>
+</div>
+
+<div class="spectrum-stage" id="spectrumStage">
+  <div class="spectrum-preview" id="specPreview"></div>
+  <div class="spectrum-wrap">
+    <span class="spectrum-label" id="specMinLabel">—</span>
+    <div class="spectrum-track" id="specTrack">
+      <div class="spectrum-ticks" id="specTicks"></div>
+    </div>
+    <span class="spectrum-label" id="specMaxLabel">—</span>
+    <div class="detail-panel" id="detailPanel" style="display:none"></div>
+  </div>
+  <div class="spectrum-hint" id="specHint">scrub the line to jump to any bird in that range</div>
+</div>
+
+<div class="intro">
+  <h1>Birds — Biggest to Smallest</h1>
+  <p>All birds that exist. Sort by size, wingspan, or population — tap any bird to read more.</p>
+</div>
+<div class="feed" id="feed"></div>
+
+<script>
+const BIRDS = [
+  {wiki:"Bee hummingbird", common:"Bee Hummingbird", sci:"Mellisuga helenae", length_cm:5.5, wingspan_cm:6, population:null},
+  {wiki:"European robin", common:"European Robin", sci:"Erithacus rubecula", length_cm:14, wingspan_cm:21, population:310000000},
+  {wiki:"House sparrow", common:"House Sparrow", sci:"Passer domesticus", length_cm:16, wingspan_cm:25, population:1600000000},
+  {wiki:"Common kingfisher", common:"Common Kingfisher", sci:"Alcedo atthis", length_cm:18, wingspan_cm:26, population:700000},
+  {wiki:"Atlantic puffin", common:"Atlantic Puffin", sci:"Fratercula arctica", length_cm:30, wingspan_cm:55, population:12000000},
+  {wiki:"Arctic tern", common:"Arctic Tern", sci:"Sterna paradisaea", length_cm:35, wingspan_cm:80, population:2000000},
+  {wiki:"Resplendent quetzal", common:"Resplendent Quetzal", sci:"Pharomachrus mocinno", length_cm:40, wingspan_cm:60, population:50000},
+  {wiki:"Peregrine falcon", common:"Peregrine Falcon", sci:"Falco peregrinus", length_cm:45, wingspan_cm:110, population:140000},
+  {wiki:"Snowy owl", common:"Snowy Owl", sci:"Bubo scandiacus", length_cm:65, wingspan_cm:150, population:28000},
+  {wiki:"Toco toucan", common:"Toco Toucan", sci:"Ramphastos toco", length_cm:65, wingspan_cm:55, population:500000},
+  {wiki:"Kakapo", common:"Kākāpō", sci:"Strigops habroptilus", length_cm:60, wingspan_cm:null, population:250},
+  {wiki:"Bald eagle", common:"Bald Eagle", sci:"Haliaeetus leucocephalus", length_cm:80, wingspan_cm:220, population:316000},
+  {wiki:"Golden eagle", common:"Golden Eagle", sci:"Aquila chrysaetos", length_cm:85, wingspan_cm:220, population:300000},
+  {wiki:"Scarlet macaw", common:"Scarlet Macaw", sci:"Ara macao", length_cm:90, wingspan_cm:110, population:30000},
+  {wiki:"Wandering albatross", common:"Wandering Albatross", sci:"Diomedea exulans", length_cm:115, wingspan_cm:310, population:20000},
+  {wiki:"Emperor penguin", common:"Emperor Penguin", sci:"Aptenodytes forsteri", length_cm:115, wingspan_cm:null, population:595000},
+  {wiki:"Shoebill", common:"Shoebill", sci:"Balaeniceps rex", length_cm:120, wingspan_cm:230, population:5300},
+  {wiki:"California condor", common:"California Condor", sci:"Gymnogyps californianus", length_cm:120, wingspan_cm:300, population:560},
+  {wiki:"Andean condor", common:"Andean Condor", sci:"Vultur gryphus", length_cm:130, wingspan_cm:320, population:6700},
+  {wiki:"Secretarybird", common:"Secretarybird", sci:"Sagittarius serpentarius", length_cm:130, wingspan_cm:200, population:25000},
+  {wiki:"Greater flamingo", common:"Greater Flamingo", sci:"Phoenicopterus roseus", length_cm:140, wingspan_cm:150, population:600000},
+  {wiki:"Mute swan", common:"Mute Swan", sci:"Cygnus olor", length_cm:150, wingspan_cm:220, population:600000},
+  {wiki:"Mallard", common:"Mallard", sci:"Anas platyrhynchos", length_cm:55, wingspan_cm:90, population:19000000},
+  {wiki:"Canada goose", common:"Canada Goose", sci:"Branta canadensis", length_cm:110, wingspan_cm:175, population:5000000},
+  {wiki:"American robin", common:"American Robin", sci:"Turdus migratorius", length_cm:25, wingspan_cm:36, population:370000000},
+  {wiki:"Northern cardinal", common:"Northern Cardinal", sci:"Cardinalis cardinalis", length_cm:21, wingspan_cm:30, population:120000000},
+  {wiki:"Blue jay", common:"Blue Jay", sci:"Cyanocitta cristata", length_cm:28, wingspan_cm:43, population:17000000},
+  {wiki:"Great blue heron", common:"Great Blue Heron", sci:"Ardea herodias", length_cm:130, wingspan_cm:195, population:1400000},
+  {wiki:"Indian peafowl", common:"Indian Peafowl", sci:"Pavo cristatus", length_cm:115, wingspan_cm:150, population:null},
+  {wiki:"Wild turkey", common:"Wild Turkey", sci:"Meleagris gallopavo", length_cm:110, wingspan_cm:125, population:6000000},
+  {wiki:"Red-tailed hawk", common:"Red-tailed Hawk", sci:"Buteo jamaicensis", length_cm:56, wingspan_cm:130, population:2000000},
+  {wiki:"Turkey vulture", common:"Turkey Vulture", sci:"Cathartes aura", length_cm:75, wingspan_cm:180, population:18000000},
+  {wiki:"White stork", common:"White Stork", sci:"Ciconia ciconia", length_cm:115, wingspan_cm:200, population:600000},
+  {wiki:"Eurasian magpie", common:"Eurasian Magpie", sci:"Pica pica", length_cm:46, wingspan_cm:60, population:40000000},
+  {wiki:"Common raven", common:"Common Raven", sci:"Corvus corax", length_cm:63, wingspan_cm:130, population:20000000},
+  {wiki:"American crow", common:"American Crow", sci:"Corvus brachyrhynchos", length_cm:45, wingspan_cm:92, population:27000000},
+  {wiki:"Rock dove", common:"Rock Pigeon", sci:"Columba livia", length_cm:33, wingspan_cm:65, population:260000000},
+  {wiki:"Barn swallow", common:"Barn Swallow", sci:"Hirundo rustica", length_cm:18, wingspan_cm:33, population:190000000},
+  {wiki:"Pileated woodpecker", common:"Pileated Woodpecker", sci:"Dryocopus pileatus", length_cm:48, wingspan_cm:75, population:2600000},
+  {wiki:"Common ostrich", common:"Common Ostrich", sci:"Struthio camelus", length_cm:230, wingspan_cm:null, population:150000},
+];
+
+let currentKey = "length_cm";
+let sortDir = -1; // -1 = biggest/most first, 1 = smallest/least first
+let searchQuery = "";
+const feed = document.getElementById("feed");
+const cache = {};
+
+const SORT_LABELS = {
+  length_cm: "Size",
+  wingspan_cm: "Wingspan",
+  population: "Population",
+};
+const DIR_LABELS = {
+  length_cm: ["Smallest to Biggest", "Biggest to Smallest"],
+  wingspan_cm: ["Narrowest to Widest", "Widest to Narrowest"],
+  population: ["Fewest to Most", "Most to Fewest"],
+};
+
+function updateTitle(){
+  const dirIdx = sortDir === -1 ? 1 : 0;
+  const label = `Birds — ${DIR_LABELS[currentKey][dirIdx]}`;
+  document.title = `${label} · birds.gallery`;
+  const h1 = document.querySelector(".intro h1");
+  if(h1) h1.textContent = label;
+}
+
+function fmtNum(n){
+  if(n===null || n===undefined) return "—";
+  if(n>=1000000) return (n/1000000).toFixed(n%1000000===0?0:1)+"M";
+  if(n>=1000) return (n/1000).toFixed(n%1000===0?0:1)+"K";
+  return String(n);
+}
+function fmtVal(key, v){
+  if(v===null || v===undefined) return "no data";
+  if(key==="length_cm") return v + " cm";
+  if(key==="wingspan_cm") return v + " cm";
+  if(key==="population") return "~" + fmtNum(v);
+}
+
+function specRowsHtml(bird){
+  const lengthPct = bird.length_cm ? Math.min(100,(bird.length_cm/230)*100) : 0;
+  const wingPct = bird.wingspan_cm ? Math.min(100,(bird.wingspan_cm/320)*100) : 0;
+  const popPct = bird.population ? Math.min(100,(Math.log10(bird.population)/9.3)*100) : 0;
+  return `
+    <div class="spec-row">
+      <div class="spec-label">Length</div>
+      <div class="spec-bar"><i style="width:${lengthPct}%"></i></div>
+      <div class="spec-val">${fmtVal('length_cm', bird.length_cm)}</div>
+    </div>
+    <div class="spec-row">
+      <div class="spec-label">Wingspan</div>
+      <div class="spec-bar"><i style="width:${wingPct}%"></i></div>
+      <div class="spec-val">${fmtVal('wingspan_cm', bird.wingspan_cm)}</div>
+    </div>
+    <div class="spec-row">
+      <div class="spec-label">Population</div>
+      <div class="spec-bar"><i style="width:${popPct}%"></i></div>
+      <div class="spec-val">${fmtVal('population', bird.population)}</div>
+    </div>
+  `;
+}
+
+let currentRange = {min:0, max:1};
+
+function getRange(birds, key){
+  const vals = birds.map(b=>b[key]).filter(v=>v!==null && v!==undefined);
+  return {min: Math.min(...vals), max: Math.max(...vals)};
+}
+function scalePos(key, value, range){
+  if(key === "population"){
+    const lo = Math.log10(range.min || 1), hi = Math.log10(range.max);
+    return hi===lo ? 0.5 : (Math.log10(value||1)-lo)/(hi-lo);
+  }
+  return range.max===range.min ? 0.5 : (value-range.min)/(range.max-range.min);
+}
+function unscalePos(key, pos, range){
+  if(key === "population"){
+    const lo = Math.log10(range.min || 1), hi = Math.log10(range.max);
+    return Math.pow(10, lo + pos*(hi-lo));
+  }
+  return range.min + pos*(range.max-range.min);
+}
+
+function renderSpectrum(birds){
+  currentRange = getRange(birds, currentKey);
+  document.getElementById("specMinLabel").textContent = fmtVal(currentKey, currentRange.min);
+  document.getElementById("specMaxLabel").textContent = fmtVal(currentKey, currentRange.max);
+  const ticksEl = document.getElementById("specTicks");
+  ticksEl.innerHTML = birds
+    .filter(b => b[currentKey]!==null && b[currentKey]!==undefined)
+    .map(b => `<div class="tick" style="left:${(scalePos(currentKey, b[currentKey], currentRange)*100).toFixed(2)}%"></div>`)
+    .join("");
+}
+
+function render(){
+  updateTitle();
+
+  const filtered = BIRDS.filter(b=>{
+    if(!searchQuery) return true;
+    const q = searchQuery.toLowerCase();
+    return b.common.toLowerCase().includes(q) || b.sci.toLowerCase().includes(q);
+  });
+
+  const sorted = [...filtered].sort((a,b)=>{
+    const av = a[currentKey], bv = b[currentKey];
+    if(av===null && bv===null) return 0;
+    if(av===null) return 1;
+    if(bv===null) return -1;
+    return sortDir===-1 ? bv-av : av-bv;
+  });
+  sortedCache = sorted;
+  renderSpectrum(sorted);
+
+  feed.innerHTML = "";
+
+  if(sorted.length===0){
+    feed.innerHTML = `<div class="empty-state">No birds matching "${searchQuery}" — yet. Try another name.</div>`;
+    document.getElementById("specTicks").innerHTML = "";
+    return;
+  }
+  sorted.forEach((bird, i)=>{
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="imgwrap" id="img-${i}"><span class="ph">loading…</span></div>
+      <div class="info">
+        <div class="eyebrow">Species No. ${String(i+1).padStart(3,"0")}</div>
+        <div class="name-row">
+          <div class="common-name">${bird.common}</div>
+          <div class="sci-name">${bird.sci}</div>
+        </div>
+        <div class="extract" id="extract-${i}"></div>
+        <div class="specs">${specRowsHtml(bird)}</div>
+        <div class="wiki-row">
+          <button class="audio-btn" id="audio-${i}" style="display:none" title="Play call/song">▶</button>
+          <a class="audio-credit" id="credit-${i}" style="display:none" target="_blank" rel="noopener"></a>
+        </div>
+      </div>
+    `;
+    card.addEventListener("click", (e)=>{
+      if(e.target.closest(".audio-btn") || e.target.closest(".audio-credit")) return;
+      const href = card.dataset.wikiHref;
+      if(href) window.open(href, "_blank", "noopener");
+    });
+    feed.appendChild(card);
+    observer.observe(card);
+    card.dataset.index = i;
+    card.id = `card-${i}`;
+  });
+}
+
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const i = entry.target.dataset.index;
+      const bird = sortedCache[i];
+      if(bird && !bird._loaded){
+        bird._loaded = true;
+        loadWiki(bird, i);
+        loadAudio(bird, i);
+      }
+      observer.unobserve(entry.target);
+    }
+  });
+}, {rootMargin: "400px 0px"});
+
+let sortedCache = [];
+
+async function fetchWikiSummary(bird){
+  if(!(bird.wiki in cache)){
+    try{
+      const res = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(bird.wiki)}`);
+      cache[bird.wiki] = await res.json();
+    } catch(e){
+      cache[bird.wiki] = null;
+    }
+  }
+  return cache[bird.wiki];
+}
+
+async function loadWiki(bird, i){
+  const imgEl = document.getElementById(`img-${i}`);
+  const cardEl = document.getElementById(`card-${i}`);
+  const extractEl = document.getElementById(`extract-${i}`);
+  const data = await fetchWikiSummary(bird);
+  if(!data){
+    if(imgEl) imgEl.innerHTML = `<span class="ph">fetch failed</span>`;
+    return;
+  }
+  if(imgEl){
+    if(data.thumbnail && data.thumbnail.source){
+      imgEl.innerHTML = `<img src="${data.thumbnail.source.replace(/\/\d+px-/, '/500px-')}" alt="${bird.common}" loading="lazy">`;
+    } else {
+      imgEl.innerHTML = `<span class="ph">no image</span>`;
+    }
+  }
+  if(data.content_urls && data.content_urls.desktop && cardEl){
+    cardEl.dataset.wikiHref = data.content_urls.desktop.page;
+  }
+  if(data.extract && extractEl){
+    extractEl.textContent = data.extract.length > 180 ? data.extract.slice(0,177)+"…" : data.extract;
+  }
+}
+
+let previewToken = 0;
+async function showPreviewImage(bird){
+  const token = ++previewToken;
+  const previewEl = document.getElementById("specPreview");
+  if(!previewEl) return;
+  previewEl.innerHTML = `<span class="ph">···</span>`;
+  const data = await fetchWikiSummary(bird);
+  if(token !== previewToken) return; // a newer hover happened — drop this stale result
+  if(data && data.thumbnail && data.thumbnail.source){
+    previewEl.innerHTML = `<img src="${data.thumbnail.source.replace(/\/\d+px-/, '/300px-')}" alt="${bird.common}">`;
+  } else {
+    previewEl.innerHTML = `<span class="ph">no image</span>`;
+  }
+}
+
+let currentlyPlaying = null;
+
+function stripHtml(s){
+  return s.replace(/<[^>]+>/g, "").trim();
+}
+
+async function loadAudio(bird, i){
+  try {
+    const pageRes = await fetch(`https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(bird.wiki)}&prop=pageprops&format=json&origin=*`);
+    const pageData = await pageRes.json();
+    const page = Object.values(pageData.query.pages)[0];
+    const qid = page.pageprops && page.pageprops.wikibase_item;
+    if(!qid) return;
+
+    const claimsRes = await fetch(`https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=${qid}&property=P51&format=json&origin=*`);
+    const claimsData = await claimsRes.json();
+    const claims = claimsData.claims && claimsData.claims.P51;
+    if(!claims || !claims.length) return; // no recording on Wikidata for this species
+
+    const filename = claims[0].mainsnak.datavalue.value;
+    const fileUrl = `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(filename)}`;
+    const filePageUrl = `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(filename)}`;
+    const btn = document.getElementById(`audio-${i}`);
+    const creditEl = document.getElementById(`credit-${i}`);
+    if(!btn) return;
+
+    // Fetch attribution — Commons audio is almost always CC-licensed and
+    // requires crediting the recordist (often sourced from xeno-canto).
+    let creditText = "recording credit";
+    try{
+      const attrRes = await fetch(`https://commons.wikimedia.org/w/api.php?action=query&titles=${encodeURIComponent('File:'+filename)}&prop=imageinfo&iiprop=extmetadata&format=json&origin=*`);
+      const attrData = await attrRes.json();
+      const attrPage = Object.values(attrData.query.pages)[0];
+      const meta = (attrPage.imageinfo && attrPage.imageinfo[0] && attrPage.imageinfo[0].extmetadata) || {};
+      const artist = stripHtml(meta.Artist && meta.Artist.value || "");
+      const license = (meta.LicenseShortName && meta.LicenseShortName.value) || "";
+      if(artist) creditText = `recording: ${artist}${license ? " · " + license : ""}`;
+    } catch(e){ /* attribution lookup failed — still play, just less credit detail */ }
+
+    if(creditEl){
+      creditEl.textContent = creditText;
+      creditEl.href = filePageUrl;
+      creditEl.style.display = "inline";
+    }
+
+    const audio = new Audio(fileUrl);
+    btn.style.display = "flex";
+    btn.addEventListener("click", ()=>{
+      if(currentlyPlaying && currentlyPlaying.audio !== audio){
+        currentlyPlaying.audio.pause();
+        currentlyPlaying.btn.classList.remove("playing");
+        currentlyPlaying.btn.textContent = "▶";
+      }
+      if(audio.paused){
+        audio.play();
+        btn.classList.add("playing");
+        btn.textContent = "❚❚";
+        currentlyPlaying = {audio, btn};
+      } else {
+        audio.pause();
+        btn.classList.remove("playing");
+        btn.textContent = "▶";
+        currentlyPlaying = null;
+      }
+    });
+    audio.addEventListener("ended", ()=>{
+      btn.classList.remove("playing");
+      btn.textContent = "▶";
+      currentlyPlaying = null;
+    });
+  } catch(e){
+    // no recording available — button just stays hidden
+  }
+}
+
+let currentView = "spectrum";
+const detailPanel = document.getElementById("detailPanel");
+
+function showDetail(bird, idx){
+  showPreviewImage(bird); // pin the image above the line to this selection
+  detailPanel.innerHTML = `
+    <div class="card detail-card" id="card-detail">
+      <div class="info">
+        <div class="detail-body">
+          <div class="detail-main">
+            <div class="eyebrow">Species No. ${String(idx+1).padStart(3,"0")}</div>
+            <div class="name-row">
+              <div class="common-name">${bird.common}</div>
+              <div class="sci-name">${bird.sci}</div>
+            </div>
+            <div class="extract" id="extract-detail"></div>
+          </div>
+          <div class="detail-side">
+            <div class="specs">${specRowsHtml(bird)}</div>
+            <div class="wiki-row">
+              <button class="audio-btn" id="audio-detail" style="display:none" title="Play call/song">▶</button>
+              <a class="audio-credit" id="credit-detail" style="display:none" target="_blank" rel="noopener"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  specHint.style.display = "none";
+  detailPanel.style.display = "block";
+  const detailCard = document.getElementById("card-detail");
+  detailCard.addEventListener("click", (e)=>{
+    if(e.target.closest(".audio-btn") || e.target.closest(".audio-credit")) return;
+    const href = detailCard.dataset.wikiHref;
+    if(href) window.open(href, "_blank", "noopener");
+  });
+  loadWiki(bird, "detail");
+  loadAudio(bird, "detail");
+}
+
+const specTrack = document.getElementById("specTrack");
+const specHint = document.getElementById("specHint");
+const defaultHint = specHint.textContent;
+
+function nearestBirdIndex(targetVal){
+  let nearest = null, nearestDiff = Infinity;
+  sortedCache.forEach((b, idx)=>{
+    if(b[currentKey]===null || b[currentKey]===undefined) return;
+    const diff = Math.abs(b[currentKey]-targetVal);
+    if(diff < nearestDiff){ nearestDiff = diff; nearest = idx; }
+  });
+  return nearest;
+}
+
+function posFromEvent(e){
+  const rect = specTrack.getBoundingClientRect();
+  const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+  return Math.min(1, Math.max(0, (clientX-rect.left)/rect.width));
+}
+
+let lastHoverIdx = null;
+
+function scrubAt(e){
+  const pos = posFromEvent(e);
+  const targetVal = unscalePos(currentKey, pos, currentRange);
+  const idx = nearestBirdIndex(targetVal);
+  if(idx===null) return;
+  document.querySelectorAll(".tick.near").forEach(t=>t.classList.remove("near"));
+  const ticks = document.querySelectorAll("#specTicks .tick");
+  const bird = sortedCache[idx];
+  const tickPct = scalePos(currentKey, bird[currentKey], currentRange)*100;
+  ticks.forEach(t=>{
+    if(Math.abs(parseFloat(t.style.left)-tickPct) < 0.05) t.classList.add("near");
+  });
+  specHint.textContent = `${bird.common} — ${fmtVal(currentKey, bird[currentKey])}`;
+  if(idx !== lastHoverIdx){
+    lastHoverIdx = idx;
+    if(currentView === "spectrum") showPreviewImage(bird);
+  }
+}
+
+specTrack.addEventListener("mousemove", scrubAt);
+specTrack.addEventListener("touchmove", scrubAt, {passive:true});
+specTrack.addEventListener("touchstart", scrubAt, {passive:true});
+
+specTrack.addEventListener("mouseleave", ()=>{
+  document.querySelectorAll(".tick.near").forEach(t=>t.classList.remove("near"));
+  specHint.textContent = defaultHint;
+  lastHoverIdx = null;
+});
+
+specTrack.addEventListener("click", (e)=>{
+  const pos = posFromEvent(e);
+  const targetVal = unscalePos(currentKey, pos, currentRange);
+  const idx = nearestBirdIndex(targetVal);
+  if(idx===null) return;
+  if(currentView === "spectrum"){
+    showDetail(sortedCache[idx], idx);
+  } else {
+    const card = document.getElementById(`card-${idx}`);
+    if(!card) return;
+    card.scrollIntoView({behavior:"smooth", block:"center"});
+    card.classList.add("flash");
+    setTimeout(()=>card.classList.remove("flash"), 1400);
+  }
+});
+
+document.getElementById("viewToggle").addEventListener("click", (e)=>{
+  const btn = e.target.closest(".view-btn");
+  if(!btn) return;
+  currentView = btn.dataset.view;
+  document.querySelectorAll(".view-btn").forEach(b=>b.classList.toggle("active", b===btn));
+  document.body.classList.toggle("view-spectrum", currentView === "spectrum");
+  detailPanel.style.display = "none";
+  specHint.style.display = "";
+  specHint.textContent = defaultHint;
+});
+
+document.getElementById("sortGroup").addEventListener("click", (e)=>{
+  const btn = e.target.closest(".sort-btn");
+  if(!btn) return;
+  currentKey = btn.dataset.key;
+  document.querySelectorAll(".sort-btn").forEach(b=>b.classList.toggle("active", b===btn));
+  render();
+});
+
+document.getElementById("dirToggle").addEventListener("click", ()=>{
+  sortDir *= -1;
+  document.getElementById("dirToggle").textContent = sortDir === -1 ? "↓" : "↑";
+  render();
+});
+
+let searchDebounce;
+document.getElementById("searchBox").addEventListener("input", (e)=>{
+  clearTimeout(searchDebounce);
+  searchDebounce = setTimeout(()=>{
+    searchQuery = e.target.value.trim();
+    render();
+  }, 150);
+});
+
+document.getElementById("modeToggle").addEventListener("click", ()=>{
+  const isDark = document.documentElement.classList.toggle("dark");
+  document.getElementById("modeToggle").textContent = isDark ? "☀" : "☾";
+});
+
+render();
+</script>
+</body>
+</html>
