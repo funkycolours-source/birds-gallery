@@ -419,6 +419,12 @@ function render(){
   sortedCache = sorted;
   renderSpectrum(sorted);
 
+  if(sorted.length && currentView === "spectrum" && !selectedBird){
+    const smallest = sorted.reduce((a,b) => (a.length_cm !== null && (b.length_cm === null || a.length_cm < b.length_cm)) ? a : b);
+    const idx = sorted.indexOf(smallest);
+    showDetail(smallest, idx);
+  }
+
   feed.innerHTML = "";
 
   if(sorted.length===0){
@@ -621,7 +627,8 @@ let currentView = "spectrum";
 const detailPanel = document.getElementById("detailPanel");
 
 function showDetail(bird, idx){
-  showPreviewImage(bird); // pin the image above the line to this selection
+  selectedBird = bird;
+  showPreviewImage(bird);
   detailPanel.innerHTML = `
     <div class="card detail-card" id="card-detail">
       <div class="info">
@@ -678,6 +685,7 @@ function posFromEvent(e){
 }
 
 let lastHoverIdx = null;
+let selectedBird = null;
 
 function scrubAt(e){
   const pos = posFromEvent(e);
@@ -706,6 +714,7 @@ specTrack.addEventListener("mouseleave", ()=>{
   document.querySelectorAll(".tick.near").forEach(t=>t.classList.remove("near"));
   specHint.textContent = defaultHint;
   lastHoverIdx = null;
+  if(selectedBird) showPreviewImage(selectedBird);
 });
 
 specTrack.addEventListener("click", (e)=>{
