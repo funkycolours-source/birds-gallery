@@ -514,7 +514,7 @@ async function loadWiki(bird, i){
   }
   if(imgEl){
     if(data.thumbnail && data.thumbnail.source){
-      imgEl.innerHTML = `<img src="${data.thumbnail.source.replace(/\/\d+px-/, '/500px-')}" alt="${bird.common}" loading="lazy">`;
+      imgEl.innerHTML = `<img src="${data.thumbnail.source}" alt="${bird.common}" loading="lazy">`;
     } else {
       imgEl.innerHTML = `<span class="ph">no image</span>`;
     }
@@ -536,7 +536,7 @@ async function showPreviewImage(bird){
   const data = await fetchWikiSummary(bird);
   if(token !== previewToken) return; // a newer hover happened — drop this stale result
   if(data && data.thumbnail && data.thumbnail.source){
-    previewEl.innerHTML = `<img src="${data.thumbnail.source.replace(/\/\d+px-/, '/300px-')}" alt="${bird.common}">`;
+    previewEl.innerHTML = `<img src="${data.thumbnail.source}" alt="${bird.common}">`;
   } else {
     previewEl.innerHTML = `<span class="ph">no image</span>`;
   }
