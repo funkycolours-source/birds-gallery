@@ -4498,5 +4498,212 @@
     "wingspan_cm": 78.0,
     "status": "LC",
     "family": "Laridae"
+  },
+  {
+    "wiki": "Bee hummingbird",
+    "common": "Bee Hummingbird",
+    "sci": "Mellisuga helenae",
+    "length_cm": 5.5,
+    "wingspan_cm": 6,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "European robin",
+    "common": "European Robin",
+    "sci": "Erithacus rubecula",
+    "length_cm": 14,
+    "wingspan_cm": 21,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "House sparrow",
+    "common": "House Sparrow",
+    "sci": "Passer domesticus",
+    "length_cm": 16,
+    "wingspan_cm": 25,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Common kingfisher",
+    "common": "Common Kingfisher",
+    "sci": "Alcedo atthis",
+    "length_cm": 18,
+    "wingspan_cm": 26,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Atlantic puffin",
+    "common": "Atlantic Puffin",
+    "sci": "Fratercula arctica",
+    "length_cm": 30,
+    "wingspan_cm": 55,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Resplendent quetzal",
+    "common": "Resplendent Quetzal",
+    "sci": "Pharomachrus mocinno",
+    "length_cm": 40,
+    "wingspan_cm": 60,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Snowy owl",
+    "common": "Snowy Owl",
+    "sci": "Bubo scandiacus",
+    "length_cm": 65,
+    "wingspan_cm": 150,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Toco toucan",
+    "common": "Toco Toucan",
+    "sci": "Ramphastos toco",
+    "length_cm": 65,
+    "wingspan_cm": 55,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Kakapo",
+    "common": "Kākāpō",
+    "sci": "Strigops habroptilus",
+    "length_cm": 60,
+    "wingspan_cm": null,
+    "status": "CR",
+    "family": null
+  },
+  {
+    "wiki": "Scarlet macaw",
+    "common": "Scarlet Macaw",
+    "sci": "Ara macao",
+    "length_cm": 90,
+    "wingspan_cm": 110,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Emperor penguin",
+    "common": "Emperor Penguin",
+    "sci": "Aptenodytes forsteri",
+    "length_cm": 115,
+    "wingspan_cm": null,
+    "status": "NT",
+    "family": null
+  },
+  {
+    "wiki": "Shoebill",
+    "common": "Shoebill",
+    "sci": "Balaeniceps rex",
+    "length_cm": 120,
+    "wingspan_cm": 230,
+    "status": "VU",
+    "family": null
+  },
+  {
+    "wiki": "American robin",
+    "common": "American Robin",
+    "sci": "Turdus migratorius",
+    "length_cm": 25,
+    "wingspan_cm": 36,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Northern cardinal",
+    "common": "Northern Cardinal",
+    "sci": "Cardinalis cardinalis",
+    "length_cm": 21,
+    "wingspan_cm": 30,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Blue jay",
+    "common": "Blue Jay",
+    "sci": "Cyanocitta cristata",
+    "length_cm": 28,
+    "wingspan_cm": 43,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Indian peafowl",
+    "common": "Indian Peafowl",
+    "sci": "Pavo cristatus",
+    "length_cm": 115,
+    "wingspan_cm": 150,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Red-tailed hawk",
+    "common": "Red-tailed Hawk",
+    "sci": "Buteo jamaicensis",
+    "length_cm": 56,
+    "wingspan_cm": 130,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Eurasian magpie",
+    "common": "Eurasian Magpie",
+    "sci": "Pica pica",
+    "length_cm": 46,
+    "wingspan_cm": 60,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "American crow",
+    "common": "American Crow",
+    "sci": "Corvus brachyrhynchos",
+    "length_cm": 45,
+    "wingspan_cm": 92,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Rock dove",
+    "common": "Rock Pigeon",
+    "sci": "Columba livia",
+    "length_cm": 33,
+    "wingspan_cm": 65,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Barn swallow",
+    "common": "Barn Swallow",
+    "sci": "Hirundo rustica",
+    "length_cm": 18,
+    "wingspan_cm": 33,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Pileated woodpecker",
+    "common": "Pileated Woodpecker",
+    "sci": "Dryocopus pileatus",
+    "length_cm": 48,
+    "wingspan_cm": 75,
+    "status": null,
+    "family": null
+  },
+  {
+    "wiki": "Common ostrich",
+    "common": "Common Ostrich",
+    "sci": "Struthio camelus",
+    "length_cm": 230,
+    "wingspan_cm": null,
+    "status": "LC",
+    "family": null
   }
 ]
