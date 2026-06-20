@@ -273,7 +273,7 @@
 
 <div class="intro">
   <h1>Birds — Widest to Narrowest</h1>
-  <p>500 bird species with data from Wikipedia and Wikidata. Sort by wingspan, size, or population — tap any bird to read more.</p>
+  <p id="introDesc">500 bird species with data from Wikipedia and Wikidata. Sort by wingspan — tap any bird to read more.</p>
 </div>
 <div class="feed" id="feed"></div>
 
@@ -442,6 +442,21 @@ function render(){
   });
   sortedCache = sorted;
   renderSpectrum(sorted);
+
+  const descEl = document.getElementById("introDesc");
+  if(descEl){
+    if(!q){
+      descEl.textContent = `${BIRDS.length} bird species with data from Wikipedia and Wikidata. Sort by wingspan — tap any bird to read more.`;
+    } else if(locationCodes){
+      const matchedName = Object.keys(countryToCode).find(name => name.includes(q));
+      const place = matchedName ? matchedName.replace(/\b\w/g, c => c.toUpperCase()) : q;
+      descEl.textContent = `${filtered.length} bird species recorded in ${place}.`;
+    } else if(statusMatch){
+      descEl.textContent = `${filtered.length} bird species classified as ${STATUS_LABELS[statusMatch]}.`;
+    } else {
+      descEl.textContent = `${filtered.length} bird species matching "${searchQuery}".`;
+    }
+  }
 
   if(sorted.length && currentView === "spectrum" && !selectedBird){
     const smallest = sorted.reduce((a,b) => {
