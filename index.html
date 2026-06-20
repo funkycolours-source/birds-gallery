@@ -230,6 +230,7 @@
   <div class="wordmark">birds<span>.</span>gallery</div>
   <div class="sort-group" id="sortGroup">
     <button class="sort-btn active" data-key="wingspan_cm">Wingspan</button>
+    <button class="sort-btn" data-key="status">Status</button>
     <button class="dir-btn" id="dirToggle" title="Reverse sort order">↓</button>
   </div>
   <div class="controls">
@@ -273,15 +274,24 @@ let searchQuery = "";
 const feed = document.getElementById("feed");
 const cache = {};
 
+const STATUS_ORDER = {LC:0, DD:1, NT:2, VU:3, EN:4, CR:5, EW:6, EX:7};
+const STATUS_LABELS = {
+  LC:"Least Concern", NT:"Near Threatened", VU:"Vulnerable",
+  EN:"Endangered", CR:"Critically Endangered",
+  EW:"Extinct in the Wild", EX:"Extinct", DD:"Data Deficient",
+};
+const STATUS_COLORS = {
+  LC:"#4caf50", NT:"#8bc34a", VU:"#ffc107", EN:"#ff9800",
+  CR:"#f44336", EW:"#9c27b0", EX:"#424242", DD:"#9e9e9e",
+};
+
 const SORT_LABELS = {
-  length_cm: "Size",
   wingspan_cm: "Wingspan",
-  population: "Population",
+  status: "Status",
 };
 const DIR_LABELS = {
-  length_cm: ["Smallest to Biggest", "Biggest to Smallest"],
   wingspan_cm: ["Narrowest to Widest", "Widest to Narrowest"],
-  population: ["Fewest to Most", "Most to Fewest"],
+  status: ["Least to Most Threatened", "Most to Least Threatened"],
 };
 
 function updateTitle(){
@@ -300,63 +310,82 @@ function fmtNum(n){
 }
 function fmtVal(key, v){
   if(v===null || v===undefined) return "no data";
-  if(key==="length_cm") return v + " cm";
   if(key==="wingspan_cm") return v + " cm";
-  if(key==="population") return "~" + fmtNum(v);
+  if(key==="status") return STATUS_LABELS[v] || v;
+}
+
+function statusHtml(bird){
+  const s = bird.status;
+  if(!s) return `<span class="spec-val">no data</span>`;
+  const color = STATUS_COLORS[s] || "var(--ink-soft)";
+  const label = STATUS_LABELS[s] || s;
+  const tip = {
+    LC:"Population is large and stable — not at risk.",
+    NT:"Close to qualifying as threatened in the near future.",
+    VU:"Facing a high risk of extinction in the wild.",
+    EN:"Facing a very high risk of extinction in the wild.",
+    CR:"Facing an extremely high risk of extinction in the wild.",
+    EW:"Survives only in captivity or cultivation.",
+    EX:"No known living individuals remain.",
+    DD:"Not enough data to assess extinction risk.",
+  }[s] || "";
+  return `<span style="color:${color};font-weight:500">${s}</span> ${label} <span class="status-info" title="${tip}" style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;border:1px solid var(--ink-soft);font-size:9px;cursor:help;vertical-align:middle;margin-left:2px;color:var(--ink-soft)">i</span>`;
 }
 
 function specRowsHtml(bird){
-  const lengthPct = bird.length_cm ? Math.min(100,(bird.length_cm/230)*100) : 0;
   const wingPct = bird.wingspan_cm ? Math.min(100,(bird.wingspan_cm/320)*100) : 0;
-  const popPct = bird.population ? Math.min(100,(Math.log10(bird.population)/9.3)*100) : 0;
   return `
-    <div class="spec-row">
-      <div class="spec-label">Length</div>
-      <div class="spec-bar"><i style="width:${lengthPct}%"></i></div>
-      <div class="spec-val">${fmtVal('length_cm', bird.length_cm)}</div>
-    </div>
     <div class="spec-row">
       <div class="spec-label">Wingspan</div>
       <div class="spec-bar"><i style="width:${wingPct}%"></i></div>
       <div class="spec-val">${fmtVal('wingspan_cm', bird.wingspan_cm)}</div>
     </div>
     <div class="spec-row">
-      <div class="spec-label">Population</div>
-      <div class="spec-bar"><i style="width:${popPct}%"></i></div>
-      <div class="spec-val">${fmtVal('population', bird.population)}</div>
+      <div class="spec-label">Status</div>
+      <div class="spec-bar" style="background:none"></div>
+      <div class="spec-val">${statusHtml(bird)}</div>
     </div>
   `;
 }
 
 let currentRange = {min:0, max:1};
 
+function statusVal(s){ return s in STATUS_ORDER ? STATUS_ORDER[s] : null; }
+
 function getRange(birds, key){
+  if(key === "status"){
+    const vals = birds.map(b=>statusVal(b.status)).filter(v=>v!==null);
+    return {min: Math.min(...vals), max: Math.max(...vals)};
+  }
   const vals = birds.map(b=>b[key]).filter(v=>v!==null && v!==undefined);
   return {min: Math.min(...vals), max: Math.max(...vals)};
 }
+function sortVal(key, bird){
+  return key === "status" ? statusVal(bird.status) : bird[key];
+}
 function scalePos(key, value, range){
-  if(key === "population"){
-    const lo = Math.log10(range.min || 1), hi = Math.log10(range.max);
-    return hi===lo ? 0.5 : (Math.log10(value||1)-lo)/(hi-lo);
-  }
   return range.max===range.min ? 0.5 : (value-range.min)/(range.max-range.min);
 }
 function unscalePos(key, pos, range){
-  if(key === "population"){
-    const lo = Math.log10(range.min || 1), hi = Math.log10(range.max);
-    return Math.pow(10, lo + pos*(hi-lo));
-  }
   return range.min + pos*(range.max-range.min);
 }
 
 function renderSpectrum(birds){
   currentRange = getRange(birds, currentKey);
-  document.getElementById("specMinLabel").textContent = fmtVal(currentKey, currentRange.min);
-  document.getElementById("specMaxLabel").textContent = fmtVal(currentKey, currentRange.max);
+  if(currentKey === "status"){
+    const codes = Object.entries(STATUS_ORDER);
+    const minCode = codes.find(([,v])=>v===currentRange.min);
+    const maxCode = codes.find(([,v])=>v===currentRange.max);
+    document.getElementById("specMinLabel").textContent = minCode ? STATUS_LABELS[minCode[0]] : "";
+    document.getElementById("specMaxLabel").textContent = maxCode ? STATUS_LABELS[maxCode[0]] : "";
+  } else {
+    document.getElementById("specMinLabel").textContent = fmtVal(currentKey, currentRange.min);
+    document.getElementById("specMaxLabel").textContent = fmtVal(currentKey, currentRange.max);
+  }
   const ticksEl = document.getElementById("specTicks");
   ticksEl.innerHTML = birds
-    .filter(b => b[currentKey]!==null && b[currentKey]!==undefined)
-    .map(b => `<div class="tick" style="left:${(scalePos(currentKey, b[currentKey], currentRange)*100).toFixed(2)}%"></div>`)
+    .filter(b => sortVal(currentKey, b)!==null)
+    .map(b => `<div class="tick" style="left:${(scalePos(currentKey, sortVal(currentKey, b), currentRange)*100).toFixed(2)}%"></div>`)
     .join("");
 }
 
@@ -383,7 +412,7 @@ function render(){
   });
 
   const sorted = [...filtered].sort((a,b)=>{
-    const av = a[currentKey], bv = b[currentKey];
+    const av = sortVal(currentKey, a), bv = sortVal(currentKey, b);
     if(av===null && bv===null) return 0;
     if(av===null) return 1;
     if(bv===null) return -1;
@@ -658,8 +687,9 @@ const defaultHint = specHint.textContent;
 function nearestBirdIndex(targetVal){
   let nearest = null, nearestDiff = Infinity;
   sortedCache.forEach((b, idx)=>{
-    if(b[currentKey]===null || b[currentKey]===undefined) return;
-    const diff = Math.abs(b[currentKey]-targetVal);
+    const v = sortVal(currentKey, b);
+    if(v===null) return;
+    const diff = Math.abs(v-targetVal);
     if(diff < nearestDiff){ nearestDiff = diff; nearest = idx; }
   });
   return nearest;
@@ -682,11 +712,11 @@ function scrubAt(e){
   document.querySelectorAll(".tick.near").forEach(t=>t.classList.remove("near"));
   const ticks = document.querySelectorAll("#specTicks .tick");
   const bird = sortedCache[idx];
-  const tickPct = scalePos(currentKey, bird[currentKey], currentRange)*100;
+  const tickPct = scalePos(currentKey, sortVal(currentKey, bird), currentRange)*100;
   ticks.forEach(t=>{
     if(Math.abs(parseFloat(t.style.left)-tickPct) < 0.05) t.classList.add("near");
   });
-  specHint.textContent = `${bird.common} — ${fmtVal(currentKey, bird[currentKey])}`;
+  specHint.textContent = `${bird.common} — ${fmtVal(currentKey, currentKey==="status" ? bird.status : bird[currentKey])}`;
   if(idx !== lastHoverIdx){
     lastHoverIdx = idx;
     if(currentView === "spectrum") showPreviewImage(bird);
@@ -735,11 +765,13 @@ document.getElementById("sortGroup").addEventListener("click", (e)=>{
   const btn = e.target.closest(".sort-btn");
   if(!btn) return;
   currentKey = btn.dataset.key;
+  selectedBird = null;
   document.querySelectorAll(".sort-btn").forEach(b=>b.classList.toggle("active", b===btn));
   render();
 });
 
 document.getElementById("dirToggle").addEventListener("click", ()=>{
+  selectedBird = null;
   sortDir *= -1;
   document.getElementById("dirToggle").textContent = sortDir === -1 ? "↓" : "↑";
   render();
