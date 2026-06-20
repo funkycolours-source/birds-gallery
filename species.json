@@ -3,7 +3,7 @@
     "wiki": "Northern royal albatross",
     "common": "Northern Royal Albatross",
     "sci": "Diomedea sanfordi",
-    "length_cm": null,
+    "length_cm": 115.0,
     "wingspan_cm": 320.5,
     "status": null,
     "family": "albatross"
@@ -12,7 +12,7 @@
     "wiki": "Southern royal albatross",
     "common": "Southern Royal Albatross",
     "sci": "Diomedea epomophora",
-    "length_cm": null,
+    "length_cm": 117.5,
     "wingspan_cm": 320.5,
     "status": "VU",
     "family": "albatross"
@@ -21,7 +21,7 @@
     "wiki": "Dalmatian pelican",
     "common": "Dalmatian Pelican",
     "sci": "Pelecanus crispus",
-    "length_cm": null,
+    "length_cm": 170.0,
     "wingspan_cm": 320.0,
     "status": "NT",
     "family": "pelicans"
@@ -30,7 +30,7 @@
     "wiki": "Andean condor",
     "common": "Andean Condor",
     "sci": "Vultur gryphus",
-    "length_cm": null,
+    "length_cm": 115.0,
     "wingspan_cm": 304.8,
     "status": "VU",
     "family": "New World vulture"
@@ -48,7 +48,7 @@
     "wiki": "Amsterdam albatross",
     "common": "Amsterdam Albatross",
     "sci": "Diomedea amsterdamensis",
-    "length_cm": null,
+    "length_cm": 114.5,
     "wingspan_cm": 300.0,
     "status": null,
     "family": "albatross"
@@ -57,7 +57,7 @@
     "wiki": "Antipodean albatross",
     "common": "Antipodean Albatross",
     "sci": "Diomedea antipodensis",
-    "length_cm": null,
+    "length_cm": 110.0,
     "wingspan_cm": 300.0,
     "status": null,
     "family": "albatross"
@@ -66,7 +66,7 @@
     "wiki": "Great white pelican",
     "common": "Great White Pelican",
     "sci": "Pelecanus onocrotalus",
-    "length_cm": null,
+    "length_cm": 160.0,
     "wingspan_cm": 291.0,
     "status": "LC",
     "family": "pelicans"
@@ -93,7 +93,7 @@
     "wiki": "Lappet-faced vulture",
     "common": "Lappet-faced Vulture",
     "sci": "Torgos tracheliotos",
-    "length_cm": null,
+    "length_cm": 105.0,
     "wingspan_cm": 280.4,
     "status": null,
     "family": "Accipitridae"
@@ -102,7 +102,7 @@
     "wiki": "American white pelican",
     "common": "American White Pelican",
     "sci": "Pelecanus erythrorhynchos",
-    "length_cm": null,
+    "length_cm": 155.0,
     "wingspan_cm": 271.5,
     "status": "LC",
     "family": "pelicans"
@@ -111,7 +111,7 @@
     "wiki": "Bearded vulture",
     "common": "bearded vulture",
     "sci": "Gypaetus barbatus",
-    "length_cm": null,
+    "length_cm": 109.5,
     "wingspan_cm": 262.1,
     "status": "NT",
     "family": "Accipitridae"
@@ -120,7 +120,7 @@
     "wiki": "Eurasian griffon vulture",
     "common": "Griffon Vulture",
     "sci": "Gyps fulvus",
-    "length_cm": null,
+    "length_cm": 108.0,
     "wingspan_cm": 259.1,
     "status": "LC",
     "family": "Accipitridae"
@@ -129,7 +129,7 @@
     "wiki": "Marabou stork",
     "common": "Marabou Stork",
     "sci": "Leptoptilos crumenifer",
-    "length_cm": null,
+    "length_cm": 125.0,
     "wingspan_cm": 256.0,
     "status": "LC",
     "family": null
@@ -138,7 +138,7 @@
     "wiki": "Cape vulture",
     "common": "Cape Vulture",
     "sci": "Gyps coprotheres",
-    "length_cm": null,
+    "length_cm": 105.5,
     "wingspan_cm": 256.0,
     "status": "VU",
     "family": "Accipitridae"
@@ -147,7 +147,7 @@
     "wiki": "Saddle-billed stork",
     "common": "Ephippiorhynchus senegalensis",
     "sci": "Ephippiorhynchus senegalensis",
-    "length_cm": null,
+    "length_cm": 147.5,
     "wingspan_cm": 255.0,
     "status": "NT",
     "family": null
@@ -156,7 +156,7 @@
     "wiki": "Cinereous vulture",
     "common": "Cinereous Vulture",
     "sci": "Aegypius monachus",
-    "length_cm": null,
+    "length_cm": 109.0,
     "wingspan_cm": 250.0,
     "status": "NT",
     "family": "Accipitridae"
@@ -165,7 +165,7 @@
     "wiki": "Wattled crane",
     "common": "Wattled Crane",
     "sci": "Bugeranus carunculatus",
-    "length_cm": null,
+    "length_cm": 162.5,
     "wingspan_cm": 245.0,
     "status": "VU",
     "family": "Gruidae"
@@ -174,7 +174,7 @@
     "wiki": "Jabiru",
     "common": "Jabiru",
     "sci": "Jabiru mycteria",
-    "length_cm": null,
+    "length_cm": 130.0,
     "wingspan_cm": 245.0,
     "status": "LC",
     "family": null
@@ -183,7 +183,7 @@
     "wiki": "Trumpeter swan",
     "common": "Trumpeter Swan",
     "sci": "Cygnus buccinator",
-    "length_cm": null,
+    "length_cm": 151.5,
     "wingspan_cm": 245.0,
     "status": "LC",
     "family": null
@@ -192,7 +192,7 @@
     "wiki": "Australian pelican",
     "common": "Australian Pelican",
     "sci": "Pelecanus conspicillatus",
-    "length_cm": null,
+    "length_cm": 170.0,
     "wingspan_cm": 245.0,
     "status": "LC",
     "family": "pelicans"
@@ -201,7 +201,7 @@
     "wiki": "White-rumped vulture",
     "common": "White-rumped Vulture",
     "sci": "Gyps bengalensis",
-    "length_cm": null,
+    "length_cm": 84.0,
     "wingspan_cm": 243.8,
     "status": "CR",
     "family": "Accipitridae"
@@ -210,7 +210,7 @@
     "wiki": "Rüppell's vulture",
     "common": "Gyps rueppelli",
     "sci": "Gyps rueppelli",
-    "length_cm": null,
+    "length_cm": 94.0,
     "wingspan_cm": 240.8,
     "status": "CR",
     "family": "Accipitridae"
@@ -219,7 +219,7 @@
     "wiki": "Red-crowned crane",
     "common": "Red-crowned Crane",
     "sci": "Grus japonensis",
-    "length_cm": null,
+    "length_cm": 154.0,
     "wingspan_cm": 235.0,
     "status": "VU",
     "family": "Gruidae"
@@ -228,7 +228,7 @@
     "wiki": "Great bustard",
     "common": "Great Bustard",
     "sci": "Otis tarda",
-    "length_cm": null,
+    "length_cm": 97.5,
     "wingspan_cm": 235.0,
     "status": null,
     "family": "Otididae"
@@ -237,7 +237,7 @@
     "wiki": "Siberian crane",
     "common": "Siberian Crane",
     "sci": "Leucogeranus leucogeranus",
-    "length_cm": null,
+    "length_cm": 140.0,
     "wingspan_cm": 235.0,
     "status": "CR",
     "family": "Gruidae"
@@ -246,7 +246,7 @@
     "wiki": "Shy albatross",
     "common": "Shy Albatross",
     "sci": "Thalassarche cauta",
-    "length_cm": null,
+    "length_cm": 94.5,
     "wingspan_cm": 235.0,
     "status": "NT",
     "family": "albatross"
@@ -255,7 +255,7 @@
     "wiki": "Spot-billed pelican",
     "common": "Spot-billed Pelican",
     "sci": "Pelecanus philippensis",
-    "length_cm": null,
+    "length_cm": 138.5,
     "wingspan_cm": 231.5,
     "status": "NT",
     "family": "pelicans"
@@ -264,7 +264,7 @@
     "wiki": "Magnificent frigatebird",
     "common": "magnificent frigatebird",
     "sci": "Fregata magnificens",
-    "length_cm": null,
+    "length_cm": 101.5,
     "wingspan_cm": 230.5,
     "status": "LC",
     "family": "Frigatebirds"
@@ -273,7 +273,7 @@
     "wiki": "Campbell albatross",
     "common": "Campbell Albatross",
     "sci": "Thalassarche impavida",
-    "length_cm": null,
+    "length_cm": 88.0,
     "wingspan_cm": 230.0,
     "status": "VU",
     "family": "albatross"
@@ -300,7 +300,7 @@
     "wiki": "Whooper swan",
     "common": "Whooper Swan",
     "sci": "Cygnus cygnus",
-    "length_cm": null,
+    "length_cm": 152.5,
     "wingspan_cm": 229.0,
     "status": "LC",
     "family": null
@@ -309,7 +309,7 @@
     "wiki": "Red-headed vulture",
     "common": "Red-headed Vulture",
     "sci": "Sarcogyps calvus",
-    "length_cm": null,
+    "length_cm": 81.0,
     "wingspan_cm": 228.6,
     "status": "CR",
     "family": "Accipitridae"
@@ -318,7 +318,7 @@
     "wiki": "White-headed vulture",
     "common": "White-headed Vulture",
     "sci": "Trigonoceps occipitalis",
-    "length_cm": null,
+    "length_cm": 78.5,
     "wingspan_cm": 228.6,
     "status": "CR",
     "family": "Accipitridae"
@@ -327,7 +327,7 @@
     "wiki": "Slender-billed vulture",
     "common": "Slender-billed Vulture",
     "sci": "Gyps tenuirostris",
-    "length_cm": null,
+    "length_cm": 87.5,
     "wingspan_cm": 228.6,
     "status": "CR",
     "family": "Accipitridae"
@@ -336,7 +336,7 @@
     "wiki": "Indian vulture",
     "common": "Indian Vulture",
     "sci": "Gyps indicus",
-    "length_cm": null,
+    "length_cm": 96.0,
     "wingspan_cm": 228.6,
     "status": "CR",
     "family": "Accipitridae"
@@ -345,7 +345,7 @@
     "wiki": "Peruvian pelican",
     "common": "Peruvian Pelican",
     "sci": "Pelecanus thagus",
-    "length_cm": null,
+    "length_cm": 144.5,
     "wingspan_cm": 228.0,
     "status": "NT",
     "family": "pelicans"
@@ -354,7 +354,7 @@
     "wiki": "Short-tailed albatross",
     "common": "Short-tailed Albatross",
     "sci": "Phoebastria albatrus",
-    "length_cm": null,
+    "length_cm": 89.0,
     "wingspan_cm": 226.5,
     "status": "VU",
     "family": "albatross"
@@ -363,7 +363,7 @@
     "wiki": "Common crane",
     "common": "Common Crane",
     "sci": "Grus grus",
-    "length_cm": null,
+    "length_cm": 115.0,
     "wingspan_cm": 222.0,
     "status": "LC",
     "family": "Gruidae"
@@ -372,7 +372,7 @@
     "wiki": "Goliath heron",
     "common": "Goliath Heron",
     "sci": "Ardea goliath",
-    "length_cm": null,
+    "length_cm": 136.0,
     "wingspan_cm": 220.0,
     "status": "LC",
     "family": null
@@ -381,7 +381,7 @@
     "wiki": "Steller's sea eagle",
     "common": "Steller’s Sea Eagle",
     "sci": "Haliaeetus pelagicus",
-    "length_cm": null,
+    "length_cm": 95.0,
     "wingspan_cm": 220.0,
     "status": "VU",
     "family": "Accipitridae"
@@ -390,7 +390,7 @@
     "wiki": "White-backed vulture",
     "common": "White-backed Vulture",
     "sci": "Gyps africanus",
-    "length_cm": null,
+    "length_cm": 88.0,
     "wingspan_cm": 219.5,
     "status": "CR",
     "family": "Accipitridae"
@@ -399,7 +399,7 @@
     "wiki": "Black-browed albatross",
     "common": "Black-browed Albatross",
     "sci": "Thalassarche melanophris",
-    "length_cm": null,
+    "length_cm": 87.5,
     "wingspan_cm": 219.0,
     "status": "LC",
     "family": "albatross"
@@ -408,7 +408,7 @@
     "wiki": "Great frigatebird",
     "common": "Great Frigatebird",
     "sci": "Fregata minor",
-    "length_cm": null,
+    "length_cm": 95.0,
     "wingspan_cm": 218.0,
     "status": "LC",
     "family": "Frigatebirds"
@@ -417,7 +417,7 @@
     "wiki": "Grey-headed albatross",
     "common": "Grey-headed Albatross",
     "sci": "Thalassarche chrysostoma",
-    "length_cm": null,
+    "length_cm": 81.0,
     "wingspan_cm": 218.0,
     "status": null,
     "family": "albatross"
@@ -435,7 +435,7 @@
     "wiki": "Christmas frigatebird",
     "common": "Christmas Island Frigatebrid",
     "sci": "Fregata andrewsi",
-    "length_cm": null,
+    "length_cm": 94.5,
     "wingspan_cm": 217.5,
     "status": "VU",
     "family": "Frigatebirds"
@@ -453,7 +453,7 @@
     "wiki": "Whooping crane",
     "common": "whooping crane",
     "sci": "Grus americana",
-    "length_cm": null,
+    "length_cm": 132.0,
     "wingspan_cm": 215.0,
     "status": null,
     "family": "Gruidae"
@@ -462,7 +462,7 @@
     "wiki": "Brolga",
     "common": "brolga",
     "sci": "Grus rubicunda",
-    "length_cm": null,
+    "length_cm": 105.0,
     "wingspan_cm": 215.0,
     "status": "LC",
     "family": "Gruidae"
@@ -471,7 +471,7 @@
     "wiki": "Sandhill crane",
     "common": "Grus canadensis",
     "sci": "Grus canadensis",
-    "length_cm": null,
+    "length_cm": 108.0,
     "wingspan_cm": 210.0,
     "status": "LC",
     "family": "Gruidae"
@@ -480,7 +480,7 @@
     "wiki": "Buller's albatross",
     "common": "Buller's Albatross",
     "sci": "Thalassarche bulleri",
-    "length_cm": null,
+    "length_cm": 79.0,
     "wingspan_cm": 209.0,
     "status": "NT",
     "family": "albatross"
@@ -489,7 +489,7 @@
     "wiki": "Light-mantled albatross",
     "common": "Light-mantled Albatross",
     "sci": "Phoebetria palpebrata",
-    "length_cm": null,
+    "length_cm": 84.0,
     "wingspan_cm": 207.5,
     "status": "NT",
     "family": "albatross"
@@ -498,7 +498,7 @@
     "wiki": "Martial eagle",
     "common": "Martial Eagle",
     "sci": "Polemaetus bellicosus",
-    "length_cm": null,
+    "length_cm": 85.5,
     "wingspan_cm": 207.5,
     "status": null,
     "family": "Accipitridae"
@@ -507,7 +507,7 @@
     "wiki": "Wedge-tailed eagle",
     "common": "Wedge-tailed Eagle",
     "sci": "Aquila audax",
-    "length_cm": null,
+    "length_cm": 107.0,
     "wingspan_cm": 207.0,
     "status": "LC",
     "family": null
@@ -516,7 +516,7 @@
     "wiki": "Black-footed albatross",
     "common": "Black-footed Albatross",
     "sci": "Phoebastria nigripes",
-    "length_cm": null,
+    "length_cm": 71.0,
     "wingspan_cm": 206.5,
     "status": "NT",
     "family": "albatross"
@@ -525,7 +525,7 @@
     "wiki": "Greater yellow-headed vulture",
     "common": "greater yellow-headed vulture",
     "sci": "Cathartes melambrotus",
-    "length_cm": null,
+    "length_cm": 69.5,
     "wingspan_cm": 205.7,
     "status": "LC",
     "family": "New World vulture"
@@ -534,7 +534,7 @@
     "wiki": "Laysan albatross",
     "common": "Laysan Albatross",
     "sci": "Phoebastria immutabilis",
-    "length_cm": null,
+    "length_cm": 81.0,
     "wingspan_cm": 205.0,
     "status": "NT",
     "family": "albatross"
@@ -543,7 +543,7 @@
     "wiki": "Black-necked stork",
     "common": "Black-necked Stork",
     "sci": "Ephippiorhynchus asiaticus",
-    "length_cm": null,
+    "length_cm": 123.5,
     "wingspan_cm": 204.0,
     "status": "LC",
     "family": null
@@ -570,7 +570,7 @@
     "wiki": "Secretarybird",
     "common": "Secretarybird",
     "sci": "Sagittarius serpentarius",
-    "length_cm": null,
+    "length_cm": 130.0,
     "wingspan_cm": 203.0,
     "status": null,
     "family": "Sagittariidae"
@@ -588,7 +588,7 @@
     "wiki": "Australasian gannet",
     "common": "Australasian Gannet",
     "sci": "Morus serrator",
-    "length_cm": null,
+    "length_cm": 87.5,
     "wingspan_cm": 200.0,
     "status": "LC",
     "family": "Sulidae"
@@ -597,7 +597,7 @@
     "wiki": "Verreaux's eagle",
     "common": "Verreaux's Eagle",
     "sci": "Aquila verreauxii",
-    "length_cm": null,
+    "length_cm": 85.5,
     "wingspan_cm": 200.0,
     "status": "LC",
     "family": null
@@ -606,7 +606,7 @@
     "wiki": "Sooty albatross",
     "common": "Sooty Albatross",
     "sci": "Phoebetria fusca",
-    "length_cm": null,
+    "length_cm": 85.0,
     "wingspan_cm": 200.0,
     "status": null,
     "family": "albatross"
@@ -615,7 +615,7 @@
     "wiki": "Ascension frigatebird",
     "common": "Ascension Frigatebird",
     "sci": "Fregata aquila",
-    "length_cm": null,
+    "length_cm": 92.5,
     "wingspan_cm": 198.5,
     "status": "VU",
     "family": "Frigatebirds"
@@ -624,7 +624,7 @@
     "wiki": "Spanish imperial eagle",
     "common": "Spanish Imperial Eagle",
     "sci": "Aquila adalberti",
-    "length_cm": null,
+    "length_cm": 78.5,
     "wingspan_cm": 198.5,
     "status": "VU",
     "family": null
@@ -633,7 +633,7 @@
     "wiki": "Turkey vulture",
     "common": "Turkey Vulture",
     "sci": "Cathartes aura",
-    "length_cm": null,
+    "length_cm": 71.5,
     "wingspan_cm": 198.1,
     "status": "LC",
     "family": "New World vulture"
@@ -642,7 +642,7 @@
     "wiki": "Tundra swan",
     "common": "Cygnus columbianus",
     "sci": "Cygnus columbianus",
-    "length_cm": null,
+    "length_cm": 132.5,
     "wingspan_cm": 198.0,
     "status": "LC",
     "family": null
@@ -651,7 +651,7 @@
     "wiki": "White-bellied sea eagle",
     "common": "White-bellied Sea Eagle",
     "sci": "Haliaeetus leucogaster",
-    "length_cm": null,
+    "length_cm": 85.0,
     "wingspan_cm": 198.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -660,7 +660,7 @@
     "wiki": "Eastern imperial eagle",
     "common": "Imperial Eagle",
     "sci": "Aquila heliaca",
-    "length_cm": null,
+    "length_cm": 79.0,
     "wingspan_cm": 197.5,
     "status": "VU",
     "family": null
@@ -669,7 +669,7 @@
     "wiki": "Indian yellow-nosed albatross",
     "common": "Indian Yellow-nosed Albatross",
     "sci": "Thalassarche carteri",
-    "length_cm": null,
+    "length_cm": 76.0,
     "wingspan_cm": 197.5,
     "status": null,
     "family": "albatross"
@@ -678,7 +678,7 @@
     "wiki": "Oriental stork",
     "common": "Oriental White Stork",
     "sci": "Ciconia boyciana",
-    "length_cm": null,
+    "length_cm": 114.5,
     "wingspan_cm": 197.5,
     "status": null,
     "family": null
@@ -687,7 +687,7 @@
     "wiki": "Pallas's fish eagle",
     "common": "Pallas’s Fish Eagle",
     "sci": "Haliaeetus leucoryphus",
-    "length_cm": null,
+    "length_cm": 78.5,
     "wingspan_cm": 197.5,
     "status": null,
     "family": "Accipitridae"
@@ -696,7 +696,7 @@
     "wiki": "Philippine eagle",
     "common": "Philippine Eagle",
     "sci": "Pithecophaga jefferyi",
-    "length_cm": null,
+    "length_cm": 100.0,
     "wingspan_cm": 193.0,
     "status": "CR",
     "family": "Accipitridae"
@@ -705,7 +705,7 @@
     "wiki": "White stork",
     "common": "White Stork",
     "sci": "Ciconia ciconia",
-    "length_cm": null,
+    "length_cm": 107.5,
     "wingspan_cm": 191.0,
     "status": "LC",
     "family": null
@@ -714,7 +714,7 @@
     "wiki": "Lesser yellow-headed vulture",
     "common": "lesser yellow-headed vulture",
     "sci": "Cathartes burrovianus",
-    "length_cm": null,
+    "length_cm": 59.5,
     "wingspan_cm": 190.5,
     "status": "LC",
     "family": "New World vulture"
@@ -723,7 +723,7 @@
     "wiki": "Black-necked crane",
     "common": "Black-necked Crane",
     "sci": "Grus nigricollis",
-    "length_cm": null,
+    "length_cm": 139.0,
     "wingspan_cm": 190.0,
     "status": "NT",
     "family": "Gruidae"
@@ -732,7 +732,7 @@
     "wiki": "Black crowned crane",
     "common": "Black Crowned Crane",
     "sci": "Balearica pavonina",
-    "length_cm": null,
+    "length_cm": 105.0,
     "wingspan_cm": 190.0,
     "status": "VU",
     "family": "Gruidae"
@@ -741,7 +741,7 @@
     "wiki": "Blue crane",
     "common": "blue crane",
     "sci": "Anthropoides paradiseus",
-    "length_cm": null,
+    "length_cm": 110.0,
     "wingspan_cm": 190.0,
     "status": "VU",
     "family": "Gruidae"
@@ -750,7 +750,7 @@
     "wiki": "Great-billed heron",
     "common": "Great-billed Heron",
     "sci": "Ardea sumatrana",
-    "length_cm": null,
+    "length_cm": 115.0,
     "wingspan_cm": 190.0,
     "status": "LC",
     "family": null
@@ -759,7 +759,7 @@
     "wiki": "Harpy eagle",
     "common": "harpy eagle",
     "sci": "Harpia harpyja",
-    "length_cm": null,
+    "length_cm": 96.8,
     "wingspan_cm": 188.5,
     "status": "VU",
     "family": "Accipitridae"
@@ -768,7 +768,7 @@
     "wiki": "White-naped crane",
     "common": "Antigone vipio",
     "sci": "Antigone vipio",
-    "length_cm": null,
+    "length_cm": 118.5,
     "wingspan_cm": 185.0,
     "status": null,
     "family": "Gruidae"
@@ -777,7 +777,7 @@
     "wiki": "Blakiston's fish owl",
     "common": "Blakiston`s Eagle Owl",
     "sci": "Bubo blakistoni",
-    "length_cm": null,
+    "length_cm": 66.0,
     "wingspan_cm": 184.0,
     "status": "VU",
     "family": "true owls"
@@ -786,7 +786,7 @@
     "wiki": "Great blue heron",
     "common": "Great Blue Heron",
     "sci": "Ardea herodias",
-    "length_cm": null,
+    "length_cm": 126.0,
     "wingspan_cm": 183.0,
     "status": "LC",
     "family": null
@@ -795,7 +795,7 @@
     "wiki": "Hooded vulture",
     "common": "Hooded Vulture",
     "sci": "Necrosyrtes monachus",
-    "length_cm": null,
+    "length_cm": 67.0,
     "wingspan_cm": 182.9,
     "status": "CR",
     "family": "Accipitridae"
@@ -813,7 +813,7 @@
     "wiki": "Northern giant petrel",
     "common": "Macronectes halli",
     "sci": "Macronectes halli",
-    "length_cm": null,
+    "length_cm": 87.5,
     "wingspan_cm": 180.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -822,7 +822,7 @@
     "wiki": "Southern giant petrel",
     "common": "Southern Giant Petrel",
     "sci": "Macronectes giganteus",
-    "length_cm": null,
+    "length_cm": 92.5,
     "wingspan_cm": 180.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -849,7 +849,7 @@
     "wiki": "Short-toed snake eagle",
     "common": "Short-toed Snake Eagle",
     "sci": "Circaetus gallicus",
-    "length_cm": null,
+    "length_cm": 64.5,
     "wingspan_cm": 177.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -858,7 +858,7 @@
     "wiki": "Gurney's eagle",
     "common": "Gurney's Eagle",
     "sci": "Aquila gurneyi",
-    "length_cm": null,
+    "length_cm": 80.0,
     "wingspan_cm": 175.0,
     "status": "NT",
     "family": null
@@ -867,7 +867,7 @@
     "wiki": "Swan goose",
     "common": "Swan Goose",
     "sci": "Anser cygnoides",
-    "length_cm": null,
+    "length_cm": 87.5,
     "wingspan_cm": 175.0,
     "status": null,
     "family": null
@@ -876,7 +876,7 @@
     "wiki": "Eurasian eagle-owl",
     "common": "Eurasian Eagle-owl",
     "sci": "Bubo bubo",
-    "length_cm": null,
+    "length_cm": 65.5,
     "wingspan_cm": 174.0,
     "status": "LC",
     "family": "true owls"
@@ -885,7 +885,7 @@
     "wiki": "Grey heron",
     "common": "Grey Heron",
     "sci": "Ardea cinerea",
-    "length_cm": null,
+    "length_cm": 93.0,
     "wingspan_cm": 173.0,
     "status": "LC",
     "family": null
@@ -903,7 +903,7 @@
     "wiki": "Brown snake eagle",
     "common": "Brown Snake Eagle",
     "sci": "Circaetus cinereus",
-    "length_cm": null,
+    "length_cm": 72.0,
     "wingspan_cm": 172.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -912,7 +912,7 @@
     "wiki": "Madagascar fish eagle",
     "common": "Madagascar Fish Eagle",
     "sci": "Haliaeetus vociferoides",
-    "length_cm": null,
+    "length_cm": 63.0,
     "wingspan_cm": 172.5,
     "status": "CR",
     "family": "Accipitridae"
@@ -921,7 +921,7 @@
     "wiki": "Northern gannet",
     "common": "Northern Gannet",
     "sci": "Morus bassanus",
-    "length_cm": null,
+    "length_cm": 93.5,
     "wingspan_cm": 172.0,
     "status": "LC",
     "family": "Sulidae"
@@ -939,7 +939,7 @@
     "wiki": "Hooded crane",
     "common": "Hooded Crane",
     "sci": "Grus monacha",
-    "length_cm": null,
+    "length_cm": 100.0,
     "wingspan_cm": 170.0,
     "status": "VU",
     "family": "Gruidae"
@@ -948,7 +948,7 @@
     "wiki": "Horned screamer",
     "common": "Horned Screamer",
     "sci": "Anhima cornuta",
-    "length_cm": null,
+    "length_cm": 89.5,
     "wingspan_cm": 170.0,
     "status": "LC",
     "family": "Anhimidae"
@@ -957,7 +957,7 @@
     "wiki": "Canada goose",
     "common": "Canada Goose",
     "sci": "Branta canadensis",
-    "length_cm": null,
+    "length_cm": 92.5,
     "wingspan_cm": 169.0,
     "status": "LC",
     "family": null
@@ -975,7 +975,7 @@
     "wiki": "Demoiselle crane",
     "common": "Anthropoides virgo",
     "sci": "Anthropoides virgo",
-    "length_cm": null,
+    "length_cm": 82.5,
     "wingspan_cm": 167.5,
     "status": "LC",
     "family": "Gruidae"
@@ -993,7 +993,7 @@
     "wiki": "Great black-backed gull",
     "common": "Great Black-backed Gull",
     "sci": "Larus marinus",
-    "length_cm": null,
+    "length_cm": 71.5,
     "wingspan_cm": 167.0,
     "status": "LC",
     "family": "Laridae"
@@ -1002,7 +1002,7 @@
     "wiki": "Red kite",
     "common": "Red Kite",
     "sci": "Milvus milvus",
-    "length_cm": null,
+    "length_cm": 65.0,
     "wingspan_cm": 166.0,
     "status": null,
     "family": "Accipitridae"
@@ -1011,7 +1011,7 @@
     "wiki": "Crowned eagle",
     "common": "Crowned Eagle",
     "sci": "Stephanoaetus coronatus",
-    "length_cm": null,
+    "length_cm": 90.0,
     "wingspan_cm": 166.0,
     "status": "NT",
     "family": "Accipitridae"
@@ -1047,7 +1047,7 @@
     "wiki": "Taiga bean goose",
     "common": "taiga bean goose",
     "sci": "Anser fabalis",
-    "length_cm": null,
+    "length_cm": 79.0,
     "wingspan_cm": 162.0,
     "status": "LC",
     "family": null
@@ -1056,7 +1056,7 @@
     "wiki": "Pallas's gull",
     "common": "Pallas's Gull",
     "sci": "Ichthyaetus ichthyaetus",
-    "length_cm": null,
+    "length_cm": 63.5,
     "wingspan_cm": 161.0,
     "status": null,
     "family": "Laridae"
@@ -1065,7 +1065,7 @@
     "wiki": "Osprey",
     "common": "Osprey",
     "sci": "Pandion haliaetus",
-    "length_cm": null,
+    "length_cm": 58.0,
     "wingspan_cm": 160.0,
     "status": "LC",
     "family": "Pandionidae"
@@ -1074,7 +1074,7 @@
     "wiki": "Glaucous gull",
     "common": "Glaucous Gull",
     "sci": "Larus hyperboreus",
-    "length_cm": null,
+    "length_cm": 66.0,
     "wingspan_cm": 158.0,
     "status": "LC",
     "family": "Laridae"
@@ -1083,7 +1083,7 @@
     "wiki": "Yellow-billed stork",
     "common": "Yellow-billed Stork",
     "sci": "Mycteria ibis",
-    "length_cm": null,
+    "length_cm": 97.5,
     "wingspan_cm": 157.5,
     "status": "LC",
     "family": null
@@ -1092,7 +1092,7 @@
     "wiki": "Greylag goose",
     "common": "Greylag Goose",
     "sci": "Anser anser",
-    "length_cm": null,
+    "length_cm": 82.5,
     "wingspan_cm": 155.0,
     "status": "LC",
     "family": null
@@ -1101,7 +1101,7 @@
     "wiki": "Black-and-chestnut eagle",
     "common": "Spizaetus isidori",
     "sci": "Spizaetus isidori",
-    "length_cm": null,
+    "length_cm": 70.0,
     "wingspan_cm": 155.0,
     "status": null,
     "family": "Accipitridae"
@@ -1110,7 +1110,7 @@
     "wiki": "White-necked heron",
     "common": "White-necked Heron",
     "sci": "Ardea pacifica",
-    "length_cm": null,
+    "length_cm": 91.0,
     "wingspan_cm": 153.5,
     "status": "LC",
     "family": null
@@ -1128,7 +1128,7 @@
     "wiki": "Crested serpent eagle",
     "common": "Crested Serpent Eagle",
     "sci": "Spilornis cheela",
-    "length_cm": null,
+    "length_cm": 58.0,
     "wingspan_cm": 153.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -1137,7 +1137,7 @@
     "wiki": "Masked booby",
     "common": "Masked Booby",
     "sci": "Sula dactylatra",
-    "length_cm": null,
+    "length_cm": 80.0,
     "wingspan_cm": 152.0,
     "status": "LC",
     "family": "Sulidae"
@@ -1146,7 +1146,7 @@
     "wiki": "Japanese cormorant",
     "common": "Japanese Cormorant",
     "sci": "Phalacrocorax capillatus",
-    "length_cm": null,
+    "length_cm": 86.5,
     "wingspan_cm": 152.0,
     "status": "LC",
     "family": "Phalacrocoracidae"
@@ -1164,7 +1164,7 @@
     "wiki": "Verreaux's eagle-owl",
     "common": "Verreaux's Eagle-Owl",
     "sci": "Bubo lacteus",
-    "length_cm": null,
+    "length_cm": 62.0,
     "wingspan_cm": 152.0,
     "status": "LC",
     "family": "true owls"
@@ -1173,7 +1173,7 @@
     "wiki": "Upland buzzard",
     "common": "Upland Buzzard",
     "sci": "Buteo hemilasius",
-    "length_cm": null,
+    "length_cm": 64.5,
     "wingspan_cm": 152.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -1182,7 +1182,7 @@
     "wiki": "Pink-footed goose",
     "common": "pink-footed goose",
     "sci": "Anser brachyrhynchus",
-    "length_cm": null,
+    "length_cm": 67.5,
     "wingspan_cm": 152.0,
     "status": "LC",
     "family": null
@@ -1191,7 +1191,7 @@
     "wiki": "Pel's fishing owl",
     "common": "Scotopelia peli",
     "sci": "Scotopelia peli",
-    "length_cm": null,
+    "length_cm": 57.0,
     "wingspan_cm": 151.5,
     "status": "LC",
     "family": null
@@ -1200,7 +1200,7 @@
     "wiki": "Black stork",
     "common": "Black Stork",
     "sci": "Ciconia nigra",
-    "length_cm": null,
+    "length_cm": 97.5,
     "wingspan_cm": 150.0,
     "status": "LC",
     "family": null
@@ -1209,7 +1209,7 @@
     "wiki": "Wood stork",
     "common": "Wood Stork",
     "sci": "Mycteria americana",
-    "length_cm": null,
+    "length_cm": 99.0,
     "wingspan_cm": 150.0,
     "status": "LC",
     "family": null
@@ -1227,7 +1227,7 @@
     "wiki": "Bar-headed goose",
     "common": "bar-headed goose",
     "sci": "Anser indicus",
-    "length_cm": null,
+    "length_cm": 73.5,
     "wingspan_cm": 150.0,
     "status": "LC",
     "family": null
@@ -1236,7 +1236,7 @@
     "wiki": "Palm-nut vulture",
     "common": "Palm-nut Vulture",
     "sci": "Gypohierax angolensis",
-    "length_cm": null,
+    "length_cm": 60.0,
     "wingspan_cm": 149.4,
     "status": "LC",
     "family": "Accipitridae"
@@ -1245,7 +1245,7 @@
     "wiki": "Yellow-footed gull",
     "common": "Yellow-footed Gull",
     "sci": "Larus livens",
-    "length_cm": null,
+    "length_cm": 62.5,
     "wingspan_cm": 148.5,
     "status": "LC",
     "family": "Laridae"
@@ -1254,7 +1254,7 @@
     "wiki": "Black-breasted buzzard",
     "common": "Hamirostra melanosternon",
     "sci": "Hamirostra melanosternon",
-    "length_cm": null,
+    "length_cm": 56.0,
     "wingspan_cm": 148.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -1263,7 +1263,7 @@
     "wiki": "Snow goose",
     "common": "snow goose",
     "sci": "Anser caerulescens",
-    "length_cm": null,
+    "length_cm": 71.5,
     "wingspan_cm": 148.5,
     "status": "LC",
     "family": null
@@ -1272,7 +1272,7 @@
     "wiki": "Pacific gull",
     "common": "Pacific Gull",
     "sci": "Larus pacificus",
-    "length_cm": null,
+    "length_cm": 62.0,
     "wingspan_cm": 147.0,
     "status": "LC",
     "family": "Laridae"
@@ -1281,7 +1281,7 @@
     "wiki": "Crested eagle",
     "common": "crested eagle",
     "sci": "Morphnus guianensis",
-    "length_cm": null,
+    "length_cm": 80.0,
     "wingspan_cm": 146.0,
     "status": "NT",
     "family": "Accipitridae"
@@ -1290,7 +1290,7 @@
     "wiki": "Iceland gull",
     "common": "Iceland Gull",
     "sci": "Larus glaucoides",
-    "length_cm": null,
+    "length_cm": 57.0,
     "wingspan_cm": 145.0,
     "status": "LC",
     "family": "Laridae"
@@ -1299,7 +1299,7 @@
     "wiki": "Magpie goose",
     "common": "magpie goose",
     "sci": "Anseranas semipalmata",
-    "length_cm": null,
+    "length_cm": 82.5,
     "wingspan_cm": 145.0,
     "status": "LC",
     "family": "Anseranatidae"
@@ -1308,7 +1308,7 @@
     "wiki": "Yellow-billed loon",
     "common": "Yellow-billed Diver",
     "sci": "Gavia adamsii",
-    "length_cm": null,
+    "length_cm": 86.5,
     "wingspan_cm": 144.5,
     "status": "NT",
     "family": "loon"
@@ -1317,7 +1317,7 @@
     "wiki": "Great egret",
     "common": "Great Egret",
     "sci": "Ardea alba",
-    "length_cm": null,
+    "length_cm": 92.0,
     "wingspan_cm": 144.0,
     "status": "LC",
     "family": null
@@ -1326,7 +1326,7 @@
     "wiki": "Egyptian goose",
     "common": "Egyptian Goose",
     "sci": "Alopochen aegyptiaca",
-    "length_cm": null,
+    "length_cm": 68.0,
     "wingspan_cm": 144.0,
     "status": "LC",
     "family": null
@@ -1335,7 +1335,7 @@
     "wiki": "Brown skua",
     "common": "Brown Skua",
     "sci": "Stercorarius antarcticus",
-    "length_cm": null,
+    "length_cm": 58.0,
     "wingspan_cm": 143.0,
     "status": null,
     "family": "Stercorariidae"
@@ -1344,7 +1344,7 @@
     "wiki": "Ferruginous hawk",
     "common": "Ferruginous Hawk",
     "sci": "Buteo regalis",
-    "length_cm": null,
+    "length_cm": 58.0,
     "wingspan_cm": 143.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -1353,7 +1353,7 @@
     "wiki": "Crested honey buzzard",
     "common": "Crested Honey Buzzard",
     "sci": "Pernis ptilorhynchus",
-    "length_cm": null,
+    "length_cm": 58.5,
     "wingspan_cm": 141.8,
     "status": "LC",
     "family": "Accipitridae"
@@ -1362,7 +1362,7 @@
     "wiki": "Slaty-backed gull",
     "common": "Slaty-backed Gull",
     "sci": "Larus schistisagus",
-    "length_cm": null,
+    "length_cm": 61.8,
     "wingspan_cm": 141.0,
     "status": "LC",
     "family": "Laridae"
@@ -1371,7 +1371,7 @@
     "wiki": "White-chinned petrel",
     "common": "White-chinned Petrel",
     "sci": "Procellaria aequinoctialis",
-    "length_cm": null,
+    "length_cm": 54.5,
     "wingspan_cm": 141.0,
     "status": "VU",
     "family": "Procellariidae"
@@ -1380,7 +1380,7 @@
     "wiki": "Caspian gull",
     "common": "Caspian Gull",
     "sci": "Larus cachinnans",
-    "length_cm": null,
+    "length_cm": 62.0,
     "wingspan_cm": 141.0,
     "status": "LC",
     "family": "Laridae"
@@ -1398,7 +1398,7 @@
     "wiki": "Greater white-fronted goose",
     "common": "greater white-fronted goose",
     "sci": "Anser albifrons",
-    "length_cm": null,
+    "length_cm": 72.5,
     "wingspan_cm": 141.0,
     "status": "LC",
     "family": null
@@ -1407,7 +1407,7 @@
     "wiki": "Great cormorant",
     "common": "Great Cormorant",
     "sci": "Phalacrocorax carbo",
-    "length_cm": null,
+    "length_cm": 86.0,
     "wingspan_cm": 140.0,
     "status": "LC",
     "family": "Phalacrocoracidae"
@@ -1416,7 +1416,7 @@
     "wiki": "Armenian gull",
     "common": "Armenian Gull",
     "sci": "Larus armenicus",
-    "length_cm": null,
+    "length_cm": 57.0,
     "wingspan_cm": 140.0,
     "status": "LC",
     "family": "Laridae"
@@ -1425,7 +1425,7 @@
     "wiki": "Papuan eagle",
     "common": "Papuan Eagle",
     "sci": "Harpyopsis novaeguineae",
-    "length_cm": null,
+    "length_cm": 82.5,
     "wingspan_cm": 139.0,
     "status": "VU",
     "family": "Accipitridae"
@@ -1434,7 +1434,7 @@
     "wiki": "Glaucous-winged gull",
     "common": "Glaucous-winged Gull",
     "sci": "Larus glaucescens",
-    "length_cm": null,
+    "length_cm": 59.0,
     "wingspan_cm": 138.5,
     "status": "LC",
     "family": "Laridae"
@@ -1443,7 +1443,7 @@
     "wiki": "Square-tailed kite",
     "common": "Square-tailed Kite",
     "sci": "Lophoictinia isura",
-    "length_cm": null,
+    "length_cm": 53.0,
     "wingspan_cm": 138.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -1452,7 +1452,7 @@
     "wiki": "Great grey owl",
     "common": "Great Grey Owl",
     "sci": "Strix nebulosa",
-    "length_cm": null,
+    "length_cm": 72.0,
     "wingspan_cm": 137.0,
     "status": "LC",
     "family": "true owls"
@@ -1470,7 +1470,7 @@
     "wiki": "Western gull",
     "common": "Western Gull",
     "sci": "Larus occidentalis",
-    "length_cm": null,
+    "length_cm": 61.5,
     "wingspan_cm": 137.0,
     "status": "LC",
     "family": "Laridae"
@@ -1479,7 +1479,7 @@
     "wiki": "Great skua",
     "common": "Great Skua",
     "sci": "Stercorarius skua",
-    "length_cm": null,
+    "length_cm": 54.0,
     "wingspan_cm": 136.0,
     "status": "LC",
     "family": "Stercorariidae"
@@ -1488,7 +1488,7 @@
     "wiki": "Thayer's gull",
     "common": "Thayer's Gull",
     "sci": "Larus thayeri",
-    "length_cm": null,
+    "length_cm": 60.0,
     "wingspan_cm": 135.0,
     "status": "LC",
     "family": "Laridae"
@@ -1497,7 +1497,7 @@
     "wiki": "South polar skua",
     "common": "South Polar Skua",
     "sci": "Stercorarius maccormicki",
-    "length_cm": null,
+    "length_cm": 53.0,
     "wingspan_cm": 135.0,
     "status": "LC",
     "family": "Stercorariidae"
@@ -1506,7 +1506,7 @@
     "wiki": "Kelp gull",
     "common": "Kelp Gull",
     "sci": "Larus dominicanus",
-    "length_cm": null,
+    "length_cm": 59.5,
     "wingspan_cm": 135.0,
     "status": "LC",
     "family": "Laridae"
@@ -1515,7 +1515,7 @@
     "wiki": "Olrog's gull",
     "common": "Olrog's Gull",
     "sci": "Larus atlanticus",
-    "length_cm": null,
+    "length_cm": 55.0,
     "wingspan_cm": 135.0,
     "status": "NT",
     "family": "Laridae"
@@ -1524,7 +1524,7 @@
     "wiki": "Purple heron",
     "common": "Purple Heron",
     "sci": "Ardea purpurea",
-    "length_cm": null,
+    "length_cm": 86.0,
     "wingspan_cm": 135.0,
     "status": "LC",
     "family": null
@@ -1533,7 +1533,7 @@
     "wiki": "Rough-legged buzzard",
     "common": "Rough-legged Buzzard",
     "sci": "Buteo lagopus",
-    "length_cm": null,
+    "length_cm": 57.0,
     "wingspan_cm": 135.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -1542,7 +1542,7 @@
     "wiki": "Jackal buzzard",
     "common": "Jackal Buzzard",
     "sci": "Buteo rufofuscus",
-    "length_cm": null,
+    "length_cm": 52.0,
     "wingspan_cm": 135.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -1551,7 +1551,7 @@
     "wiki": "Augur buzzard",
     "common": "Augur Buzzard",
     "sci": "Buteo augur",
-    "length_cm": null,
+    "length_cm": 54.0,
     "wingspan_cm": 134.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -1569,7 +1569,7 @@
     "wiki": "European herring gull",
     "common": "European Herring Gull",
     "sci": "Larus argentatus",
-    "length_cm": null,
+    "length_cm": 63.0,
     "wingspan_cm": 134.0,
     "status": "LC",
     "family": "Laridae"
@@ -1596,7 +1596,7 @@
     "wiki": "Spotted harrier",
     "common": "Spotted Harrier",
     "sci": "Circus assimilis",
-    "length_cm": null,
+    "length_cm": 54.5,
     "wingspan_cm": 134.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -1605,7 +1605,7 @@
     "wiki": "Lesser black-backed gull",
     "common": "Larus fuscus",
     "sci": "Larus fuscus",
-    "length_cm": null,
+    "length_cm": 57.5,
     "wingspan_cm": 134.0,
     "status": "LC",
     "family": "Laridae"
@@ -1614,7 +1614,7 @@
     "wiki": "Caspian tern",
     "common": "Caspian Tern",
     "sci": "Hydroprogne caspia",
-    "length_cm": null,
+    "length_cm": 54.0,
     "wingspan_cm": 133.5,
     "status": "LC",
     "family": "Laridae"
@@ -1623,7 +1623,7 @@
     "wiki": "Ruddy shelduck",
     "common": "Ruddy Shelduck",
     "sci": "Tadorna ferruginea",
-    "length_cm": null,
+    "length_cm": 64.0,
     "wingspan_cm": 133.0,
     "status": "LC",
     "family": null
@@ -1632,7 +1632,7 @@
     "wiki": "Whistling kite",
     "common": "Whistling Kite",
     "sci": "Haliastur sphenurus",
-    "length_cm": null,
+    "length_cm": 55.0,
     "wingspan_cm": 133.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -1641,7 +1641,7 @@
     "wiki": "Bank cormorant",
     "common": "Bank Cormorant",
     "sci": "Phalacrocorax neglectus",
-    "length_cm": null,
+    "length_cm": 75.0,
     "wingspan_cm": 132.0,
     "status": null,
     "family": "Phalacrocoracidae"
@@ -1668,7 +1668,7 @@
     "wiki": "Swamp harrier",
     "common": "Swamp Harrier",
     "sci": "Circus approximans",
-    "length_cm": null,
+    "length_cm": 55.0,
     "wingspan_cm": 131.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -1677,7 +1677,7 @@
     "wiki": "California gull",
     "common": "California Gull",
     "sci": "Larus californicus",
-    "length_cm": null,
+    "length_cm": 50.5,
     "wingspan_cm": 131.0,
     "status": "LC",
     "family": "Laridae"
@@ -1686,7 +1686,7 @@
     "wiki": "Savanna hawk",
     "common": "Savanna Hawk",
     "sci": "Buteogallus meridionalis",
-    "length_cm": null,
+    "length_cm": 53.5,
     "wingspan_cm": 130.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -1695,7 +1695,7 @@
     "wiki": "Yellow-legged gull",
     "common": "Yellow-legged Gull",
     "sci": "Larus michahellis",
-    "length_cm": null,
+    "length_cm": 60.0,
     "wingspan_cm": 130.0,
     "status": "LC",
     "family": "Laridae"
@@ -1722,7 +1722,7 @@
     "wiki": "Upland goose",
     "common": "Upland Goose",
     "sci": "Chloephaga picta",
-    "length_cm": null,
+    "length_cm": 66.2,
     "wingspan_cm": 129.0,
     "status": "LC",
     "family": null
@@ -1731,7 +1731,7 @@
     "wiki": "Rufous-tailed hawk",
     "common": "Rufous-tailed Hawk",
     "sci": "Buteo ventralis",
-    "length_cm": null,
+    "length_cm": 57.0,
     "wingspan_cm": 129.0,
     "status": null,
     "family": "Accipitridae"
@@ -1740,7 +1740,7 @@
     "wiki": "Zone-tailed hawk",
     "common": "Zone-tailed Hawk",
     "sci": "Buteo albonotatus",
-    "length_cm": null,
+    "length_cm": 51.0,
     "wingspan_cm": 128.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -1749,7 +1749,7 @@
     "wiki": "Swallow-tailed kite",
     "common": "Swallow-tailed Kite",
     "sci": "Elanoides forficatus",
-    "length_cm": null,
+    "length_cm": 59.0,
     "wingspan_cm": 127.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -1758,7 +1758,7 @@
     "wiki": "Swainson's hawk",
     "common": "Swainson's Hawk",
     "sci": "Buteo swainsoni",
-    "length_cm": null,
+    "length_cm": 49.5,
     "wingspan_cm": 127.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -1767,7 +1767,7 @@
     "wiki": "Eurasian bittern",
     "common": "Eurasian Bittern",
     "sci": "Botaurus stellaris",
-    "length_cm": null,
+    "length_cm": 75.0,
     "wingspan_cm": 127.0,
     "status": "LC",
     "family": null
@@ -1785,7 +1785,7 @@
     "wiki": "European honey buzzard",
     "common": "European honey buzzard",
     "sci": "Pernis apivorus",
-    "length_cm": null,
+    "length_cm": 56.0,
     "wingspan_cm": 126.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -1794,7 +1794,7 @@
     "wiki": "Scopoli's shearwater",
     "common": "Scopoli's Shearwater",
     "sci": "Calonectris diomedea",
-    "length_cm": null,
+    "length_cm": 48.5,
     "wingspan_cm": 126.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -1812,7 +1812,7 @@
     "wiki": "Powerful owl",
     "common": "Powerful Owl",
     "sci": "Ninox strenua",
-    "length_cm": null,
+    "length_cm": 55.0,
     "wingspan_cm": 125.0,
     "status": "LC",
     "family": "true owls"
@@ -1821,7 +1821,7 @@
     "wiki": "Lesser white-fronted goose",
     "common": "lesser white-fronted goose",
     "sci": "Anser erythropus",
-    "length_cm": null,
+    "length_cm": 59.5,
     "wingspan_cm": 125.0,
     "status": "VU",
     "family": null
@@ -1830,7 +1830,7 @@
     "wiki": "Black-tailed gull",
     "common": "Black-tailed Gull",
     "sci": "Larus crassirostris",
-    "length_cm": null,
+    "length_cm": 46.0,
     "wingspan_cm": 124.0,
     "status": "LC",
     "family": "Laridae"
@@ -1848,7 +1848,7 @@
     "wiki": "Variable hawk",
     "common": "Variable Hawk",
     "sci": "Geranoaetus polyosoma",
-    "length_cm": null,
+    "length_cm": 53.5,
     "wingspan_cm": 124.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -1875,7 +1875,7 @@
     "wiki": "Southern banded snake eagle",
     "common": "Southern Banded Snake Eagle",
     "sci": "Circaetus fasciolatus",
-    "length_cm": null,
+    "length_cm": 57.5,
     "wingspan_cm": 123.5,
     "status": "NT",
     "family": "Accipitridae"
@@ -1884,7 +1884,7 @@
     "wiki": "Mantled hawk",
     "common": "Mantled Hawk",
     "sci": "Pseudastur polionotus",
-    "length_cm": null,
+    "length_cm": 49.0,
     "wingspan_cm": 123.5,
     "status": "NT",
     "family": "Accipitridae"
@@ -1893,7 +1893,7 @@
     "wiki": "Red goshawk",
     "common": "Red Goshawk",
     "sci": "Erythrotriorchis radiatus",
-    "length_cm": null,
+    "length_cm": 52.5,
     "wingspan_cm": 123.5,
     "status": null,
     "family": null
@@ -1902,7 +1902,7 @@
     "wiki": "Grey petrel",
     "common": "Grey Petrel",
     "sci": "Procellaria cinerea",
-    "length_cm": null,
+    "length_cm": 50.0,
     "wingspan_cm": 122.5,
     "status": "NT",
     "family": "Procellariidae"
@@ -1911,7 +1911,7 @@
     "wiki": "Cape eagle-owl",
     "common": "Cape Eagle-Owl",
     "sci": "Bubo capensis",
-    "length_cm": null,
+    "length_cm": 53.5,
     "wingspan_cm": 122.5,
     "status": "LC",
     "family": "true owls"
@@ -1920,7 +1920,7 @@
     "wiki": "Sulawesi hawk-eagle",
     "common": "Sulawesi Hawk-Eagle",
     "sci": "Nisaetus lanceolatus",
-    "length_cm": null,
+    "length_cm": 64.0,
     "wingspan_cm": 122.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -1929,7 +1929,7 @@
     "wiki": "Réunion harrier",
     "common": "Réunion Harrier",
     "sci": "Circus maillardi",
-    "length_cm": null,
+    "length_cm": 48.5,
     "wingspan_cm": 122.5,
     "status": null,
     "family": "Accipitridae"
@@ -1938,7 +1938,7 @@
     "wiki": "Long-tailed honey buzzard",
     "common": "Long-tailed Honey Buzzard",
     "sci": "Henicopernis longicauda",
-    "length_cm": null,
+    "length_cm": 55.5,
     "wingspan_cm": 122.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -1947,7 +1947,7 @@
     "wiki": "African darter",
     "common": "African Darter",
     "sci": "Anhinga rufa",
-    "length_cm": null,
+    "length_cm": 80.0,
     "wingspan_cm": 122.0,
     "status": "LC",
     "family": "Anhingidae"
@@ -1956,7 +1956,7 @@
     "wiki": "Ayres's hawk-eagle",
     "common": "Ayres's Hawk-Eagle",
     "sci": "Hieraaetus ayresii",
-    "length_cm": null,
+    "length_cm": 50.5,
     "wingspan_cm": 121.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -1983,7 +1983,7 @@
     "wiki": "Striated caracara",
     "common": "Striated Caracara",
     "sci": "Phalcoboenus australis",
-    "length_cm": null,
+    "length_cm": 59.0,
     "wingspan_cm": 120.5,
     "status": "NT",
     "family": null
@@ -1992,7 +1992,7 @@
     "wiki": "Long-crested eagle",
     "common": "Long-crested Eagle",
     "sci": "Lophaetus occipitalis",
-    "length_cm": null,
+    "length_cm": 55.5,
     "wingspan_cm": 120.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -2001,7 +2001,7 @@
     "wiki": "Black-throated loon",
     "common": "Black-throated loon",
     "sci": "Gavia arctica",
-    "length_cm": null,
+    "length_cm": 70.0,
     "wingspan_cm": 120.0,
     "status": "LC",
     "family": "loon"
@@ -2010,7 +2010,7 @@
     "wiki": "Anhinga",
     "common": "Anhinga anhinga",
     "sci": "Anhinga anhinga",
-    "length_cm": null,
+    "length_cm": 85.0,
     "wingspan_cm": 120.0,
     "status": "LC",
     "family": "Anhingidae"
@@ -2019,7 +2019,7 @@
     "wiki": "Belcher's gull",
     "common": "Belcher's Gull",
     "sci": "Larus belcheri",
-    "length_cm": null,
+    "length_cm": 51.0,
     "wingspan_cm": 120.0,
     "status": "LC",
     "family": "Laridae"
@@ -2028,7 +2028,7 @@
     "wiki": "Royal spoonbill",
     "common": "Royal Spoonbill",
     "sci": "Platalea regia",
-    "length_cm": null,
+    "length_cm": 80.0,
     "wingspan_cm": 120.0,
     "status": "LC",
     "family": null
@@ -2037,7 +2037,7 @@
     "wiki": "Javan hawk-eagle",
     "common": "Javan hawk-eagle",
     "sci": "Nisaetus bartelsi",
-    "length_cm": null,
+    "length_cm": 60.0,
     "wingspan_cm": 120.0,
     "status": null,
     "family": "Accipitridae"
@@ -2046,7 +2046,7 @@
     "wiki": "Australian pied cormorant",
     "common": "Australian Pied Cormorant",
     "sci": "Phalacrocorax varius",
-    "length_cm": null,
+    "length_cm": 75.0,
     "wingspan_cm": 120.0,
     "status": "LC",
     "family": "Phalacrocoracidae"
@@ -2055,7 +2055,7 @@
     "wiki": "Wild turkey",
     "common": "Wild Turkey",
     "sci": "Meleagris gallopavo",
-    "length_cm": null,
+    "length_cm": 110.5,
     "wingspan_cm": 119.0,
     "status": "LC",
     "family": null
@@ -2064,7 +2064,7 @@
     "wiki": "Emperor goose",
     "common": "Emperor Goose",
     "sci": "Anser canagicus",
-    "length_cm": null,
+    "length_cm": 68.5,
     "wingspan_cm": 119.0,
     "status": "LC",
     "family": null
@@ -2082,7 +2082,7 @@
     "wiki": "Little eagle",
     "common": "Little Eagle",
     "sci": "Hieraaetus morphnoides",
-    "length_cm": null,
+    "length_cm": 50.0,
     "wingspan_cm": 118.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -2091,7 +2091,7 @@
     "wiki": "Pomarine jaeger",
     "common": "Pomarine Skua",
     "sci": "Stercorarius pomarinus",
-    "length_cm": null,
+    "length_cm": 56.5,
     "wingspan_cm": 118.0,
     "status": "LC",
     "family": "Stercorariidae"
@@ -2100,7 +2100,7 @@
     "wiki": "African sacred ibis",
     "common": "African Sacred Ibis",
     "sci": "Threskiornis aethiopicus",
-    "length_cm": null,
+    "length_cm": 68.0,
     "wingspan_cm": 118.0,
     "status": "LC",
     "family": null
@@ -2109,7 +2109,7 @@
     "wiki": "Barred hawk",
     "common": "Morphnarchus princeps",
     "sci": "Morphnarchus princeps",
-    "length_cm": null,
+    "length_cm": 56.0,
     "wingspan_cm": 118.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -2118,7 +2118,7 @@
     "wiki": "Royal tern",
     "common": "Royal Tern",
     "sci": "Thalasseus maximus",
-    "length_cm": null,
+    "length_cm": 47.5,
     "wingspan_cm": 117.5,
     "status": "LC",
     "family": "Laridae"
@@ -2127,7 +2127,7 @@
     "wiki": "Black petrel",
     "common": "Black Petrel",
     "sci": "Procellaria parkinsoni",
-    "length_cm": null,
+    "length_cm": 46.0,
     "wingspan_cm": 117.5,
     "status": "VU",
     "family": "Procellariidae"
@@ -2145,7 +2145,7 @@
     "wiki": "Australian white ibis",
     "common": "Australian White Ibis",
     "sci": "Threskiornis molucca",
-    "length_cm": null,
+    "length_cm": 70.0,
     "wingspan_cm": 117.5,
     "status": "LC",
     "family": null
@@ -2154,7 +2154,7 @@
     "wiki": "Brahminy kite",
     "common": "Brahminy Kite",
     "sci": "Haliastur indus",
-    "length_cm": null,
+    "length_cm": 48.0,
     "wingspan_cm": 117.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -2163,7 +2163,7 @@
     "wiki": "Barred honey buzzard",
     "common": "Barred Honey Buzzard",
     "sci": "Pernis celebensis",
-    "length_cm": null,
+    "length_cm": 53.5,
     "wingspan_cm": 117.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -2172,7 +2172,7 @@
     "wiki": "Pied harrier",
     "common": "Circus melanoleucos",
     "sci": "Circus melanoleucos",
-    "length_cm": null,
+    "length_cm": 45.0,
     "wingspan_cm": 117.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -2181,7 +2181,7 @@
     "wiki": "Reddish egret",
     "common": "Reddish Egret",
     "sci": "Egretta rufescens",
-    "length_cm": null,
+    "length_cm": 75.0,
     "wingspan_cm": 117.0,
     "status": "NT",
     "family": "heron"
@@ -2190,7 +2190,7 @@
     "wiki": "Southern fulmar",
     "common": "Southern Fulmar",
     "sci": "Fulmarus glacialoides",
-    "length_cm": null,
+    "length_cm": 47.5,
     "wingspan_cm": 117.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -2199,7 +2199,7 @@
     "wiki": "White-throated caracara",
     "common": "White-throated Caracara",
     "sci": "Phalcoboenus albogularis",
-    "length_cm": null,
+    "length_cm": 52.0,
     "wingspan_cm": 117.0,
     "status": "LC",
     "family": null
@@ -2217,7 +2217,7 @@
     "wiki": "Western marsh harrier",
     "common": "Western Marsh Harrier",
     "sci": "Circus aeruginosus",
-    "length_cm": null,
+    "length_cm": 52.0,
     "wingspan_cm": 116.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -2226,7 +2226,7 @@
     "wiki": "Carunculated caracara",
     "common": "Carunculated Caracara",
     "sci": "Phalcoboenus carunculatus",
-    "length_cm": null,
+    "length_cm": 53.0,
     "wingspan_cm": 115.5,
     "status": "LC",
     "family": null
@@ -2235,7 +2235,7 @@
     "wiki": "Greater crested tern",
     "common": "Greater Crested Tern",
     "sci": "Thalasseus bergii",
-    "length_cm": null,
+    "length_cm": 47.5,
     "wingspan_cm": 115.0,
     "status": "LC",
     "family": "Laridae"
@@ -2244,7 +2244,7 @@
     "wiki": "Ring-billed gull",
     "common": "Ring-billed Gull",
     "sci": "Larus delawarensis",
-    "length_cm": null,
+    "length_cm": 48.5,
     "wingspan_cm": 115.0,
     "status": "LC",
     "family": "Laridae"
@@ -2253,7 +2253,7 @@
     "wiki": "American bittern",
     "common": "American Bittern",
     "sci": "Botaurus lentiginosus",
-    "length_cm": null,
+    "length_cm": 71.5,
     "wingspan_cm": 115.0,
     "status": "LC",
     "family": null
@@ -2262,7 +2262,7 @@
     "wiki": "Rufous owl",
     "common": "Rufous Owl",
     "sci": "Ninox rufa",
-    "length_cm": null,
+    "length_cm": 51.5,
     "wingspan_cm": 115.0,
     "status": "LC",
     "family": "true owls"
@@ -2271,7 +2271,7 @@
     "wiki": "Philippine hawk-eagle",
     "common": "Philippine Hawk-Eagle",
     "sci": "Nisaetus philippensis",
-    "length_cm": null,
+    "length_cm": 61.5,
     "wingspan_cm": 115.0,
     "status": null,
     "family": "Accipitridae"
@@ -2280,7 +2280,7 @@
     "wiki": "African marsh harrier",
     "common": "African Marsh Harrier",
     "sci": "Circus ranivorus",
-    "length_cm": null,
+    "length_cm": 45.5,
     "wingspan_cm": 115.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -2289,7 +2289,7 @@
     "wiki": "Large-billed crow",
     "common": "Large-billed Crow",
     "sci": "Corvus macrorhynchos",
-    "length_cm": null,
+    "length_cm": 52.5,
     "wingspan_cm": 115.0,
     "status": "LC",
     "family": "Corvidae"
@@ -2298,7 +2298,7 @@
     "wiki": "Ural owl",
     "common": "Ural Owl",
     "sci": "Strix uralensis",
-    "length_cm": null,
+    "length_cm": 57.0,
     "wingspan_cm": 114.5,
     "status": "LC",
     "family": "true owls"
@@ -2307,7 +2307,7 @@
     "wiki": "Pink-footed shearwater",
     "common": "Pink-footed Shearwater",
     "sci": "Ardenna creatopus",
-    "length_cm": null,
+    "length_cm": 48.0,
     "wingspan_cm": 113.5,
     "status": "VU",
     "family": "Procellariidae"
@@ -2316,7 +2316,7 @@
     "wiki": "Australian shelduck",
     "common": "Australian Shelduck",
     "sci": "Tadorna tadornoides",
-    "length_cm": null,
+    "length_cm": 64.0,
     "wingspan_cm": 113.0,
     "status": "LC",
     "family": null
@@ -2334,7 +2334,7 @@
     "wiki": "Sulawesi serpent eagle",
     "common": "Sulawesi Serpent Eagle",
     "sci": "Spilornis rufipectus",
-    "length_cm": null,
+    "length_cm": 50.0,
     "wingspan_cm": 112.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -2343,7 +2343,7 @@
     "wiki": "Pale chanting goshawk",
     "common": "Pale Chanting Goshawk",
     "sci": "Melierax canorus",
-    "length_cm": null,
+    "length_cm": 55.0,
     "wingspan_cm": 112.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -2352,7 +2352,7 @@
     "wiki": "Philippine serpent eagle",
     "common": "Philippine Serpent Eagle",
     "sci": "Spilornis holospilus",
-    "length_cm": null,
+    "length_cm": 50.0,
     "wingspan_cm": 112.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -2361,7 +2361,7 @@
     "wiki": "Streaked shearwater",
     "common": "Streaked Shearwater",
     "sci": "Calonectris leucomelas",
-    "length_cm": null,
+    "length_cm": 48.5,
     "wingspan_cm": 112.5,
     "status": "NT",
     "family": "Procellariidae"
@@ -2370,7 +2370,7 @@
     "wiki": "Ornate hawk-eagle",
     "common": "Ornate Hawk-Eagle",
     "sci": "Spizaetus ornatus",
-    "length_cm": null,
+    "length_cm": 61.8,
     "wingspan_cm": 112.5,
     "status": "NT",
     "family": "Accipitridae"
@@ -2379,7 +2379,7 @@
     "wiki": "Common shelduck",
     "common": "Common Shelduck",
     "sci": "Tadorna tadorna",
-    "length_cm": null,
+    "length_cm": 60.0,
     "wingspan_cm": 112.0,
     "status": "LC",
     "family": null
@@ -2397,7 +2397,7 @@
     "wiki": "Australasian bittern",
     "common": "Australasian Bittern",
     "sci": "Botaurus poiciloptilus",
-    "length_cm": null,
+    "length_cm": 75.0,
     "wingspan_cm": 111.5,
     "status": "VU",
     "family": null
@@ -2406,7 +2406,7 @@
     "wiki": "Saker falcon",
     "common": "Saker Falcon",
     "sci": "Falco cherrug",
-    "length_cm": null,
+    "length_cm": 51.0,
     "wingspan_cm": 111.5,
     "status": null,
     "family": null
@@ -2415,7 +2415,7 @@
     "wiki": "Ivory gull",
     "common": "Ivory Gull",
     "sci": "Pagophila eburnea",
-    "length_cm": null,
+    "length_cm": 41.5,
     "wingspan_cm": 111.0,
     "status": "NT",
     "family": "Laridae"
@@ -2424,7 +2424,7 @@
     "wiki": "Booted eagle",
     "common": "Booted Eagle",
     "sci": "Hieraaetus pennatus",
-    "length_cm": null,
+    "length_cm": 40.0,
     "wingspan_cm": 111.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -2433,7 +2433,7 @@
     "wiki": "Common gull",
     "common": "Common Gull",
     "sci": "Larus canus",
-    "length_cm": null,
+    "length_cm": 43.0,
     "wingspan_cm": 111.0,
     "status": "LC",
     "family": "Laridae"
@@ -2442,7 +2442,7 @@
     "wiki": "Kerguelen shag",
     "common": "Kerguelen Shag",
     "sci": "Leucocarbo verrucosus",
-    "length_cm": null,
+    "length_cm": 65.0,
     "wingspan_cm": 110.0,
     "status": "LC",
     "family": "Phalacrocoracidae"
@@ -2451,7 +2451,7 @@
     "wiki": "Little bustard",
     "common": "Little Bustard",
     "sci": "Tetrax tetrax",
-    "length_cm": null,
+    "length_cm": 43.5,
     "wingspan_cm": 110.0,
     "status": "NT",
     "family": "Otididae"
@@ -2469,7 +2469,7 @@
     "wiki": "Harris's hawk",
     "common": "Harris's Hawk",
     "sci": "Parabuteo unicinctus",
-    "length_cm": null,
+    "length_cm": 52.5,
     "wingspan_cm": 110.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -2478,7 +2478,7 @@
     "wiki": "Straw-necked ibis",
     "common": "Straw-necked Ibis",
     "sci": "Threskiornis spinicollis",
-    "length_cm": null,
+    "length_cm": 67.5,
     "wingspan_cm": 110.0,
     "status": "LC",
     "family": null
@@ -2487,7 +2487,7 @@
     "wiki": "Hen harrier",
     "common": "Hen Harrier",
     "sci": "Circus cyaneus",
-    "length_cm": null,
+    "length_cm": 46.5,
     "wingspan_cm": 110.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -2496,7 +2496,7 @@
     "wiki": "Red-throated caracara",
     "common": "Red-throated Caracara",
     "sci": "Ibycter americanus",
-    "length_cm": null,
+    "length_cm": 53.5,
     "wingspan_cm": 110.0,
     "status": "LC",
     "family": null
@@ -2505,7 +2505,7 @@
     "wiki": "Black harrier",
     "common": "Black Harrier",
     "sci": "Circus maurus",
-    "length_cm": null,
+    "length_cm": 47.0,
     "wingspan_cm": 110.0,
     "status": null,
     "family": "Accipitridae"
@@ -2523,7 +2523,7 @@
     "wiki": "Forest buzzard",
     "common": "Forest buzzard",
     "sci": "Buteo trizonatus",
-    "length_cm": null,
+    "length_cm": 44.5,
     "wingspan_cm": 109.5,
     "status": "NT",
     "family": "Accipitridae"
@@ -2532,7 +2532,7 @@
     "wiki": "Cape cormorant",
     "common": "Cape Cormorant",
     "sci": "Phalacrocorax capensis",
-    "length_cm": null,
+    "length_cm": 62.5,
     "wingspan_cm": 109.0,
     "status": null,
     "family": "Phalacrocoracidae"
@@ -2550,7 +2550,7 @@
     "wiki": "White-headed petrel",
     "common": "White-headed Petrel",
     "sci": "Pterodroma lessonii",
-    "length_cm": null,
+    "length_cm": 101.6,
     "wingspan_cm": 109.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -2559,7 +2559,7 @@
     "wiki": "Montagu's harrier",
     "common": "Montagu's Harrier",
     "sci": "Circus pygargus",
-    "length_cm": null,
+    "length_cm": 45.0,
     "wingspan_cm": 109.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -2568,7 +2568,7 @@
     "wiki": "Pallid harrier",
     "common": "Pallid Harrier",
     "sci": "Circus macrourus",
-    "length_cm": null,
+    "length_cm": 44.0,
     "wingspan_cm": 109.0,
     "status": "NT",
     "family": "Accipitridae"
@@ -2577,7 +2577,7 @@
     "wiki": "Indian skimmer",
     "common": "Indian Skimmer",
     "sci": "Rynchops albicollis",
-    "length_cm": null,
+    "length_cm": 41.5,
     "wingspan_cm": 108.0,
     "status": null,
     "family": "Rynchopidae"
@@ -2586,7 +2586,7 @@
     "wiki": "Cassin's hawk-eagle",
     "common": "Cassin's Hawk-Eagle",
     "sci": "Aquila africana",
-    "length_cm": null,
+    "length_cm": 53.0,
     "wingspan_cm": 108.0,
     "status": "LC",
     "family": null
@@ -2595,7 +2595,7 @@
     "wiki": "Barnacle goose",
     "common": "Barnacle goose",
     "sci": "Branta leucopsis",
-    "length_cm": null,
+    "length_cm": 62.5,
     "wingspan_cm": 108.0,
     "status": "LC",
     "family": null
@@ -2604,7 +2604,7 @@
     "wiki": "Bat hawk",
     "common": "Bat Hawk",
     "sci": "Macheiramphus alcinus",
-    "length_cm": null,
+    "length_cm": 45.0,
     "wingspan_cm": 107.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -2622,7 +2622,7 @@
     "wiki": "White hawk",
     "common": "Pseudastur albicollis",
     "sci": "Pseudastur albicollis",
-    "length_cm": null,
+    "length_cm": 51.0,
     "wingspan_cm": 107.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -2631,7 +2631,7 @@
     "wiki": "Eurasian whimbrel",
     "common": "Eurasian Whimbrel",
     "sci": "Numenius phaeopus",
-    "length_cm": null,
+    "length_cm": 42.0,
     "wingspan_cm": 107.0,
     "status": "LC",
     "family": "Scolopacidae"
@@ -2649,7 +2649,7 @@
     "wiki": "Snail kite",
     "common": "Snail Kite",
     "sci": "Rostrhamus sociabilis",
-    "length_cm": null,
+    "length_cm": 42.0,
     "wingspan_cm": 107.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -2658,7 +2658,7 @@
     "wiki": "Northern fulmar",
     "common": "Northern Fulmar",
     "sci": "Fulmarus glacialis",
-    "length_cm": null,
+    "length_cm": 46.0,
     "wingspan_cm": 107.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -2667,7 +2667,7 @@
     "wiki": "Spotted eagle-owl",
     "common": "Spotted Eagle-Owl",
     "sci": "Bubo africanus",
-    "length_cm": null,
+    "length_cm": 45.0,
     "wingspan_cm": 106.5,
     "status": "LC",
     "family": "true owls"
@@ -2676,7 +2676,7 @@
     "wiki": "Yellow-crowned night heron",
     "common": "Yellow-crowned Night Heron",
     "sci": "Nyctanassa violacea",
-    "length_cm": null,
+    "length_cm": 62.5,
     "wingspan_cm": 106.5,
     "status": "LC",
     "family": null
@@ -2694,7 +2694,7 @@
     "wiki": "Western capercaillie",
     "common": "Western Capercaillie",
     "sci": "Tetrao urogallus",
-    "length_cm": null,
+    "length_cm": 69.5,
     "wingspan_cm": 106.0,
     "status": "LC",
     "family": "Phasianidae"
@@ -2703,7 +2703,7 @@
     "wiki": "African skimmer",
     "common": "African skimmer",
     "sci": "Rynchops flavirostris",
-    "length_cm": null,
+    "length_cm": 38.0,
     "wingspan_cm": 106.0,
     "status": "LC",
     "family": "Rynchopidae"
@@ -2712,7 +2712,7 @@
     "wiki": "Parasitic jaeger",
     "common": "Parasitic Jaeger",
     "sci": "Stercorarius parasiticus",
-    "length_cm": null,
+    "length_cm": 44.5,
     "wingspan_cm": 106.0,
     "status": "LC",
     "family": "Stercorariidae"
@@ -2721,7 +2721,7 @@
     "wiki": "White-faced heron",
     "common": "White-faced Heron",
     "sci": "Egretta novaehollandiae",
-    "length_cm": null,
+    "length_cm": 65.0,
     "wingspan_cm": 106.0,
     "status": "LC",
     "family": "heron"
@@ -2730,7 +2730,7 @@
     "wiki": "Socotra cormorant",
     "common": "Socotra Cormorant",
     "sci": "Phalacrocorax nigrogularis",
-    "length_cm": null,
+    "length_cm": 80.0,
     "wingspan_cm": 106.0,
     "status": "VU",
     "family": "Phalacrocoracidae"
@@ -2748,7 +2748,7 @@
     "wiki": "Nankeen night heron",
     "common": "Nankeen Night Heron",
     "sci": "Nycticorax caledonicus",
-    "length_cm": null,
+    "length_cm": 60.0,
     "wingspan_cm": 105.5,
     "status": "LC",
     "family": null
@@ -2757,7 +2757,7 @@
     "wiki": "Grey-faced buzzard",
     "common": "Grey-faced Buzzard",
     "sci": "Butastur indicus",
-    "length_cm": null,
+    "length_cm": 43.5,
     "wingspan_cm": 105.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -2766,7 +2766,7 @@
     "wiki": "Black falcon",
     "common": "Black Falcon",
     "sci": "Falco subniger",
-    "length_cm": null,
+    "length_cm": 50.0,
     "wingspan_cm": 105.5,
     "status": "LC",
     "family": null
@@ -2775,7 +2775,7 @@
     "wiki": "Laughing gull",
     "common": "Laughing Gull",
     "sci": "Leucophaeus atricilla",
-    "length_cm": null,
+    "length_cm": 38.5,
     "wingspan_cm": 105.0,
     "status": null,
     "family": "Laridae"
@@ -2784,7 +2784,7 @@
     "wiki": "Campbell shag",
     "common": "Campbell Shag",
     "sci": "Leucocarbo campbelli",
-    "length_cm": null,
+    "length_cm": 63.0,
     "wingspan_cm": 105.0,
     "status": "VU",
     "family": "Phalacrocoracidae"
@@ -2793,7 +2793,7 @@
     "wiki": "Antarctic petrel",
     "common": "Antarctic Petrel",
     "sci": "Thalassoica antarctica",
-    "length_cm": null,
+    "length_cm": 42.5,
     "wingspan_cm": 105.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -2811,7 +2811,7 @@
     "wiki": "Juan Fernández petrel",
     "common": "Juan Fernández Petrel",
     "sci": "Pterodroma externa",
-    "length_cm": null,
+    "length_cm": 43.0,
     "wingspan_cm": 104.5,
     "status": "VU",
     "family": "Procellariidae"
@@ -2829,7 +2829,7 @@
     "wiki": "Atlantic petrel",
     "common": "Atlantic Petrel",
     "sci": "Pterodroma incerta",
-    "length_cm": null,
+    "length_cm": 43.0,
     "wingspan_cm": 104.0,
     "status": null,
     "family": "Procellariidae"
@@ -2838,7 +2838,7 @@
     "wiki": "Madagascar serpent eagle",
     "common": "Madagascar Serpent Eagle",
     "sci": "Eutriorchis astur",
-    "length_cm": null,
+    "length_cm": 61.5,
     "wingspan_cm": 104.0,
     "status": null,
     "family": null
@@ -2847,7 +2847,7 @@
     "wiki": "Red-throated loon",
     "common": "Red-throated Diver",
     "sci": "Gavia stellata",
-    "length_cm": null,
+    "length_cm": 61.0,
     "wingspan_cm": 104.0,
     "status": "LC",
     "family": "loon"
@@ -2856,7 +2856,7 @@
     "wiki": "Far Eastern curlew",
     "common": "Far Eastern Curlew",
     "sci": "Numenius madagascariensis",
-    "length_cm": null,
+    "length_cm": 63.0,
     "wingspan_cm": 103.5,
     "status": null,
     "family": "Scolopacidae"
@@ -2865,7 +2865,7 @@
     "wiki": "Eastern chanting goshawk",
     "common": "Eastern Chanting Goshawk",
     "sci": "Melierax poliopterus",
-    "length_cm": null,
+    "length_cm": 52.0,
     "wingspan_cm": 103.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -2874,7 +2874,7 @@
     "wiki": "Greater sooty owl",
     "common": "Greater Sooty Owl",
     "sci": "Tyto tenebricosa",
-    "length_cm": null,
+    "length_cm": 44.0,
     "wingspan_cm": 103.0,
     "status": "LC",
     "family": null
@@ -2883,7 +2883,7 @@
     "wiki": "Red-billed tropicbird",
     "common": "Red-billed Tropicbird",
     "sci": "Phaethon aethereus",
-    "length_cm": null,
+    "length_cm": 48.0,
     "wingspan_cm": 102.5,
     "status": "LC",
     "family": "Phaethontidae"
@@ -2892,7 +2892,7 @@
     "wiki": "Grey-headed gull",
     "common": "Grey-headed Gull",
     "sci": "Chroicocephalus cirrocephalus",
-    "length_cm": null,
+    "length_cm": 42.0,
     "wingspan_cm": 102.5,
     "status": null,
     "family": null
@@ -2910,7 +2910,7 @@
     "wiki": "Slender-billed gull",
     "common": "Slender-billed Gull",
     "sci": "Chroicocephalus genei",
-    "length_cm": null,
+    "length_cm": 38.5,
     "wingspan_cm": 102.0,
     "status": null,
     "family": null
@@ -2919,7 +2919,7 @@
     "wiki": "Short-eared owl",
     "common": "Short-eared Owl",
     "sci": "Asio flammeus",
-    "length_cm": null,
+    "length_cm": 38.5,
     "wingspan_cm": 102.0,
     "status": "LC",
     "family": "true owls"
@@ -2928,7 +2928,7 @@
     "wiki": "Peregrine falcon",
     "common": "Peregrine Falcon",
     "sci": "Falco peregrinus",
-    "length_cm": null,
+    "length_cm": 46.0,
     "wingspan_cm": 102.0,
     "status": "LC",
     "family": null
@@ -2955,7 +2955,7 @@
     "wiki": "Red-shouldered hawk",
     "common": "Red-shouldered Hawk",
     "sci": "Buteo lineatus",
-    "length_cm": null,
+    "length_cm": 52.0,
     "wingspan_cm": 102.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -2964,7 +2964,7 @@
     "wiki": "Brown falcon",
     "common": "Brown Falcon",
     "sci": "Falco berigora",
-    "length_cm": null,
+    "length_cm": 45.0,
     "wingspan_cm": 101.5,
     "status": "LC",
     "family": null
@@ -2973,7 +2973,7 @@
     "wiki": "Buller's shearwater",
     "common": "Buller's Shearwater",
     "sci": "Ardenna bulleri",
-    "length_cm": null,
+    "length_cm": 46.5,
     "wingspan_cm": 101.5,
     "status": "VU",
     "family": "Procellariidae"
@@ -2982,7 +2982,7 @@
     "wiki": "Sooty shearwater",
     "common": "Sooty Shearwater",
     "sci": "Ardenna grisea",
-    "length_cm": null,
+    "length_cm": 45.5,
     "wingspan_cm": 101.5,
     "status": "NT",
     "family": "Procellariidae"
@@ -2991,7 +2991,7 @@
     "wiki": "Black-capped petrel",
     "common": "Black-capped Petrel",
     "sci": "Pterodroma hasitata",
-    "length_cm": null,
+    "length_cm": 40.5,
     "wingspan_cm": 101.5,
     "status": null,
     "family": "Procellariidae"
@@ -3000,7 +3000,7 @@
     "wiki": "Brant (goose)",
     "common": "Brant Goose",
     "sci": "Branta bernicla",
-    "length_cm": null,
+    "length_cm": 60.5,
     "wingspan_cm": 101.0,
     "status": "LC",
     "family": null
@@ -3018,7 +3018,7 @@
     "wiki": "Little blue heron",
     "common": "Little Blue Heron",
     "sci": "Egretta caerulea",
-    "length_cm": null,
+    "length_cm": 65.0,
     "wingspan_cm": 100.5,
     "status": "LC",
     "family": "heron"
@@ -3027,7 +3027,7 @@
     "wiki": "Lanner falcon",
     "common": "Lanner Falcon",
     "sci": "Falco biarmicus",
-    "length_cm": null,
+    "length_cm": 46.5,
     "wingspan_cm": 100.5,
     "status": "LC",
     "family": null
@@ -3036,7 +3036,7 @@
     "wiki": "Caspian snowcock",
     "common": "Caspian Snowcock",
     "sci": "Tetraogallus caspius",
-    "length_cm": null,
+    "length_cm": 59.5,
     "wingspan_cm": 100.0,
     "status": "LC",
     "family": null
@@ -3045,7 +3045,7 @@
     "wiki": "Sandwich tern",
     "common": "Sandwich Tern",
     "sci": "Thalasseus sandvicensis",
-    "length_cm": null,
+    "length_cm": 38.5,
     "wingspan_cm": 100.0,
     "status": "LC",
     "family": "Laridae"
@@ -3054,7 +3054,7 @@
     "wiki": "Long-tailed jaeger",
     "common": "Long-tailed Jaeger",
     "sci": "Stercorarius longicaudus",
-    "length_cm": null,
+    "length_cm": 48.0,
     "wingspan_cm": 100.0,
     "status": "LC",
     "family": "Stercorariidae"
@@ -3063,7 +3063,7 @@
     "wiki": "Little black cormorant",
     "common": "Little Black Cormorant",
     "sci": "Phalacrocorax sulcirostris",
-    "length_cm": null,
+    "length_cm": 62.5,
     "wingspan_cm": 100.0,
     "status": "LC",
     "family": "Phalacrocoracidae"
@@ -3072,7 +3072,7 @@
     "wiki": "Red-tailed tropicbird",
     "common": "Red-tailed Tropicbird",
     "sci": "Phaethon rubricauda",
-    "length_cm": null,
+    "length_cm": 99.5,
     "wingspan_cm": 100.0,
     "status": "LC",
     "family": "Phaethontidae"
@@ -3081,7 +3081,7 @@
     "wiki": "Gray-headed kite",
     "common": "Gray-headed Kite",
     "sci": "Leptodon cayanensis",
-    "length_cm": null,
+    "length_cm": 49.5,
     "wingspan_cm": 100.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -3090,7 +3090,7 @@
     "wiki": "Wallace's hawk-eagle",
     "common": "Wallace's Hawk-Eagle",
     "sci": "Nisaetus nanus",
-    "length_cm": null,
+    "length_cm": 46.0,
     "wingspan_cm": 100.0,
     "status": "VU",
     "family": "Accipitridae"
@@ -3108,7 +3108,7 @@
     "wiki": "Tawny owl",
     "common": "tawny owl",
     "sci": "Strix aluco",
-    "length_cm": null,
+    "length_cm": 41.5,
     "wingspan_cm": 99.0,
     "status": "LC",
     "family": "true owls"
@@ -3117,7 +3117,7 @@
     "wiki": "Grasshopper buzzard",
     "common": "Grasshopper Buzzard",
     "sci": "Butastur rufipennis",
-    "length_cm": null,
+    "length_cm": 32.5,
     "wingspan_cm": 99.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -3135,7 +3135,7 @@
     "wiki": "Great-winged petrel",
     "common": "Great-winged Petrel",
     "sci": "Pterodroma macroptera",
-    "length_cm": null,
+    "length_cm": 43.5,
     "wingspan_cm": 98.5,
     "status": "LC",
     "family": "Procellariidae"
@@ -3144,7 +3144,7 @@
     "wiki": "Common eider",
     "common": "Common Eider",
     "sci": "Somateria mollissima",
-    "length_cm": null,
+    "length_cm": 60.5,
     "wingspan_cm": 98.0,
     "status": "NT",
     "family": null
@@ -3153,7 +3153,7 @@
     "wiki": "Rufous crab hawk",
     "common": "Rufous Crab Hawk",
     "sci": "Buteogallus aequinoctialis",
-    "length_cm": null,
+    "length_cm": 44.2,
     "wingspan_cm": 98.0,
     "status": "NT",
     "family": "Accipitridae"
@@ -3162,7 +3162,7 @@
     "wiki": "Hooded crow",
     "common": "Hooded Crow",
     "sci": "Corvus cornix",
-    "length_cm": null,
+    "length_cm": 50.0,
     "wingspan_cm": 98.0,
     "status": null,
     "family": "Corvidae"
@@ -3171,7 +3171,7 @@
     "wiki": "Lesser flamingo",
     "common": "Lesser Flamingo",
     "sci": "Phoeniconaias minor",
-    "length_cm": null,
+    "length_cm": 87.5,
     "wingspan_cm": 97.5,
     "status": "NT",
     "family": "Flamingos"
@@ -3189,7 +3189,7 @@
     "wiki": "Eurasian curlew",
     "common": "Eurasian Curlew",
     "sci": "Numenius arquata",
-    "length_cm": null,
+    "length_cm": 55.0,
     "wingspan_cm": 97.0,
     "status": "NT",
     "family": "Scolopacidae"
@@ -3198,7 +3198,7 @@
     "wiki": "Plains-wanderer",
     "common": "Plains-wanderer",
     "sci": "Pedionomus torquatus",
-    "length_cm": null,
+    "length_cm": 17.0,
     "wingspan_cm": 97.0,
     "status": null,
     "family": "Pedionomidae"
@@ -3207,7 +3207,7 @@
     "wiki": "Black-headed gull",
     "common": "Black-headed Gull",
     "sci": "Chroicocephalus ridibundus",
-    "length_cm": null,
+    "length_cm": 36.5,
     "wingspan_cm": 97.0,
     "status": "LC",
     "family": null
@@ -3216,7 +3216,7 @@
     "wiki": "Velvet scoter",
     "common": "Velvet Scoter",
     "sci": "Melanitta fusca",
-    "length_cm": null,
+    "length_cm": 53.5,
     "wingspan_cm": 97.0,
     "status": "VU",
     "family": null
@@ -3225,7 +3225,7 @@
     "wiki": "Lesser crested tern",
     "common": "Lesser Crested Tern",
     "sci": "Thalasseus bengalensis",
-    "length_cm": null,
+    "length_cm": 39.0,
     "wingspan_cm": 96.5,
     "status": "LC",
     "family": "Laridae"
@@ -3234,7 +3234,7 @@
     "wiki": "Pelagic cormorant",
     "common": "Pelagic Cormorant",
     "sci": "Phalacrocorax pelagicus",
-    "length_cm": null,
+    "length_cm": 76.5,
     "wingspan_cm": 96.5,
     "status": null,
     "family": "Phalacrocoracidae"
@@ -3243,7 +3243,7 @@
     "wiki": "Red-footed booby",
     "common": "Red-footed Booby",
     "sci": "Sula sula",
-    "length_cm": null,
+    "length_cm": 70.0,
     "wingspan_cm": 96.0,
     "status": "LC",
     "family": "Sulidae"
@@ -3261,7 +3261,7 @@
     "wiki": "Black-legged kittiwake",
     "common": "Black-legged Kittiwake",
     "sci": "Rissa tridactyla",
-    "length_cm": null,
+    "length_cm": 39.0,
     "wingspan_cm": 96.0,
     "status": "VU",
     "family": "Laridae"
@@ -3270,7 +3270,7 @@
     "wiki": "White-necked hawk",
     "common": "White-necked Hawk",
     "sci": "Buteogallus lacernulatus",
-    "length_cm": null,
+    "length_cm": 45.5,
     "wingspan_cm": 96.0,
     "status": "NT",
     "family": "Accipitridae"
@@ -3279,7 +3279,7 @@
     "wiki": "Barau's petrel",
     "common": "Barau's Petrel",
     "sci": "Pterodroma baraui",
-    "length_cm": null,
+    "length_cm": 40.0,
     "wingspan_cm": 96.0,
     "status": null,
     "family": "Procellariidae"
@@ -3297,7 +3297,7 @@
     "wiki": "Black caracara",
     "common": "Black Caracara",
     "sci": "Daptrius ater",
-    "length_cm": null,
+    "length_cm": 44.0,
     "wingspan_cm": 95.5,
     "status": "LC",
     "family": null
@@ -3306,7 +3306,7 @@
     "wiki": "Pacific reef heron",
     "common": "Pacific Reef Heron",
     "sci": "Egretta sacra",
-    "length_cm": null,
+    "length_cm": 61.5,
     "wingspan_cm": 95.0,
     "status": "LC",
     "family": "heron"
@@ -3315,7 +3315,7 @@
     "wiki": "Great stone-curlew",
     "common": "Great Thick-knee",
     "sci": "Esacus recurvirostris",
-    "length_cm": null,
+    "length_cm": 52.0,
     "wingspan_cm": 95.0,
     "status": "NT",
     "family": "Burhinidae"
@@ -3324,7 +3324,7 @@
     "wiki": "Spotted shag",
     "common": "Spotted Shag",
     "sci": "Phalacrocorax punctatus",
-    "length_cm": null,
+    "length_cm": 69.0,
     "wingspan_cm": 95.0,
     "status": "LC",
     "family": "Phalacrocoracidae"
@@ -3351,7 +3351,7 @@
     "wiki": "Madagascar cuckoo-hawk",
     "common": "Madagascar Cuckoo-Hawk",
     "sci": "Aviceda madagascariensis",
-    "length_cm": null,
+    "length_cm": 76.2,
     "wingspan_cm": 95.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -3360,7 +3360,7 @@
     "wiki": "Eleonora's falcon",
     "common": "Eleonora's Falcon",
     "sci": "Falco eleonorae",
-    "length_cm": null,
+    "length_cm": 39.0,
     "wingspan_cm": 95.0,
     "status": "LC",
     "family": null
@@ -3369,7 +3369,7 @@
     "wiki": "Herald petrel",
     "common": "Pterodroma heraldica",
     "sci": "Pterodroma heraldica",
-    "length_cm": null,
+    "length_cm": 37.0,
     "wingspan_cm": 95.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -3387,7 +3387,7 @@
     "wiki": "Trindade petrel",
     "common": "Trindade Petrel",
     "sci": "Pterodroma arminjoniana",
-    "length_cm": null,
+    "length_cm": 37.0,
     "wingspan_cm": 95.0,
     "status": "VU",
     "family": "Procellariidae"
@@ -3396,7 +3396,7 @@
     "wiki": "Gull-billed tern",
     "common": "Gull-billed Tern",
     "sci": "Gelochelidon nilotica",
-    "length_cm": null,
+    "length_cm": 37.5,
     "wingspan_cm": 94.0,
     "status": "LC",
     "family": "Laridae"
@@ -3405,7 +3405,7 @@
     "wiki": "White-tailed kite",
     "common": "white-tailed kite",
     "sci": "Elanus leucurus",
-    "length_cm": null,
+    "length_cm": 39.0,
     "wingspan_cm": 94.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -3414,7 +3414,7 @@
     "wiki": "Hawaiian hawk",
     "common": "Hawaiian Hawk",
     "sci": "Buteo solitarius",
-    "length_cm": null,
+    "length_cm": 43.0,
     "wingspan_cm": 94.0,
     "status": "NT",
     "family": "Accipitridae"
@@ -3423,7 +3423,7 @@
     "wiki": "Silver gull",
     "common": "Silver Gull",
     "sci": "Chroicocephalus novaehollandiae",
-    "length_cm": null,
+    "length_cm": 42.5,
     "wingspan_cm": 93.5,
     "status": "LC",
     "family": null
@@ -3432,7 +3432,7 @@
     "wiki": "Henderson petrel",
     "common": "Henderson Petrel",
     "sci": "Pterodroma atrata",
-    "length_cm": null,
+    "length_cm": 37.0,
     "wingspan_cm": 93.5,
     "status": null,
     "family": "Procellariidae"
@@ -3441,7 +3441,7 @@
     "wiki": "King eider",
     "common": "King Eider",
     "sci": "Somateria spectabilis",
-    "length_cm": null,
+    "length_cm": 60.0,
     "wingspan_cm": 93.0,
     "status": "LC",
     "family": null
@@ -3450,7 +3450,7 @@
     "wiki": "Henst's goshawk",
     "common": "Accipiter henstii",
     "sci": "Accipiter henstii",
-    "length_cm": null,
+    "length_cm": 57.0,
     "wingspan_cm": 93.0,
     "status": "VU",
     "family": null
@@ -3468,7 +3468,7 @@
     "wiki": "Murphy's petrel",
     "common": "Murphy's Petrel",
     "sci": "Pterodroma ultima",
-    "length_cm": null,
+    "length_cm": 39.5,
     "wingspan_cm": 93.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -3477,7 +3477,7 @@
     "wiki": "Rook (bird)",
     "common": "Rook",
     "sci": "Corvus frugilegus",
-    "length_cm": null,
+    "length_cm": 45.0,
     "wingspan_cm": 93.0,
     "status": "LC",
     "family": "Corvidae"
@@ -3486,7 +3486,7 @@
     "wiki": "Common merganser",
     "common": "Common Merganser",
     "sci": "Mergus merganser",
-    "length_cm": null,
+    "length_cm": 65.0,
     "wingspan_cm": 93.0,
     "status": "LC",
     "family": null
@@ -3504,7 +3504,7 @@
     "wiki": "White-throated hawk",
     "common": "White-throated Hawk",
     "sci": "Buteo albigula",
-    "length_cm": null,
+    "length_cm": 43.0,
     "wingspan_cm": 93.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -3513,7 +3513,7 @@
     "wiki": "Pacific baza",
     "common": "Pacific Baza",
     "sci": "Aviceda subcristata",
-    "length_cm": null,
+    "length_cm": 40.5,
     "wingspan_cm": 92.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -3522,7 +3522,7 @@
     "wiki": "Little egret",
     "common": "Little Egret",
     "sci": "Egretta garzetta",
-    "length_cm": null,
+    "length_cm": 60.0,
     "wingspan_cm": 92.0,
     "status": "LC",
     "family": "heron"
@@ -3531,7 +3531,7 @@
     "wiki": "Grey falcon",
     "common": "Grey Falcon",
     "sci": "Falco hypoleucos",
-    "length_cm": null,
+    "length_cm": 37.5,
     "wingspan_cm": 92.0,
     "status": "VU",
     "family": null
@@ -3540,7 +3540,7 @@
     "wiki": "Kermadec petrel",
     "common": "Kermadec Petrel",
     "sci": "Pterodroma neglecta",
-    "length_cm": null,
+    "length_cm": 38.0,
     "wingspan_cm": 92.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -3549,7 +3549,7 @@
     "wiki": "Franklin's gull",
     "common": "Franklin's Gull",
     "sci": "Leucophaeus pipixcan",
-    "length_cm": null,
+    "length_cm": 34.0,
     "wingspan_cm": 91.5,
     "status": null,
     "family": "Laridae"
@@ -3558,7 +3558,7 @@
     "wiki": "White-tailed tropicbird",
     "common": "White-tailed Tropicbird",
     "sci": "Phaethon lepturus",
-    "length_cm": null,
+    "length_cm": 75.5,
     "wingspan_cm": 91.0,
     "status": "LC",
     "family": "Phaethontidae"
@@ -3567,7 +3567,7 @@
     "wiki": "Fea's petrel",
     "common": "Fea's Petrel",
     "sci": "Pterodroma feae",
-    "length_cm": null,
+    "length_cm": 34.5,
     "wingspan_cm": 91.0,
     "status": "NT",
     "family": "Procellariidae"
@@ -3576,7 +3576,7 @@
     "wiki": "Carrion crow",
     "common": "Carrion Crow",
     "sci": "Corvus corone",
-    "length_cm": null,
+    "length_cm": 50.0,
     "wingspan_cm": 91.0,
     "status": "LC",
     "family": "Corvidae"
@@ -3585,7 +3585,7 @@
     "wiki": "Marsh owl",
     "common": "Marsh Owl",
     "sci": "Asio capensis",
-    "length_cm": null,
+    "length_cm": 34.5,
     "wingspan_cm": 90.5,
     "status": "LC",
     "family": "true owls"
@@ -3594,7 +3594,7 @@
     "wiki": "Hartlaub's gull",
     "common": "Hartlaub's gull",
     "sci": "Chroicocephalus hartlaubii",
-    "length_cm": null,
+    "length_cm": 38.0,
     "wingspan_cm": 90.5,
     "status": null,
     "family": null
@@ -3603,7 +3603,7 @@
     "wiki": "American black duck",
     "common": "American Black Duck",
     "sci": "Anas rubripes",
-    "length_cm": null,
+    "length_cm": 56.5,
     "wingspan_cm": 90.5,
     "status": "LC",
     "family": null
@@ -3612,7 +3612,7 @@
     "wiki": "Little cormorant",
     "common": "Little Cormorant",
     "sci": "Microcarbo niger",
-    "length_cm": null,
+    "length_cm": 50.0,
     "wingspan_cm": 90.0,
     "status": "LC",
     "family": "Phalacrocoracidae"
@@ -3621,7 +3621,7 @@
     "wiki": "Tricolored heron",
     "common": "Tricolored Heron",
     "sci": "Egretta tricolor",
-    "length_cm": null,
+    "length_cm": 66.0,
     "wingspan_cm": 90.0,
     "status": "LC",
     "family": "heron"
@@ -3630,7 +3630,7 @@
     "wiki": "Sooty tern",
     "common": "Sooty Tern",
     "sci": "Onychoprion fuscatus",
-    "length_cm": null,
+    "length_cm": 40.5,
     "wingspan_cm": 90.0,
     "status": "LC",
     "family": "Laridae"
@@ -3639,7 +3639,7 @@
     "wiki": "Northern pintail",
     "common": "Northern Pintail",
     "sci": "Anas acuta",
-    "length_cm": null,
+    "length_cm": 67.5,
     "wingspan_cm": 90.0,
     "status": "LC",
     "family": null
@@ -3648,7 +3648,7 @@
     "wiki": "Rufous-legged owl",
     "common": "concon",
     "sci": "Strix rufipes",
-    "length_cm": null,
+    "length_cm": 35.5,
     "wingspan_cm": 90.0,
     "status": "LC",
     "family": "true owls"
@@ -3657,7 +3657,7 @@
     "wiki": "Black-billed gull",
     "common": "Black-billed Gull",
     "sci": "Chroicocephalus bulleri",
-    "length_cm": null,
+    "length_cm": 36.5,
     "wingspan_cm": 90.0,
     "status": null,
     "family": null
@@ -3675,7 +3675,7 @@
     "wiki": "Great Nicobar serpent eagle",
     "common": "Great Nicobar Serpent Eagle",
     "sci": "Spilornis klossi",
-    "length_cm": null,
+    "length_cm": 40.0,
     "wingspan_cm": 90.0,
     "status": null,
     "family": "Accipitridae"
@@ -3684,7 +3684,7 @@
     "wiki": "Western barn owl",
     "common": "Western Barn Owl",
     "sci": "Tyto alba",
-    "length_cm": null,
+    "length_cm": 34.0,
     "wingspan_cm": 90.0,
     "status": "LC",
     "family": null
@@ -3693,7 +3693,7 @@
     "wiki": "Glossy ibis",
     "common": "Glossy Ibis",
     "sci": "Plegadis falcinellus",
-    "length_cm": null,
+    "length_cm": 59.4,
     "wingspan_cm": 89.0,
     "status": "LC",
     "family": null
@@ -3711,7 +3711,7 @@
     "wiki": "Red-legged kittiwake",
     "common": "Red-legged Kittiwake",
     "sci": "Rissa brevirostris",
-    "length_cm": null,
+    "length_cm": 37.0,
     "wingspan_cm": 88.5,
     "status": "VU",
     "family": "Laridae"
@@ -3729,7 +3729,7 @@
     "wiki": "Common tern",
     "common": "Common Tern",
     "sci": "Sterna hirundo",
-    "length_cm": null,
+    "length_cm": 33.0,
     "wingspan_cm": 88.0,
     "status": "LC",
     "family": "Sternidae"
@@ -3738,7 +3738,7 @@
     "wiki": "Great crested grebe",
     "common": "Great Crested Grebe",
     "sci": "Podiceps cristatus",
-    "length_cm": null,
+    "length_cm": 48.5,
     "wingspan_cm": 88.0,
     "status": "LC",
     "family": "Podicipedidae"
@@ -3756,7 +3756,7 @@
     "wiki": "Mallard",
     "common": "mallard",
     "sci": "Anas platyrhynchos",
-    "length_cm": null,
+    "length_cm": 57.5,
     "wingspan_cm": 88.0,
     "status": "LC",
     "family": null
@@ -3774,7 +3774,7 @@
     "wiki": "Black-shouldered kite",
     "common": "Black-shouldered Kite",
     "sci": "Elanus axillaris",
-    "length_cm": null,
+    "length_cm": 35.0,
     "wingspan_cm": 88.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -3783,7 +3783,7 @@
     "wiki": "Hook-billed kite",
     "common": "Hook-billed Kite",
     "sci": "Chondrohierax uncinatus",
-    "length_cm": null,
+    "length_cm": 40.0,
     "wingspan_cm": 88.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -3792,7 +3792,7 @@
     "wiki": "Caucasian snowcock",
     "common": "Caucasian Snowcock",
     "sci": "Tetraogallus caucasicus",
-    "length_cm": null,
+    "length_cm": 55.0,
     "wingspan_cm": 87.5,
     "status": "LC",
     "family": null
@@ -3801,7 +3801,7 @@
     "wiki": "Little pied cormorant",
     "common": "Microcarbo melanoleucos",
     "sci": "Microcarbo melanoleucos",
-    "length_cm": null,
+    "length_cm": 57.0,
     "wingspan_cm": 87.5,
     "status": "LC",
     "family": "Phalacrocoracidae"
@@ -3810,7 +3810,7 @@
     "wiki": "Mottled owl",
     "common": "Mottled Owl",
     "sci": "Strix virgata",
-    "length_cm": null,
+    "length_cm": 19.1,
     "wingspan_cm": 87.5,
     "status": null,
     "family": "true owls"
@@ -3819,7 +3819,7 @@
     "wiki": "Pacific black duck",
     "common": "Pacific Black Duck",
     "sci": "Anas superciliosa",
-    "length_cm": null,
+    "length_cm": 57.5,
     "wingspan_cm": 87.5,
     "status": "LC",
     "family": null
@@ -3828,7 +3828,7 @@
     "wiki": "Long-tailed hawk",
     "common": "Long-tailed Hawk",
     "sci": "Urotriorchis macrourus",
-    "length_cm": null,
+    "length_cm": 60.5,
     "wingspan_cm": 87.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -3837,7 +3837,7 @@
     "wiki": "Snowy egret",
     "common": "Snowy Egret",
     "sci": "Egretta thula",
-    "length_cm": null,
+    "length_cm": 61.0,
     "wingspan_cm": 87.5,
     "status": "LC",
     "family": "heron"
@@ -3846,7 +3846,7 @@
     "wiki": "Ross's gull",
     "common": "Ross's Gull",
     "sci": "Rhodostethia rosea",
-    "length_cm": null,
+    "length_cm": 30.0,
     "wingspan_cm": 87.0,
     "status": "LC",
     "family": "Laridae"
@@ -3855,7 +3855,7 @@
     "wiki": "American oystercatcher",
     "common": "American Oystercatcher",
     "sci": "Haematopus palliatus",
-    "length_cm": null,
+    "length_cm": 47.0,
     "wingspan_cm": 87.0,
     "status": "LC",
     "family": "Haematopodidae"
@@ -3864,7 +3864,7 @@
     "wiki": "Red-breasted merganser",
     "common": "Red-breasted Merganser",
     "sci": "Mergus serrator",
-    "length_cm": null,
+    "length_cm": 57.5,
     "wingspan_cm": 87.0,
     "status": "LC",
     "family": null
@@ -3882,7 +3882,7 @@
     "wiki": "Sabine's gull",
     "common": "Sabine's Gull",
     "sci": "Xema sabini",
-    "length_cm": null,
+    "length_cm": 30.0,
     "wingspan_cm": 86.5,
     "status": "LC",
     "family": "Laridae"
@@ -3891,7 +3891,7 @@
     "wiki": "Malayan night heron",
     "common": "Malayan Night Heron",
     "sci": "Gorsachius melanolophus",
-    "length_cm": null,
+    "length_cm": 48.0,
     "wingspan_cm": 86.5,
     "status": "LC",
     "family": null
@@ -3900,7 +3900,7 @@
     "wiki": "Grey goshawk",
     "common": "Grey Goshawk",
     "sci": "Accipiter novaehollandiae",
-    "length_cm": null,
+    "length_cm": 47.5,
     "wingspan_cm": 86.5,
     "status": "LC",
     "family": null
@@ -3909,7 +3909,7 @@
     "wiki": "Letter-winged kite",
     "common": "letter-winged kite",
     "sci": "Elanus scriptus",
-    "length_cm": null,
+    "length_cm": 35.0,
     "wingspan_cm": 86.5,
     "status": "NT",
     "family": "Accipitridae"
@@ -3918,7 +3918,7 @@
     "wiki": "Slender-billed curlew",
     "common": "Slender-billed Curlew",
     "sci": "Numenius tenuirostris",
-    "length_cm": null,
+    "length_cm": 38.5,
     "wingspan_cm": 86.0,
     "status": "EX",
     "family": "Scolopacidae"
@@ -3927,7 +3927,7 @@
     "wiki": "Kagu",
     "common": "Kagu",
     "sci": "Rhynochetos jubatus",
-    "length_cm": null,
+    "length_cm": 55.0,
     "wingspan_cm": 86.0,
     "status": null,
     "family": "Rhynochetidae"
@@ -3936,7 +3936,7 @@
     "wiki": "Squacco heron",
     "common": "Squacco Heron",
     "sci": "Ardeola ralloides",
-    "length_cm": null,
+    "length_cm": 21.5,
     "wingspan_cm": 86.0,
     "status": "LC",
     "family": "heron"
@@ -3945,7 +3945,7 @@
     "wiki": "Pintado petrel",
     "common": "Pintado Petrel",
     "sci": "Daption capense",
-    "length_cm": null,
+    "length_cm": 37.5,
     "wingspan_cm": 86.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -3954,7 +3954,7 @@
     "wiki": "South American tern",
     "common": "South American Tern",
     "sci": "Sterna hirundinacea",
-    "length_cm": null,
+    "length_cm": 42.0,
     "wingspan_cm": 85.0,
     "status": "LC",
     "family": "Sternidae"
@@ -3963,7 +3963,7 @@
     "wiki": "Pygmy cormorant",
     "common": "Pygmy Cormorant",
     "sci": "Microcarbo pygmaeus",
-    "length_cm": null,
+    "length_cm": 71.0,
     "wingspan_cm": 85.0,
     "status": "LC",
     "family": "Phalacrocoracidae"
@@ -3972,7 +3972,7 @@
     "wiki": "Common scoter",
     "common": "Common Scoter",
     "sci": "Melanitta nigra",
-    "length_cm": null,
+    "length_cm": 48.5,
     "wingspan_cm": 85.0,
     "status": "LC",
     "family": null
@@ -3981,7 +3981,7 @@
     "wiki": "Brown goshawk",
     "common": "Brown Goshawk",
     "sci": "Accipiter fasciatus",
-    "length_cm": null,
+    "length_cm": 47.5,
     "wingspan_cm": 85.0,
     "status": "LC",
     "family": null
@@ -3990,7 +3990,7 @@
     "wiki": "Snow petrel",
     "common": "Snow Petrel",
     "sci": "Pagodroma nivea",
-    "length_cm": null,
+    "length_cm": 35.0,
     "wingspan_cm": 85.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -3999,7 +3999,7 @@
     "wiki": "Slender-billed kite",
     "common": "Slender-billed Kite",
     "sci": "Helicolestes hamatus",
-    "length_cm": null,
+    "length_cm": 38.5,
     "wingspan_cm": 85.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -4008,7 +4008,7 @@
     "wiki": "Wandering whistling duck",
     "common": "Wandering Whistling Duck",
     "sci": "Dendrocygna arcuata",
-    "length_cm": null,
+    "length_cm": 57.0,
     "wingspan_cm": 85.0,
     "status": "LC",
     "family": null
@@ -4017,7 +4017,7 @@
     "wiki": "Broad-winged hawk",
     "common": "Broad-winged Hawk",
     "sci": "Buteo platypterus",
-    "length_cm": null,
+    "length_cm": 38.0,
     "wingspan_cm": 85.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -4026,7 +4026,7 @@
     "wiki": "Reed cormorant",
     "common": "Reed Cormorant",
     "sci": "Microcarbo africanus",
-    "length_cm": null,
+    "length_cm": 52.5,
     "wingspan_cm": 85.0,
     "status": "LC",
     "family": "Phalacrocoracidae"
@@ -4035,7 +4035,7 @@
     "wiki": "Yelkouan shearwater",
     "common": "Yelkouan Shearwater",
     "sci": "Puffinus yelkouan",
-    "length_cm": null,
+    "length_cm": 32.5,
     "wingspan_cm": 84.5,
     "status": "VU",
     "family": "Procellariidae"
@@ -4044,7 +4044,7 @@
     "wiki": "Yellow-headed caracara",
     "common": "Yellow-headed Caracara",
     "sci": "Milvago chimachima",
-    "length_cm": null,
+    "length_cm": 42.5,
     "wingspan_cm": 84.5,
     "status": "LC",
     "family": null
@@ -4053,7 +4053,7 @@
     "wiki": "Gray-lined hawk",
     "common": "Grey-lined Hawk",
     "sci": "Buteo nitidus",
-    "length_cm": null,
+    "length_cm": 53.5,
     "wingspan_cm": 84.5,
     "status": "LC",
     "family": "Accipitridae"
@@ -4062,7 +4062,7 @@
     "wiki": "Bristle-thighed curlew",
     "common": "Bristle-thighed Curlew",
     "sci": "Numenius tahitiensis",
-    "length_cm": null,
+    "length_cm": 42.0,
     "wingspan_cm": 84.0,
     "status": "NT",
     "family": "Scolopacidae"
@@ -4071,7 +4071,7 @@
     "wiki": "Tahiti petrel",
     "common": "Tahiti Petrel",
     "sci": "Pseudobulweria rostrata",
-    "length_cm": null,
+    "length_cm": 40.0,
     "wingspan_cm": 84.0,
     "status": "NT",
     "family": "Procellariidae"
@@ -4080,7 +4080,7 @@
     "wiki": "Bonaparte's gull",
     "common": "Bonaparte's Gull",
     "sci": "Chroicocephalus philadelphia",
-    "length_cm": null,
+    "length_cm": 33.0,
     "wingspan_cm": 84.0,
     "status": null,
     "family": null
@@ -4098,7 +4098,7 @@
     "wiki": "Surf scoter",
     "common": "Surf Scoter",
     "sci": "Melanitta perspicillata",
-    "length_cm": null,
+    "length_cm": 46.0,
     "wingspan_cm": 84.0,
     "status": "LC",
     "family": null
@@ -4107,7 +4107,7 @@
     "wiki": "Bulwer's petrel",
     "common": "Bulwer’s Petrel",
     "sci": "Bulweria bulwerii",
-    "length_cm": null,
+    "length_cm": 27.0,
     "wingspan_cm": 84.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -4125,7 +4125,7 @@
     "wiki": "Phoenix petrel",
     "common": "Phoenix Petrel",
     "sci": "Pterodroma alba",
-    "length_cm": null,
+    "length_cm": 35.0,
     "wingspan_cm": 83.0,
     "status": "VU",
     "family": "Procellariidae"
@@ -4134,7 +4134,7 @@
     "wiki": "Black-vented shearwater",
     "common": "Black-vented Shearwater",
     "sci": "Puffinus opisthomelas",
-    "length_cm": null,
+    "length_cm": 34.0,
     "wingspan_cm": 83.0,
     "status": "NT",
     "family": "Procellariidae"
@@ -4143,7 +4143,7 @@
     "wiki": "Newell's shearwater",
     "common": "Newell's Shearwater",
     "sci": "Puffinus newelli",
-    "length_cm": null,
+    "length_cm": 33.0,
     "wingspan_cm": 83.0,
     "status": "CR",
     "family": "Procellariidae"
@@ -4152,7 +4152,7 @@
     "wiki": "Laughing falcon",
     "common": "Laughing Falcon",
     "sci": "Herpetotheres cachinnans",
-    "length_cm": null,
+    "length_cm": 50.5,
     "wingspan_cm": 83.0,
     "status": "LC",
     "family": null
@@ -4161,7 +4161,7 @@
     "wiki": "Chinese pond heron",
     "common": "Chinese Pond Heron",
     "sci": "Ardeola bacchus",
-    "length_cm": null,
+    "length_cm": 47.0,
     "wingspan_cm": 82.5,
     "status": "LC",
     "family": "heron"
@@ -4179,7 +4179,7 @@
     "wiki": "Plumed whistling duck",
     "common": "Plumed Whistling Duck",
     "sci": "Dendrocygna eytoni",
-    "length_cm": null,
+    "length_cm": 51.0,
     "wingspan_cm": 82.5,
     "status": "LC",
     "family": null
@@ -4188,7 +4188,7 @@
     "wiki": "Eurasian oystercatcher",
     "common": "Eurasian Oystercatcher",
     "sci": "Haematopus ostralegus",
-    "length_cm": null,
+    "length_cm": 42.5,
     "wingspan_cm": 82.0,
     "status": "NT",
     "family": "Haematopodidae"
@@ -4197,7 +4197,7 @@
     "wiki": "Brown noddy",
     "common": "Brown Noddy",
     "sci": "Anous stolidus",
-    "length_cm": null,
+    "length_cm": 41.5,
     "wingspan_cm": 82.0,
     "status": "LC",
     "family": "Laridae"
@@ -4206,7 +4206,7 @@
     "wiki": "Southern lapwing",
     "common": "Southern Lapwing",
     "sci": "Vanellus chilensis",
-    "length_cm": null,
+    "length_cm": 35.0,
     "wingspan_cm": 82.0,
     "status": "LC",
     "family": null
@@ -4215,7 +4215,7 @@
     "wiki": "Greater scaup",
     "common": "Greater Scaup",
     "sci": "Aythya marila",
-    "length_cm": null,
+    "length_cm": 47.5,
     "wingspan_cm": 82.0,
     "status": "LC",
     "family": null
@@ -4224,7 +4224,7 @@
     "wiki": "Canvasback",
     "common": "Canvasback",
     "sci": "Aythya valisineria",
-    "length_cm": null,
+    "length_cm": 52.0,
     "wingspan_cm": 82.0,
     "status": "LC",
     "family": null
@@ -4233,7 +4233,7 @@
     "wiki": "Manx shearwater",
     "common": "Manx Shearwater",
     "sci": "Puffinus puffinus",
-    "length_cm": null,
+    "length_cm": 34.0,
     "wingspan_cm": 82.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -4242,7 +4242,7 @@
     "wiki": "Zino's petrel",
     "common": "Zino's Petrel",
     "sci": "Pterodroma madeira",
-    "length_cm": null,
+    "length_cm": 33.0,
     "wingspan_cm": 82.0,
     "status": null,
     "family": "Procellariidae"
@@ -4251,7 +4251,7 @@
     "wiki": "Fox kestrel",
     "common": "Fox Kestrel",
     "sci": "Falco alopex",
-    "length_cm": null,
+    "length_cm": 35.0,
     "wingspan_cm": 82.0,
     "status": "LC",
     "family": null
@@ -4260,7 +4260,7 @@
     "wiki": "Red-billed chough",
     "common": "Red-billed Chough",
     "sci": "Pyrrhocorax pyrrhocorax",
-    "length_cm": null,
+    "length_cm": 39.5,
     "wingspan_cm": 82.0,
     "status": "LC",
     "family": "Corvidae"
@@ -4269,7 +4269,7 @@
     "wiki": "Sooty falcon",
     "common": "Sooty Falcon",
     "sci": "Falco concolor",
-    "length_cm": null,
+    "length_cm": 34.5,
     "wingspan_cm": 81.5,
     "status": "VU",
     "family": null
@@ -4278,7 +4278,7 @@
     "wiki": "Eurasian stone-curlew",
     "common": "Eurasian Stone-curlew",
     "sci": "Burhinus oedicnemus",
-    "length_cm": null,
+    "length_cm": 42.0,
     "wingspan_cm": 81.0,
     "status": "LC",
     "family": "Burhinidae"
@@ -4287,7 +4287,7 @@
     "wiki": "Javan pond heron",
     "common": "Javan Pond Heron",
     "sci": "Ardeola speciosa",
-    "length_cm": null,
+    "length_cm": 45.0,
     "wingspan_cm": 81.0,
     "status": "LC",
     "family": "heron"
@@ -4296,7 +4296,7 @@
     "wiki": "Kerguelen petrel",
     "common": "Aphrodroma brevirostris",
     "sci": "Aphrodroma brevirostris",
-    "length_cm": null,
+    "length_cm": 36.0,
     "wingspan_cm": 81.0,
     "status": "LC",
     "family": "Procellariidae"
@@ -4305,7 +4305,7 @@
     "wiki": "Red-knobbed coot",
     "common": "Red-knobbed Coot",
     "sci": "Fulica cristata",
-    "length_cm": null,
+    "length_cm": 38.5,
     "wingspan_cm": 80.0,
     "status": "LC",
     "family": "Rallidae"
@@ -4314,7 +4314,7 @@
     "wiki": "Arctic tern",
     "common": "Arctic Tern",
     "sci": "Sterna paradisaea",
-    "length_cm": null,
+    "length_cm": 34.5,
     "wingspan_cm": 80.0,
     "status": "LC",
     "family": "Sternidae"
@@ -4323,7 +4323,7 @@
     "wiki": "Masked lapwing",
     "common": "Masked Lapwing",
     "sci": "Vanellus miles",
-    "length_cm": null,
+    "length_cm": 33.5,
     "wingspan_cm": 80.0,
     "status": "LC",
     "family": null
@@ -4341,7 +4341,7 @@
     "wiki": "African wood owl",
     "common": "Strix woodfordii",
     "sci": "Strix woodfordii",
-    "length_cm": null,
+    "length_cm": 32.8,
     "wingspan_cm": 80.0,
     "status": "LC",
     "family": "true owls"
@@ -4350,7 +4350,7 @@
     "wiki": "Cinereous harrier",
     "common": "Cinereous Harrier",
     "sci": "Circus cinereus",
-    "length_cm": null,
+    "length_cm": 43.0,
     "wingspan_cm": 80.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -4359,7 +4359,7 @@
     "wiki": "Redhead (bird)",
     "common": "Redhead",
     "sci": "Aythya americana",
-    "length_cm": null,
+    "length_cm": 48.0,
     "wingspan_cm": 79.5,
     "status": "LC",
     "family": null
@@ -4386,7 +4386,7 @@
     "wiki": "Andean avocet",
     "common": "Andean Avocet",
     "sci": "Recurvirostra andina",
-    "length_cm": null,
+    "length_cm": 45.7,
     "wingspan_cm": 79.0,
     "status": "LC",
     "family": "Recurvirostridae"
@@ -4395,7 +4395,7 @@
     "wiki": "Gundlach's hawk",
     "common": "Gundlach's hawk",
     "sci": "Accipiter gundlachi",
-    "length_cm": null,
+    "length_cm": 47.0,
     "wingspan_cm": 79.0,
     "status": null,
     "family": null
@@ -4404,7 +4404,7 @@
     "wiki": "Collared forest falcon",
     "common": "Collared Forest Falcon",
     "sci": "Micrastur semitorquatus",
-    "length_cm": null,
+    "length_cm": 52.0,
     "wingspan_cm": 79.0,
     "status": "LC",
     "family": null
@@ -4413,7 +4413,7 @@
     "wiki": "Mississippi kite",
     "common": "Mississippi Kite",
     "sci": "Ictinia mississippiensis",
-    "length_cm": null,
+    "length_cm": 33.5,
     "wingspan_cm": 79.0,
     "status": "LC",
     "family": "Accipitridae"
@@ -4422,7 +4422,7 @@
     "wiki": "Australian wood duck",
     "common": "Australian Wood Duck",
     "sci": "Chenonetta jubata",
-    "length_cm": null,
+    "length_cm": 48.0,
     "wingspan_cm": 79.0,
     "status": "LC",
     "family": null
@@ -4431,7 +4431,7 @@
     "wiki": "Elegant tern",
     "common": "Elegant Tern",
     "sci": "Thalasseus elegans",
-    "length_cm": null,
+    "length_cm": 40.5,
     "wingspan_cm": 78.5,
     "status": "NT",
     "family": "Laridae"
@@ -4440,7 +4440,7 @@
     "wiki": "Bridled tern",
     "common": "Bridled Tern",
     "sci": "Onychoprion anaethetus",
-    "length_cm": null,
+    "length_cm": 31.0,
     "wingspan_cm": 78.5,
     "status": "LC",
     "family": "Laridae"
@@ -4458,7 +4458,7 @@
     "wiki": "Lady Amherst's pheasant",
     "common": "Lady Amherst’s Pheasant",
     "sci": "Chrysolophus amherstiae",
-    "length_cm": null,
+    "length_cm": 110.0,
     "wingspan_cm": 78.0,
     "status": "LC",
     "family": null
@@ -4476,7 +4476,7 @@
     "wiki": "Pied avocet",
     "common": "Recurvirostra avosetta",
     "sci": "Recurvirostra avosetta",
-    "length_cm": null,
+    "length_cm": 44.0,
     "wingspan_cm": 78.0,
     "status": "LC",
     "family": "Recurvirostridae"
@@ -4485,7 +4485,7 @@
     "wiki": "Little gull",
     "common": "Little Gull",
     "sci": "Hydrocoloeus minutus",
-    "length_cm": null,
+    "length_cm": 26.0,
     "wingspan_cm": 78.0,
     "status": "LC",
     "family": "Laridae"
@@ -4494,7 +4494,7 @@
     "wiki": "Atlantic white tern",
     "common": "White Tern",
     "sci": "Gygis alba",
-    "length_cm": null,
+    "length_cm": 26.5,
     "wingspan_cm": 78.0,
     "status": "LC",
     "family": "Laridae"
