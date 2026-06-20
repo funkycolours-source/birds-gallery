@@ -739,15 +739,21 @@ const specTrack = document.getElementById("specTrack");
 const specHint = document.getElementById("specHint");
 const defaultHint = specHint.textContent;
 
-function nearestBirdIndex(targetVal){
-  let nearest = null, nearestDiff = Infinity;
+function nearestBirdIndices(targetVal){
+  let nearestDiff = Infinity;
+  let indices = [];
   sortedCache.forEach((b, idx)=>{
     const v = sortVal(currentKey, b);
     if(v===null) return;
     const diff = Math.abs(v-targetVal);
-    if(diff < nearestDiff){ nearestDiff = diff; nearest = idx; }
+    if(diff < nearestDiff){ nearestDiff = diff; indices = [idx]; }
+    else if(diff === nearestDiff){ indices.push(idx); }
   });
-  return nearest;
+  return indices;
+}
+function nearestBirdIndex(targetVal){
+  const indices = nearestBirdIndices(targetVal);
+  return indices.length ? indices[0] : null;
 }
 
 function posFromEvent(e){
@@ -789,11 +795,19 @@ specTrack.addEventListener("mouseleave", ()=>{
   if(selectedBird) showPreviewImage(selectedBird);
 });
 
+let lastClickIndices = [], lastClickCycle = 0;
 specTrack.addEventListener("click", (e)=>{
   const pos = posFromEvent(e);
   const targetVal = unscalePos(currentKey, pos, currentRange);
-  const idx = nearestBirdIndex(targetVal);
-  if(idx===null) return;
+  const indices = nearestBirdIndices(targetVal);
+  if(!indices.length) return;
+  if(indices.length > 1 && indices.join() === lastClickIndices.join()){
+    lastClickCycle = (lastClickCycle + 1) % indices.length;
+  } else {
+    lastClickIndices = indices;
+    lastClickCycle = 0;
+  }
+  const idx = indices[lastClickCycle];
   if(currentView === "spectrum"){
     showDetail(sortedCache[idx], idx);
   } else {
