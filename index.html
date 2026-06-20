@@ -374,6 +374,7 @@ function specRowsHtml(bird){
 }
 
 let currentRange = {min:0, max:1};
+let tickPositions = [];
 
 function statusVal(s){ return s in STATUS_ORDER ? STATUS_ORDER[s] : null; }
 
@@ -408,9 +409,33 @@ function renderSpectrum(birds){
     document.getElementById("specMaxLabel").textContent = fmtVal(currentKey, currentRange.max);
   }
   const ticksEl = document.getElementById("specTicks");
-  ticksEl.innerHTML = birds
-    .filter(b => sortVal(currentKey, b)!==null)
-    .map(b => `<div class="tick" style="left:${(scalePos(currentKey, sortVal(currentKey, b), currentRange)*100).toFixed(2)}%"></div>`)
+  const SPREAD = 0.6;
+  tickPositions = {};
+  const valCount = {}, groupOffsets = {};
+  // First pass: count duplicates per base position
+  birds.forEach((b, idx) => {
+    const v = sortVal(currentKey, b);
+    if(v === null) return;
+    const key = (scalePos(currentKey, v, currentRange) * 100).toFixed(2);
+    valCount[key] = (valCount[key] || 0) + 1;
+  });
+  // Second pass: assign spread positions keyed by sortedCache index
+  birds.forEach((b, idx) => {
+    const v = sortVal(currentKey, b);
+    if(v === null) return;
+    const basePct = scalePos(currentKey, v, currentRange) * 100;
+    const key = basePct.toFixed(2);
+    const total = valCount[key];
+    if(total > 1){
+      const n = groupOffsets[key] || 0;
+      groupOffsets[key] = n + 1;
+      tickPositions[idx] = basePct + (n - (total - 1) / 2) * SPREAD;
+    } else {
+      tickPositions[idx] = basePct;
+    }
+  });
+  ticksEl.innerHTML = Object.values(tickPositions)
+    .map(pct => `<div class="tick" style="left:${pct.toFixed(2)}%"></div>`)
     .join("");
 }
 
@@ -445,10 +470,11 @@ function render(){
 
   const sorted = [...filtered].sort((a,b)=>{
     const av = sortVal(currentKey, a), bv = sortVal(currentKey, b);
-    if(av===null && bv===null) return 0;
+    if(av===null && bv===null) return a.common.localeCompare(b.common);
     if(av===null) return 1;
     if(bv===null) return -1;
-    return sortDir===-1 ? bv-av : av-bv;
+    const cmp = sortDir===-1 ? bv-av : av-bv;
+    return cmp !== 0 ? cmp : a.common.localeCompare(b.common);
   });
   sortedCache = sorted;
   renderSpectrum(sorted);
@@ -693,9 +719,8 @@ function showDetail(bird, idx){
   selectedBird = bird;
   showPreviewImage(bird);
   document.querySelectorAll(".tick.selected").forEach(t=>t.classList.remove("selected"));
-  const sv = sortVal(currentKey, bird);
-  if(sv !== null){
-    const pct = scalePos(currentKey, sv, currentRange)*100;
+  const pct = tickPositions[idx];
+  if(pct !== undefined){
     document.querySelectorAll("#specTicks .tick").forEach(t=>{
       if(Math.abs(parseFloat(t.style.left)-pct) < 0.05) t.classList.add("selected");
     });
@@ -739,21 +764,13 @@ const specTrack = document.getElementById("specTrack");
 const specHint = document.getElementById("specHint");
 const defaultHint = specHint.textContent;
 
-function nearestBirdIndices(targetVal){
-  let nearestDiff = Infinity;
-  let indices = [];
-  sortedCache.forEach((b, idx)=>{
-    const v = sortVal(currentKey, b);
-    if(v===null) return;
-    const diff = Math.abs(v-targetVal);
-    if(diff < nearestDiff){ nearestDiff = diff; indices = [idx]; }
-    else if(diff === nearestDiff){ indices.push(idx); }
-  });
-  return indices;
-}
-function nearestBirdIndex(targetVal){
-  const indices = nearestBirdIndices(targetVal);
-  return indices.length ? indices[0] : null;
+function nearestBirdIndex(posPct){
+  let nearest = null, nearestDiff = Infinity;
+  for(const [idx, pct] of Object.entries(tickPositions)){
+    const diff = Math.abs(pct - posPct);
+    if(diff < nearestDiff){ nearestDiff = diff; nearest = parseInt(idx); }
+  }
+  return nearest;
 }
 
 function posFromEvent(e){
@@ -766,17 +783,16 @@ let lastHoverIdx = null;
 let selectedBird = null;
 
 function scrubAt(e){
-  const pos = posFromEvent(e);
-  const targetVal = unscalePos(currentKey, pos, currentRange);
-  const idx = nearestBirdIndex(targetVal);
+  const posPct = posFromEvent(e) * 100;
+  const idx = nearestBirdIndex(posPct);
   if(idx===null) return;
   document.querySelectorAll(".tick.near").forEach(t=>t.classList.remove("near"));
   const ticks = document.querySelectorAll("#specTicks .tick");
-  const bird = sortedCache[idx];
-  const tickPct = scalePos(currentKey, sortVal(currentKey, bird), currentRange)*100;
+  const pct = tickPositions[idx];
   ticks.forEach(t=>{
-    if(Math.abs(parseFloat(t.style.left)-tickPct) < 0.05) t.classList.add("near");
+    if(Math.abs(parseFloat(t.style.left)-pct) < 0.05) t.classList.add("near");
   });
+  const bird = sortedCache[idx];
   specHint.textContent = `${bird.common} — ${fmtVal(currentKey, currentKey==="status" ? bird.status : bird[currentKey])}`;
   if(idx !== lastHoverIdx){
     lastHoverIdx = idx;
@@ -795,19 +811,10 @@ specTrack.addEventListener("mouseleave", ()=>{
   if(selectedBird) showPreviewImage(selectedBird);
 });
 
-let lastClickIndices = [], lastClickCycle = 0;
 specTrack.addEventListener("click", (e)=>{
-  const pos = posFromEvent(e);
-  const targetVal = unscalePos(currentKey, pos, currentRange);
-  const indices = nearestBirdIndices(targetVal);
-  if(!indices.length) return;
-  if(indices.length > 1 && indices.join() === lastClickIndices.join()){
-    lastClickCycle = (lastClickCycle + 1) % indices.length;
-  } else {
-    lastClickIndices = indices;
-    lastClickCycle = 0;
-  }
-  const idx = indices[lastClickCycle];
+  const posPct = posFromEvent(e) * 100;
+  const idx = nearestBirdIndex(posPct);
+  if(idx===null) return;
   if(currentView === "spectrum"){
     showDetail(sortedCache[idx], idx);
   } else {
