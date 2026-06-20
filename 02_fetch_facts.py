@@ -40,17 +40,31 @@ def fetch_article_text(wiki_title):
         "origin": "*",
     })
     url = f"https://en.wikipedia.org/w/api.php?{params}"
-    req = urllib.request.Request(url, headers={"User-Agent": "birds-gallery/1.0"})
-    try:
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            data = json.loads(resp.read())
-        pages = data.get("query", {}).get("pages", {})
-        for page in pages.values():
-            text = page.get("extract", "")
-            if text:
-                return text[:8000]  # cap to avoid huge context
-    except Exception as e:
-        print(f"  Wikipedia fetch failed: {e}", file=sys.stderr)
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": "birds-gallery/1.0 (funkycolours@gmail.com)"}
+    )
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                data = json.loads(resp.read())
+            pages = data.get("query", {}).get("pages", {})
+            for page in pages.values():
+                text = page.get("extract", "")
+                if text:
+                    return text[:8000]
+            return None
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < 2:
+                wait = 10 * (attempt + 1)
+                print(f"  429 — waiting {wait}s...", file=sys.stderr, end=" ")
+                time.sleep(wait)
+                continue
+            print(f"  Wikipedia fetch failed: {e}", file=sys.stderr)
+            return None
+        except Exception as e:
+            print(f"  Wikipedia fetch failed: {e}", file=sys.stderr)
+            return None
     return None
 
 def extract_fact(article_text, bird_name):
@@ -127,7 +141,7 @@ def run():
         with open("facts.json", "w") as f:
             json.dump(facts, f, indent=2, ensure_ascii=False)
 
-        time.sleep(0.5)  # rate limit courtesy
+        time.sleep(2)
 
     print(f"\nDone — {len(facts)} facts saved to facts.json", file=sys.stderr)
 
