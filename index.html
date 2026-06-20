@@ -229,8 +229,8 @@
 <div class="toolbar">
   <div class="wordmark">birds<span>.</span>gallery</div>
   <div class="sort-group" id="sortGroup">
-    <button class="sort-btn active" data-key="length_cm">Size</button>
-    <button class="sort-btn" data-key="wingspan_cm">Wingspan</button>
+    <button class="sort-btn" data-key="length_cm">Size</button>
+    <button class="sort-btn active" data-key="wingspan_cm">Wingspan</button>
     <button class="sort-btn" data-key="population">Population</button>
     <button class="dir-btn" id="dirToggle" title="Reverse sort order">↓</button>
   </div>
@@ -239,7 +239,7 @@
       <button class="view-btn" data-view="list">List</button>
       <button class="view-btn active" data-view="spectrum">Spectrum</button>
     </div>
-    <input id="searchBox" class="search-box" type="text" placeholder="Search by name…">
+    <input id="searchBox" class="search-box" type="text" placeholder="Search by name or country…">
     <button class="mode-toggle" id="modeToggle" title="Toggle dark mode">☀</button>
   </div>
 </div>
@@ -258,56 +258,18 @@
 </div>
 
 <div class="intro">
-  <h1>Birds — Biggest to Smallest</h1>
-  <p>All birds that exist. Sort by size, wingspan, or population — tap any bird to read more.</p>
+  <h1>Birds — Widest to Narrowest</h1>
+  <p>500 bird species with data from Wikipedia and Wikidata. Sort by wingspan, size, or population — tap any bird to read more.</p>
 </div>
 <div class="feed" id="feed"></div>
 
 <script>
-const BIRDS = [
-  {wiki:"Bee hummingbird", common:"Bee Hummingbird", sci:"Mellisuga helenae", length_cm:5.5, wingspan_cm:6, population:null},
-  {wiki:"European robin", common:"European Robin", sci:"Erithacus rubecula", length_cm:14, wingspan_cm:21, population:310000000},
-  {wiki:"House sparrow", common:"House Sparrow", sci:"Passer domesticus", length_cm:16, wingspan_cm:25, population:1600000000},
-  {wiki:"Common kingfisher", common:"Common Kingfisher", sci:"Alcedo atthis", length_cm:18, wingspan_cm:26, population:700000},
-  {wiki:"Atlantic puffin", common:"Atlantic Puffin", sci:"Fratercula arctica", length_cm:30, wingspan_cm:55, population:12000000},
-  {wiki:"Arctic tern", common:"Arctic Tern", sci:"Sterna paradisaea", length_cm:35, wingspan_cm:80, population:2000000},
-  {wiki:"Resplendent quetzal", common:"Resplendent Quetzal", sci:"Pharomachrus mocinno", length_cm:40, wingspan_cm:60, population:50000},
-  {wiki:"Peregrine falcon", common:"Peregrine Falcon", sci:"Falco peregrinus", length_cm:45, wingspan_cm:110, population:140000},
-  {wiki:"Snowy owl", common:"Snowy Owl", sci:"Bubo scandiacus", length_cm:65, wingspan_cm:150, population:28000},
-  {wiki:"Toco toucan", common:"Toco Toucan", sci:"Ramphastos toco", length_cm:65, wingspan_cm:55, population:500000},
-  {wiki:"Kakapo", common:"Kākāpō", sci:"Strigops habroptilus", length_cm:60, wingspan_cm:null, population:250},
-  {wiki:"Bald eagle", common:"Bald Eagle", sci:"Haliaeetus leucocephalus", length_cm:80, wingspan_cm:220, population:316000},
-  {wiki:"Golden eagle", common:"Golden Eagle", sci:"Aquila chrysaetos", length_cm:85, wingspan_cm:220, population:300000},
-  {wiki:"Scarlet macaw", common:"Scarlet Macaw", sci:"Ara macao", length_cm:90, wingspan_cm:110, population:30000},
-  {wiki:"Wandering albatross", common:"Wandering Albatross", sci:"Diomedea exulans", length_cm:115, wingspan_cm:310, population:20000},
-  {wiki:"Emperor penguin", common:"Emperor Penguin", sci:"Aptenodytes forsteri", length_cm:115, wingspan_cm:null, population:595000},
-  {wiki:"Shoebill", common:"Shoebill", sci:"Balaeniceps rex", length_cm:120, wingspan_cm:230, population:5300},
-  {wiki:"California condor", common:"California Condor", sci:"Gymnogyps californianus", length_cm:120, wingspan_cm:300, population:560},
-  {wiki:"Andean condor", common:"Andean Condor", sci:"Vultur gryphus", length_cm:130, wingspan_cm:320, population:6700},
-  {wiki:"Secretarybird", common:"Secretarybird", sci:"Sagittarius serpentarius", length_cm:130, wingspan_cm:200, population:25000},
-  {wiki:"Greater flamingo", common:"Greater Flamingo", sci:"Phoenicopterus roseus", length_cm:140, wingspan_cm:150, population:600000},
-  {wiki:"Mute swan", common:"Mute Swan", sci:"Cygnus olor", length_cm:150, wingspan_cm:220, population:600000},
-  {wiki:"Mallard", common:"Mallard", sci:"Anas platyrhynchos", length_cm:55, wingspan_cm:90, population:19000000},
-  {wiki:"Canada goose", common:"Canada Goose", sci:"Branta canadensis", length_cm:110, wingspan_cm:175, population:5000000},
-  {wiki:"American robin", common:"American Robin", sci:"Turdus migratorius", length_cm:25, wingspan_cm:36, population:370000000},
-  {wiki:"Northern cardinal", common:"Northern Cardinal", sci:"Cardinalis cardinalis", length_cm:21, wingspan_cm:30, population:120000000},
-  {wiki:"Blue jay", common:"Blue Jay", sci:"Cyanocitta cristata", length_cm:28, wingspan_cm:43, population:17000000},
-  {wiki:"Great blue heron", common:"Great Blue Heron", sci:"Ardea herodias", length_cm:130, wingspan_cm:195, population:1400000},
-  {wiki:"Indian peafowl", common:"Indian Peafowl", sci:"Pavo cristatus", length_cm:115, wingspan_cm:150, population:null},
-  {wiki:"Wild turkey", common:"Wild Turkey", sci:"Meleagris gallopavo", length_cm:110, wingspan_cm:125, population:6000000},
-  {wiki:"Red-tailed hawk", common:"Red-tailed Hawk", sci:"Buteo jamaicensis", length_cm:56, wingspan_cm:130, population:2000000},
-  {wiki:"Turkey vulture", common:"Turkey Vulture", sci:"Cathartes aura", length_cm:75, wingspan_cm:180, population:18000000},
-  {wiki:"White stork", common:"White Stork", sci:"Ciconia ciconia", length_cm:115, wingspan_cm:200, population:600000},
-  {wiki:"Eurasian magpie", common:"Eurasian Magpie", sci:"Pica pica", length_cm:46, wingspan_cm:60, population:40000000},
-  {wiki:"Common raven", common:"Common Raven", sci:"Corvus corax", length_cm:63, wingspan_cm:130, population:20000000},
-  {wiki:"American crow", common:"American Crow", sci:"Corvus brachyrhynchos", length_cm:45, wingspan_cm:92, population:27000000},
-  {wiki:"Rock dove", common:"Rock Pigeon", sci:"Columba livia", length_cm:33, wingspan_cm:65, population:260000000},
-  {wiki:"Barn swallow", common:"Barn Swallow", sci:"Hirundo rustica", length_cm:18, wingspan_cm:33, population:190000000},
-  {wiki:"Pileated woodpecker", common:"Pileated Woodpecker", sci:"Dryocopus pileatus", length_cm:48, wingspan_cm:75, population:2600000},
-  {wiki:"Common ostrich", common:"Common Ostrich", sci:"Struthio camelus", length_cm:230, wingspan_cm:null, population:150000},
-];
+let BIRDS = [];
+let FACTS = {};
+let RANGES = {};
+let countryToCode = {};
 
-let currentKey = "length_cm";
+let currentKey = "wingspan_cm";
 let sortDir = -1; // -1 = biggest/most first, 1 = smallest/least first
 let searchQuery = "";
 const feed = document.getElementById("feed");
@@ -403,10 +365,23 @@ function renderSpectrum(birds){
 function render(){
   updateTitle();
 
+  const q = searchQuery ? searchQuery.toLowerCase() : "";
+  let locationCodes = null;
+  if(q){
+    const codes = new Set();
+    for(const [name, code] of Object.entries(countryToCode)){
+      if(name.includes(q)) codes.add(code);
+    }
+    if(codes.size) locationCodes = codes;
+  }
   const filtered = BIRDS.filter(b=>{
-    if(!searchQuery) return true;
-    const q = searchQuery.toLowerCase();
-    return b.common.toLowerCase().includes(q) || b.sci.toLowerCase().includes(q);
+    if(!q) return true;
+    if(b.common.toLowerCase().includes(q) || b.sci.toLowerCase().includes(q)) return true;
+    if(locationCodes){
+      const range = RANGES[b.wiki];
+      if(range) return range.some(c => locationCodes.has(c));
+    }
+    return false;
   });
 
   const sorted = [...filtered].sort((a,b)=>{
@@ -420,7 +395,11 @@ function render(){
   renderSpectrum(sorted);
 
   if(sorted.length && currentView === "spectrum" && !selectedBird){
-    const smallest = sorted.reduce((a,b) => (a.length_cm !== null && (b.length_cm === null || a.length_cm < b.length_cm)) ? a : b);
+    const smallest = sorted.reduce((a,b) => {
+      const aVal = a[currentKey], bVal = b[currentKey];
+      if(aVal !== null && (bVal === null || aVal < bVal)) return a;
+      return b;
+    });
     const idx = sorted.indexOf(smallest);
     showDetail(smallest, idx);
   }
@@ -533,8 +512,13 @@ async function loadWiki(bird, i){
   if(data.content_urls && data.content_urls.desktop && cardEl){
     cardEl.dataset.wikiHref = data.content_urls.desktop.page;
   }
-  if(data.extract && extractEl){
-    extractEl.textContent = data.extract.length > 180 ? data.extract.slice(0,177)+"…" : data.extract;
+  if(extractEl){
+    const fact = FACTS[bird.wiki];
+    if(fact){
+      extractEl.innerHTML = `<strong style="color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase">Did you know?</strong> ${fact}`;
+    } else if(data.extract){
+      extractEl.textContent = data.extract.length > 180 ? data.extract.slice(0,177)+"…" : data.extract;
+    }
   }
 }
 
@@ -777,7 +761,31 @@ document.getElementById("modeToggle").addEventListener("click", ()=>{
   document.getElementById("modeToggle").textContent = isDark ? "☀" : "☾";
 });
 
-render();
+function buildCountryLookup(ranges){
+  const dn = new Intl.DisplayNames(["en"], {type: "region"});
+  const codes = new Set();
+  for(const list of Object.values(ranges)){
+    if(list) list.forEach(c => codes.add(c));
+  }
+  const map = {};
+  for(const code of codes){
+    try{ map[dn.of(code).toLowerCase()] = code; } catch(e){}
+  }
+  return map;
+}
+
+feed.innerHTML = '<div class="empty-state">Loading species data…</div>';
+Promise.all([
+  fetch('species.json').then(r => r.json()),
+  fetch('facts.json').then(r => r.json()).catch(() => ({})),
+  fetch('ranges.json').then(r => r.json()).catch(() => ({})),
+]).then(([species, facts, ranges]) => {
+  BIRDS = species;
+  FACTS = facts;
+  RANGES = ranges;
+  countryToCode = buildCountryLookup(ranges);
+  render();
+}).catch(() => { feed.innerHTML = '<div class="empty-state">Failed to load species data.</div>'; });
 </script>
 </body>
 </html>
