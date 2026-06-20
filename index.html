@@ -214,6 +214,22 @@
     border-left:2px solid var(--rule);
   }
 
+  .status-info{
+    position:relative; display:inline-flex; align-items:center; justify-content:center;
+    width:14px; height:14px; border-radius:50%; border:1px solid var(--ink-soft);
+    font-size:9px; cursor:help; vertical-align:middle; margin-left:2px;
+    color:var(--ink-soft); font-style:normal;
+  }
+  .status-info .tip{
+    display:none; position:absolute; bottom:calc(100% + 6px); left:50%;
+    transform:translateX(-50%); width:200px; padding:8px 10px;
+    background:var(--card-bg); border:1px solid var(--rule); color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif; font-size:12px; line-height:1.4;
+    white-space:normal; text-align:left; z-index:100;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+  }
+  .status-info:hover .tip, .status-info:focus .tip{display:block;}
+
   @media (max-width:700px){
     .toolbar{grid-template-columns:1fr; justify-items:center; gap:10px; padding:14px 18px;}
     .wordmark, .sort-group, .controls{justify-self:center;}
@@ -329,7 +345,7 @@ function statusHtml(bird){
     EX:"No known living individuals remain.",
     DD:"Not enough data to assess extinction risk.",
   }[s] || "";
-  return `<span style="color:${color};font-weight:500">${s}</span> ${label} <span class="status-info" title="${tip}" style="display:inline-flex;align-items:center;justify-content:center;width:14px;height:14px;border-radius:50%;border:1px solid var(--ink-soft);font-size:9px;cursor:help;vertical-align:middle;margin-left:2px;color:var(--ink-soft)">i</span>`;
+  return `<span style="color:${color};font-weight:500">${s}</span> ${label} <span class="status-info" tabindex="0"><i>i</i><span class="tip">${tip}</span></span>`;
 }
 
 function specRowsHtml(bird){
