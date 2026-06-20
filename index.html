@@ -474,13 +474,30 @@ const observer = new IntersectionObserver((entries)=>{
 
 let sortedCache = [];
 
+async function fetchWithTimeout(url, ms = 8000){
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), ms);
+  try{
+    const res = await fetch(url, { signal: controller.signal });
+    return await res.json();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function fetchWikiSummary(bird){
   if(!(bird.wiki in cache)){
+    const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(bird.wiki)}`;
     try{
-      const res = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(bird.wiki)}`);
-      cache[bird.wiki] = await res.json();
+      cache[bird.wiki] = await fetchWithTimeout(url);
     } catch(e){
-      cache[bird.wiki] = null;
+      // one retry after a short pause — covers transient network blips
+      try{
+        await new Promise(r => setTimeout(r, 1200));
+        cache[bird.wiki] = await fetchWithTimeout(url);
+      } catch(e2){
+        cache[bird.wiki] = null; // give up cleanly — loadWiki/showPreviewImage handle null
+      }
     }
   }
   return cache[bird.wiki];
